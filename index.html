@@ -869,7 +869,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 13.10.2026 · 23:54 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 14.10.2026 · 00:04 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1097,7 +1097,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 13.10.2026 · 23:54 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 14.10.2026 · 00:04 Uhr
   </footer>
 </div><!-- /panel-rest -->
 
@@ -1169,7 +1169,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 13.10.2026 · 23:54 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 14.10.2026 · 00:04 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1268,7 +1268,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "13.10.2026 · 23:54";
+const APP_VERSION = "14.10.2026 · 00:04";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -2018,19 +2018,56 @@ function renderClocks() {
   const d = document.getElementById('clock-diff');
   if (d) d.textContent = `Thailand ist ${String(diffH).replace('.', ',')} Stunden weiter als ${TRIP.homeLabel}. Am 25.10. stellt ${TRIP.homeLabel} auf Winterzeit um (dann +6 Std, Wechsel um 8 Uhr Thai-Zeit).`;
 }
+/* Währung: fester Kurs als Rückfall, mit Internet aktueller Tageskurs (Wolli 14.10.2026) */
+const RATE_KEY = KEY('rate');
+const RATE_API = 'https://api.frankfurter.dev/v1/latest?base=EUR&symbols=THB';
+function applyRate(v, isoDate, live) {
+  TRIP.currency.perEuro = Math.round(v * 1000) / 1000;
+  TRIP.currency.asOf = formatDateDE(isoDate);
+  TRIP.currency.live = !!live;
+  TRIP.currency.sourceLabel = 'Tageskurs (Frankfurter, u. a. EZB-Daten)';
+  TRIP.currency.source = 'https://frankfurter.dev/';
+}
+function renderCurrencyInfo() {
+  const c = TRIP.currency;
+  const rateTxt = String(c.perEuro).replace('.', ',');
+  const src = document.getElementById('cur-src');
+  if (src) src.innerHTML = `${c.live ? 'Aktueller Kurs' : 'Zuletzt bekannter Kurs (ohne Internet)'}: <strong style="color:#e8e4dc;">1 € = ${rateTxt} ฿</strong> · ${escapeHTML(c.sourceLabel)} vom ${escapeHTML(c.asOf)} (${srcLink(['Quelle', c.source])}). Das ist der Referenzkurs — Wechselstuben und Karten geben etwas weniger.`;
+  const rn = document.getElementById('rate-note');
+  if (rn) rn.textContent = `1 € = ${rateTxt} ฿, ${c.sourceLabel} ${c.asOf}`;
+  const thb = document.getElementById('cur-thb');
+  if (thb && thb.value.trim()) thb.dispatchEvent(new Event('input'));
+}
 function initCurrency() {
   const thb = document.getElementById('cur-thb');
   const eur = document.getElementById('cur-eur');
-  const rate = TRIP.currency.perEuro;
   const num = s => Number(String(s).replace(/\./g, '').replace(',', '.'));
   if (thb && eur) {
-    thb.addEventListener('input', () => { const n = num(thb.value); eur.value = Number.isFinite(n) && thb.value.trim() ? (Math.round(n / rate * 100) / 100).toLocaleString('de-DE') : ''; });
-    eur.addEventListener('input', () => { const n = num(eur.value); thb.value = Number.isFinite(n) && eur.value.trim() ? Math.round(n * rate).toLocaleString('de-DE') : ''; });
+    thb.addEventListener('input', () => { const n = num(thb.value); eur.value = Number.isFinite(n) && thb.value.trim() ? (Math.round(n / TRIP.currency.perEuro * 100) / 100).toLocaleString('de-DE') : ''; });
+    eur.addEventListener('input', () => { const n = num(eur.value); thb.value = Number.isFinite(n) && eur.value.trim() ? Math.round(n * TRIP.currency.perEuro).toLocaleString('de-DE') : ''; });
   }
-  const src = document.getElementById('cur-src');
-  if (src) src.innerHTML = `Fester Kurs: <strong style="color:#e8e4dc;">1 € = ${String(rate).replace('.', ',')} ฿</strong> · ${escapeHTML(TRIP.currency.sourceLabel)} vom ${escapeHTML(TRIP.currency.asOf)} (${srcLink(['Quelle', TRIP.currency.source])}). Wechselstuben und Karten rechnen etwas schlechter.`;
-  const rn = document.getElementById('rate-note');
-  if (rn) rn.textContent = `1 € = ${String(rate).replace('.', ',')} ฿, ${TRIP.currency.sourceLabel} ${TRIP.currency.asOf}`;
+  // zuletzt geladenen Kurs übernehmen (falls neuer als der feste)
+  const saved = readJsonStorage(RATE_KEY, null);
+  if (saved && Number(saved.v) > 20 && Number(saved.v) < 60 && /^\d{4}-\d{2}-\d{2}$/.test(saved.date || '')) applyRate(Number(saved.v), saved.date, false);
+  renderCurrencyInfo();
+}
+async function loadLiveRate() {
+  if (!navigator.onLine) return;
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 6000);
+    const res = await fetch(RATE_API, { signal: ctrl.signal, cache: 'no-store' });
+    clearTimeout(timer);
+    if (!res.ok) return;
+    const data = await res.json();
+    const v = Number(data && data.rates && data.rates.THB);
+    if (!(v > 20 && v < 60) || !/^\d{4}-\d{2}-\d{2}$/.test(data.date || '')) return;   // Plausibilitätsprüfung
+    const changed = Math.abs(v - TRIP.currency.perEuro) > 0.0005;
+    applyRate(v, data.date, true);
+    writeStorage(RATE_KEY, { v, date: data.date });
+    renderCurrencyInfo();
+    if (changed) { renderAction(); augmentTravelCards(); renderPlan(); }
+  } catch (e) { /* ohne Netz: fester bzw. zuletzt geladener Kurs */ }
 }
 
 /* ── RESTAURANTS (glutenfrei) + LÄDEN ───────────────────────── */
@@ -2991,7 +3028,7 @@ function checkDayChange() {
   if (now !== lastShownDate) { lastShownDate = now; renderAllForStation(); renderWeatherBadges(); }
   else renderStationBar();
 }
-document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') checkDayChange(); });
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') { checkDayChange(); loadLiveRate(); } });
 async function checkForUpdate() {
   if (!navigator.onLine) return;
   try {
@@ -3013,6 +3050,7 @@ renderAllForStation();
 updateFavBadge();
 renderFriendsPanel();
 loadWeather();
+loadLiveRate();
 registerServiceWorker();
 setInterval(checkDayChange, 60000);
 </script>
