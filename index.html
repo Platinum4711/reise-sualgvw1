@@ -759,7 +759,7 @@
     .em-sub { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #f07060; margin: 16px 0 8px; font-weight: 600; }
     .em-place { background: #222222; border: 1px solid #2e2e2e; border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
     .em-place-name { font-weight: 600; color: #e8e4dc; font-size: 0.95rem; }
-    .em-place-name .em-tag { font-size: 9.5px; letter-spacing: .5px; text-transform: uppercase; padding: 2px 7px; border-radius: 20px; font-weight: 600; margin-left: 6px; vertical-align: middle; background: rgba(79,195,161,.15); color: #4fc3a1; }
+    .em-place-name .em-tag { display: inline-block; margin-top: 3px; line-height: 1.5; font-size: 9.5px; letter-spacing: .5px; text-transform: uppercase; padding: 2px 7px; border-radius: 20px; font-weight: 600; margin-left: 6px; vertical-align: middle; background: rgba(79,195,161,.15); color: #4fc3a1; }
     .em-place-name .em-tag.warn { background: rgba(240,112,96,.15); color: #f07060; }
     .em-place-meta { color: #7a7670; font-size: 0.78rem; line-height: 1.45; margin-top: 3px; }
     .em-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 9px; }
@@ -869,7 +869,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 13.10.2026 · 22:44 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 13.10.2026 · 23:54 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1097,7 +1097,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 13.10.2026 · 22:44 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 13.10.2026 · 23:54 Uhr
   </footer>
 </div><!-- /panel-rest -->
 
@@ -1169,7 +1169,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 13.10.2026 · 22:44 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 13.10.2026 · 23:54 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1268,7 +1268,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "13.10.2026 · 22:44";
+const APP_VERSION = "13.10.2026 · 23:54";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -1373,11 +1373,27 @@ const TRIP = {
     { num: "1669", label: "Rettung / Notarzt", hint: "Krankenwagen", primary: true },
     { num: "191", label: "Polizei", hint: "akute Gefahr", primary: true },
     { num: "199", label: "Feuerwehr", hint: "", primary: true },
-    { num: "1784", label: "Katastrophen-Hotline", hint: "Unwetter · Englisch", primary: false },
-    { num: "+6622879000", show: "02-287 9000", label: "Deutsche Botschaft", hint: "z. B. Pass verloren", primary: false }
+    { num: "1784", label: "Katastrophen-Hotline", hint: "Unwetter · Englisch", primary: false }
   ],
+  /* Deutsche Botschaft + zuständige Honorarkonsulin (Quelle: offizielle Botschaftsseite, geprüft 13.10.2026) */
+  embassy: {
+    name: "Deutsche Botschaft Bangkok", address: "9 South Sathorn Road, Bangkok 10120",
+    hours: "Mo–Fr 8:30–11:30 Uhr, Vorsprache nur mit Termin (Ausnahme: Pass verloren und dringende Rückreise)",
+    tels: [["Botschaft (Dienstzeit, auch Notfälle)", "+6622879000", "02-287 9000"], ["Notfall abends/Wochenende", "+66818456224", "081-845 6224"]],
+    emergencyHours: "Notfallnummer außerhalb der Dienstzeit (keine Visa-Fragen): Mo–Do 16–24 Uhr, Fr 13:30–24 Uhr, Sa/So/Feiertag 8–24 Uhr (Thai-Zeit)",
+    route: "Deutsche Botschaft Bangkok", pid: "ChIJVyaNQSWf4jARuKYxXZcJz6E", lat: 13.725146, lng: 100.542034, geo: "Google-Eintrag mit offizieller Adresse + Telefon (OpenStreetMap ca. 150 m, anderes Ende des Geländes)",
+    src: [["Botschaft: Öffnungszeiten + Notfall", "https://bangkok.diplo.de/th-de/ueber-uns/oeffnungszeiten-1498676"], ["Botschaft: Startseite", "https://bangkok.diplo.de/th-de"]]
+  },
+  consul: {
+    name: "Honorarkonsulin Phuket (zuständig auch für Koh Samui + Koh Phangan, Provinz Surat Thani)", address: "74/56 Night Plaza, Phoonpon Road, Talad Nuea, Mueang, Phuket 83000",
+    hours: "Mo–Fr 9:00–12:30 Uhr",
+    tels: [["Honorarkonsulin", "+66843044242", "084-304 4242"]],
+    route: "Honorary Consulate of Germany Phuket", pid: "ChIJUQJcsKAxUDARZ2Yl1Wlw19Q", lat: 7.874778, lng: 98.387928, geo: "Google-Eintrag mit offizieller Adresse + Telefon",
+    places: ["kpg", "sam"],
+    src: [["Botschaft: Honorarkonsuln", "https://bangkok.diplo.de/th-de/ueber-uns/honorarkonsuln"]]
+  },
   emergencySources: [
-    ["Tourism Authority of Thailand: Notrufnummern + Deutsche Botschaft", "https://www.tourismthailand.org/Plan-Your-Trip/Useful-Call"],
+    ["Tourism Authority of Thailand: Notrufnummern", "https://www.tourismthailand.org/Plan-Your-Trip/Useful-Call"],
     ["Auswärtiges Amt: 1784 + 1155", "https://www.auswaertiges-amt.de/de/reiseundsicherheit/thailandsicherheit-201558"],
     ["Britische Regierung: 1669 kostenlos, 1155 hilft übersetzen", "https://www.gov.uk/guidance/healthcare-and-medical-services-in-thailand"]
   ],
@@ -1465,7 +1481,7 @@ const TRIP = {
     /* ── Koh Phangan (Di 20. – Fr 23.10.) ── */
     { id: "kpg_kohtao", station: "kpg", highlight: true, ic: "🤿", name: "Tagestour Koh Tao + Koh Nang Yuan", sub: "Schnorcheln in klarem Wasser + der berühmte Aussichtspunkt über drei verbundene Inseln.",
       where: "Abfahrt Thong Sala (Koh Phangan)", duration: "ganzer Tag", priceTHB: [2040, 2940], priceNote: "ca., je nach Anbieter, inkl. 250 ฿ Nationalpark (vor Ort bar)", provider: "verschiedene Bootsanbieter", opening: "nur bei passendem Wetter",
-      maps: "Thong Sala Pier, Koh Phangan", tags: [["Highlight", "tag-hl"], ["Wasser", "tag-w"]],
+      maps: "Thong Sala Pier, Koh Phangan", tags: [["Wasser", "tag-w"]],
       info: ["Mit dem Speedboot nach Koh Tao: Schnorchelstopps an Buchten mit Fischen und Korallen, dann Koh Nang Yuan — drei Inseln, die mit Sandbänken verbunden sind. Der Aufstieg zum Aussichtspunkt dauert ca. 15 Minuten.", "Meist inklusive Mittagessen, Schnorchelausrüstung und Abholung."],
       tip: "Beim Buchen glutenfreies Essen anmelden oder eigenes Essen mitnehmen. Stornobedingungen bei schlechtem Wetter vorher klären.",
       src: [["Preis ab 1.790 ฿ (Ticket2Attraction)", "https://payment-iframe.ticket2attraction.com/discount-tickets/koh-tao-nangyuan-from-koh-phangan"], ["Preis 2.690 ฿ + Leistungen (Headout)", "https://www.headout.com/day-trips/from-koh-phangan-koh-tao-koh-nang-yuan-speedboat-day-trip-with-snorkeling-and-lunch-e-49254/"], ["Nationalpark-Gebühr 250 ฿ (Travelocity)", "https://www.travelocity.com/es/things-to-do/excursion-de-snorkel-a-koh-nangyuan-y-koh-tao-en-lancha-rapida-desde-koh-phangan.a603253.detalles-actividades"]] },
@@ -1491,7 +1507,7 @@ const TRIP = {
     /* ── Koh Samui (Fr 23. – Di 27.10.) ── */
     { id: "sam_angthong", station: "sam", highlight: true, ic: "🛶", name: "Ang Thong Marine Park mit Kajak", sub: "42 Inseln, smaragdgrüner See und Kajak zwischen Kalkfelsen — der Klassiker ab Koh Samui.",
       where: "Abfahrt Koh Samui (Abholung meist inklusive)", duration: "ganzer Tag (7–9 Std)", priceTHB: 2162, priceNote: "ca., großes Boot inkl. Frühstück + Mittag, inkl. 300 ฿ Nationalpark (vor Ort bar)", provider: "verschiedene Bootsanbieter (Speedboot ca. 69–75 US-$)", opening: "nur bei passendem Wetter",
-      maps: "Mu Ko Ang Thong National Park", tags: [["Highlight", "tag-hl"], ["Wasser", "tag-w"]],
+      maps: "Mu Ko Ang Thong National Park", tags: [["Wasser", "tag-w"]],
       info: ["Mit dem Boot in den Meeres-Nationalpark: Kajakfahren, Schnorcheln, Aufstieg zum Aussichtspunkt und zur Lagune im Inneren einer Insel.", "Großes Boot ist günstiger und ruhiger, Speedboot schneller."],
       tip: "Angebot + Oktober-Termin beim Veranstalter prüfen. Reisepass oder Kopie mitnehmen. Glutenfreies Essen vorher anmelden.",
       src: [["Großes Boot 1.862 ฿ (Expedia TH)", "https://www.expedia.co.th/things-to-do/a.a3602776.activity-details"], ["Speedboot 69 US-$ (Expedia)", "https://www.expedia.com/things-to-do/day-trip-to-angthong-marine-park-by-speed-boat-from-koh-samui.a458958.activity-details"]] },
@@ -1511,7 +1527,7 @@ const TRIP = {
     /* ── Bangkok 2 (Di 27. – Sa 31.10.) ── */
     { id: "bkk2_skywalk", station: "bkk2", highlight: true, ic: "🏙️", name: "Mahanakhon SkyWalk — Glasboden ganz oben", sub: "Über Bangkok auf einer Glasplatte stehen. Zum Sonnenuntergang spektakulär.",
       where: "King Power Mahanakhon, 114 Narathiwas Rd, Silom", duration: "1–2 Std", priceTHB: [1000, 1200], priceNote: "Erwachsene: 10–15:30 Uhr 1.000 ฿ · 15:30–19 Uhr 1.200 ฿", provider: "King Power Mahanakhon", opening: "täglich 10–24 Uhr (letzter Einlass 23 Uhr)",
-      url: "https://kingpowermahanakhon.co.th/", maps: "King Power Mahanakhon, Bangkok", tags: [["Highlight", "tag-hl"], ["Aussicht", "tag-w"]],
+      url: "https://kingpowermahanakhon.co.th/", maps: "King Power Mahanakhon, Bangkok", tags: [["Aussicht", "tag-w"]],
       info: ["Aussichtsplattform ganz oben im King Power Mahanakhon: Die Glasplatte (63 m²) liegt 310 Meter über dem Boden.", "Regeln auf der Glasplatte (z. B. Schuhe, Handy) vor Ort erfragen."],
       tip: "Online-Tickets sind meist günstiger als vor Ort.",
       src: [["Offizielle Seite SkyWalk (Preise, Zeiten, Glasplatte)", "https://kingpowermahanakhon.co.th/th/experience/mahanakhon-skywalk"]] },
@@ -1529,6 +1545,16 @@ const TRIP = {
       src: [["Zug Don Mueang → Ayutthaya (train36)", "https://train36.com/don-muang-to-ayutthaya-train.html"], ["Eintritt 50/220 ฿ (voyagetips)", "https://www.voyagetips.com/en/ayutthaya/"], ["Eintritt 80/300 ฿ (Ayutthaya Historical Research)", "https://ayutthaya-history.com/ce_admissionfee.html"]] },
 
     /* ── Schöne Ecken (kind: spot) ── */
+    { id: "bkk1_goldenmount", station: "bkk1", kind: "spot", ic: "🌇", name: "Golden Mount (Wat Saket) zum Sonnenuntergang", sub: "Tempel auf einem Hügel mitten in der Altstadt — 360°-Blick über Bangkok.",
+      where: "Wat Saket, Altstadt", priceTHB: 100, priceNote: "Aufstieg für Ausländer", opening: "täglich ca. 7–19 Uhr", maps: "Wat Saket Golden Mount, Bangkok", tags: [["Aussicht", "tag-w"]],
+      info: ["Viele Stufen führen hoch zur goldenen Stupa. Am späten Nachmittag bietet sich der Blick zum Sonnenuntergang an."],
+      tip: "Schultern + Knie bedeckt (Tuch kann vor Ort geliehen werden).",
+      src: [["Tourism Authority of Thailand", "https://www.tourismthailand.org/Attraction/wat-saket-and-the-golden-mount"], ["Wat Saket (thaiest)", "https://thaiest.com/thailand/bangkok/wat-saket"], ["Golden Mount (Places of Juma)", "https://www.placesofjuma.com/wat-saket-golden-mount-bangkok/"]] },
+    { id: "bkk2_lumphini", station: "bkk2", kind: "spot", ic: "🦎", name: "Lumphini Park mit Riesen-Waranen", sub: "Grüne Oase zwischen Hochhäusern — mit frei lebenden Waranen am See.",
+      where: "Lumphini, Bangkok", priceFree: true, opening: "täglich ab 4:30 Uhr bis ca. 21–22 Uhr (Quellen unterschiedlich)", maps: "Lumphini Park, Bangkok", tags: [["kostenlos", "tag-l"], ["Natur", "tag-l"]],
+      info: ["Großer Stadtpark mit See und Tretbooten. Am Wasser leben große Bindenwarane — Wildtiere: Abstand halten, nicht anfassen, nicht füttern."],
+      tip: "Morgens oder am späten Nachmittag, wenn es kühler ist.",
+      src: [["Lumpini Park (AAA TripCanvas)", "https://www.aaa.com/tripcanvas/attraction/lumpini-park-lumphini-park-VA13540"], ["Lumpini Park Tipps (theo-courant)", "https://theo-courant.com/en/lumpini-park-bangkok-best-tips/"], ["Stadt Bangkok: Lumpini (4:30–22 Uhr)", "https://greener.bangkok.go.th/park/suan-lumpini/"]] },
     { id: "kpg_sunset", station: "kpg", kind: "spot", ic: "🌅", name: "Sonnenuntergang an der Westküste (Hin Kong / Srithanu)", sub: "Direkt bei euch: die Westküste ist für Sonnenuntergänge bekannt.",
       where: "Hin Kong / Srithanu", priceFree: true, maps: "Hin Kong Beach, Koh Phangan", tags: [["kostenlos", "tag-l"]],
       info: ["Hin Kong ist für Ebbe-Flut-Landschaften und Sonnenuntergänge bekannt."],
@@ -1827,10 +1853,28 @@ function emergencyHTML(place, station) {
     ${place.police.map(p => placeCard(p, true)).join('')}
     ${place.policeNote ? `<div class="em-note">${escapeHTML(place.policeNote)}</div>` : ''}
     <div class="em-actions"><a class="em-btn route" href="${mapsSearchUrl(place.policeSearch)}" target="_blank" rel="noopener noreferrer">👮 Polizei in der Nähe (Google Maps)</a><a class="em-btn route" href="${mapsSearchUrl('hospital near ' + place.mapQuery)}" target="_blank" rel="noopener noreferrer">🏥 Krankenhaus in der Nähe</a></div>
+    <div class="em-sub">🇩🇪 Deutsche Botschaft</div>
+    ${embassyCard(TRIP.embassy)}
+    ${TRIP.consul && TRIP.consul.places.includes(station.place) ? embassyCard(TRIP.consul) : ''}
+    <div class="em-note">Pass oder Geld verloren, Festnahme, schwerer Unfall: Botschaft anrufen. Abends und am Wochenende gilt die <strong>Notfallnummer 081-845 6224</strong>.</div>
     <div class="em-sub">Weitere Nummern</div>
     <div class="em-grid">${secondary}</div>
     <div class="em-note">Mit der <strong>thailändischen SIM</strong> einfach die Kurznummer wählen. Kein Thai? <strong>1155</strong> anrufen — die Touristenpolizei hilft auch beim Übersetzen. Nummern und Texte gehen <strong>ohne Internet</strong>, nur die Routen-Knöpfe brauchen Netz; zum Anrufen braucht es Handyempfang. Routen führen zum geprüften Kartenpunkt des Krankenhauses — den Eingang der Notaufnahme vor Ort an den Schildern („Emergency“) suchen.</div>
     <div class="em-src" style="margin-top:8px;">Quellen: ${TRIP.emergencySources.map(srcLink).join(' · ')}</div>`;
+}
+function embassyCard(e) {
+  if (!e) return '';
+  return `
+    <div class="em-place">
+      <div class="em-place-name">${escapeHTML(e.name)}</div>
+      <div class="em-place-meta">📍 ${escapeHTML(e.address)}<br>🕐 ${escapeHTML(e.hours)}${e.emergencyHours ? '<br>🚨 ' + escapeHTML(e.emergencyHours) : ''}</div>
+      <div class="em-actions">
+        ${(e.tels || []).map(t => `<a class="em-btn tel" href="${telHref(t[1])}">📞 ${escapeHTML(t[0])} ${escapeHTML(t[2])}</a>`).join('')}
+        <a class="em-btn route" href="${emergencyRouteUrl(e)}" target="_blank" rel="noopener noreferrer">🧭 Route Google</a>
+        <a class="em-btn route" href="${appleRouteUrl(e)}" target="_blank" rel="noopener noreferrer">🍎 Apple Karten</a>
+      </div>
+      <div class="em-src">Quelle: ${(e.src || []).map(srcLink).join(' · ')}${e.geo ? ' · Kartenpunkt: ' + escapeHTML(e.geo) : ''}</div>
+    </div>`;
 }
 function renderEmergency() {
   const st = currentStation();
