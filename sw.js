@@ -6,7 +6,9 @@
    - Karten, Wetter, Suche: nur Netz.
    - Aufräumen nur von eigenen Speichern (Präfix thai-app-), nichts von anderen Seiten derselben Adresse. */
 const PREFIX = 'thai-app-';
-const VERSION = PREFIX + 'static-v2';
+const VERSION = PREFIX + 'static-v4';
+// Schriften schon beim Einrichten mitspeichern (iPhone-Test 13.10.: offline fehlte die Schrift)
+const FONT_CSS = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap';
 const PAGE_CACHE = PREFIX + 'page';
 const FONT_CACHE = PREFIX + 'fonts';
 const KEEP = [VERSION, PAGE_CACHE, FONT_CACHE];
@@ -25,6 +27,30 @@ self.addEventListener('install', event => {
       await pc.put('./', page.clone());
       await pc.put('./index.html', page);
     }
+    // Schriften: CSS + nur die lateinischen Schriftdateien (latin, latin-ext) vorladen; Fehler hier blockieren nichts
+    // Codex-Runde 8: je Datei Zeitlimit + eigener Fehlerfang, damit nichts hängt oder abbricht
+    try {
+      const fc = await caches.open(FONT_CACHE);
+      const cssRes = await Promise.race([fetch(FONT_CSS), timeout(5000)]);
+      if (cssRes.status === 200) {
+        const css = await cssRes.clone().text();
+        await fc.put(FONT_CSS, cssRes);
+        const blocks = css.split('/*').slice(1);
+        const urls = [];
+        for (const b of blocks) {
+          const label = b.slice(0, b.indexOf('*/')).trim();
+          if (label !== 'latin' && label !== 'latin-ext') continue;
+          const m = b.match(/url\((https:\/\/fonts\.gstatic\.com\/[^)]+)\)/);
+          if (m && !urls.includes(m[1])) urls.push(m[1]);
+        }
+        await Promise.all(urls.map(async u => {
+          try {
+            const r = await Promise.race([fetch(u, { mode: 'cors' }), timeout(5000)]);
+            if (r.status === 200) await fc.put(u, r);
+          } catch (e) { /* einzelne Schrift fehlt: egal */ }
+        }));
+      }
+    } catch (e) { /* ohne Netz zum Schriftserver: Standardschrift */ }
     await self.skipWaiting();
   })());
 });
@@ -94,7 +120,9 @@ self.addEventListener('fetch', event => {
       const fc = await caches.open(FONT_CACHE);
       const hit = await fc.match(req);
       const net = fetch(req).then(async res => {
-        if (res.status === 200 || res.type === 'opaque') await fc.put(req, res.clone());
+        if (res.status === 200 || res.type === 'opaque') {
+          try { await fc.put(req, res.clone()); } catch (e) { /* Speicherfehler: Antwort trotzdem liefern */ }
+        }
         return res;
       }).catch(() => hit);
       event.waitUntil(net.then(() => {}, () => {}));
