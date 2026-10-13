@@ -6,7 +6,7 @@
    - Karten, Wetter, Suche: nur Netz.
    - Aufräumen nur von eigenen Speichern (Präfix thai-app-), nichts von anderen Seiten derselben Adresse. */
 const PREFIX = 'thai-app-';
-const VERSION = PREFIX + 'static-v4';
+const VERSION = PREFIX + 'static-v5';
 // Schriften schon beim Einrichten mitspeichern (iPhone-Test 13.10.: offline fehlte die Schrift)
 const FONT_CSS = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap';
 const PAGE_CACHE = PREFIX + 'page';
@@ -74,11 +74,16 @@ async function networkFirstPage(event) {
   try {
     const response = await Promise.race([fetch(event.request, { cache: 'reload' }), timeout(4000)]);
     if (response && response.status === 200) {
+      // Codex-Runde 9: beide Kopien VOR dem ersten await erzeugen (sonst kann die Antwort schon verbraucht sein)
+      const copy1 = response.clone();
+      const copy2 = response.clone();
       const save = (async () => {
-        await cache.put('./', response.clone());
-        await cache.put('./index.html', response.clone());
-        const clients = await self.clients.matchAll();
-        clients.forEach(c => c.postMessage('cached'));
+        try {
+          await cache.put('./', copy1);
+          await cache.put('./index.html', copy2);
+          const clients = await self.clients.matchAll();
+          clients.forEach(c => c.postMessage('cached'));
+        } catch (e) { /* Speicher voll o. ä.: alte Fassung bleibt */ }
       })();
       event.waitUntil(save);
       return response;
