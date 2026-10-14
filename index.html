@@ -869,7 +869,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 14.10.2026 · 00:21 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 01:16 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1097,7 +1097,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 14.10.2026 · 00:21 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 01:16 Uhr
   </footer>
 </div><!-- /panel-rest -->
 
@@ -1169,7 +1169,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 14.10.2026 · 00:21 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 01:16 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1268,7 +1268,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "14.10.2026 · 00:21";
+const APP_VERSION = "15.10.2026 · 01:16";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -1544,6 +1544,166 @@ const TRIP = {
       tip: "Tuk-Tuk-Preis vorher aushandeln. Schultern + Knie bedeckt.",
       src: [["Zug Don Mueang → Ayutthaya (train36)", "https://train36.com/don-muang-to-ayutthaya-train.html"], ["Eintritt 50/220 ฿ (voyagetips)", "https://www.voyagetips.com/en/ayutthaya/"], ["Eintritt 80/300 ฿ (Ayutthaya Historical Research)", "https://ayutthaya-history.com/ce_admissionfee.html"]] },
 
+
+    /* ══ NEU 15.10.2026 — Team-Lauf „Aktivitäten für zwei“ (Claude: Bangkok + 3 Phangan · Codex: Inseln · gegenseitig an den Quellen geprüft) ══ */
+    /* ── Bangkok 1 (neu) ── */
+    { id: "bkk1_maeklong", station: "bkk1", highlight: true, ic: "🚂", name: "Zug-Markt Maeklong + schwimmender Markt Damnoen Saduak", sub: "Der Zug rollt mitten durch die Marktstände — die Händler klappen in letzter Sekunde ihre Dächer ein.",
+      where: "Samut Songkhram (ca. 1,5 Std westlich von Bangkok)", duration: "ca. 7 Std (Tour)", priceTHB: [688, 994], priceNote: "ca., Tour mit Abholung, Boot + Guide (laut Buchungsseiten)", provider: "verschiedene Tourenanbieter", opening: "Markt tgl. 6–18 Uhr · Zug 8× täglich, u. a. ca. 8:30, 11:10, 14:30, 17:40 (vor Ort prüfen)",
+      maps: "Maeklong Railway Market", tags: [["Erlebnis", "tag-p"], ["Markt", "tag-l"]],
+      info: ["Der Zug fährt mehrmals am Tag ganz langsam durch den Markt — die Stände stehen direkt auf den Gleisen. Danach geht es meist mit dem Boot über den schwimmenden Markt Damnoen Saduak.", "Fertige Touren holen euch ab und bringen euch zurück; so braucht ihr kein eigenes Fahrzeug."],
+      tip: "Abholung meist nur im Zentrum (nicht Lak Si) → Treffpunkt vorher klären. Beim Zughupen sofort zurücktreten, nie auf den Gleisen stehen. Kleine Baht-Scheine mitnehmen. Nicht am Flugtag buchen. Markt-Essen: Zöliakie-Karte zeigen, Frittiertes meiden; Kreuzkontakt (Messer, Bretter, Öl) ist kaum auszuschließen → im Zweifel eigenes Essen mitnehmen.",
+      src: [["Maeklong: Zugzeiten + Touren 688–994 ฿ (The Better Vacation, 06.04.2026)", "https://thebettervacation.com/bangkok-city/maeklong-railway-market/"]] },
+    { id: "bkk1_erawan", station: "bkk1", highlight: true, ic: "💦", name: "Erawan-Wasserfall + Brücke am Kwai + Todeseisenbahn", sub: "Sieben türkisfarbene Stufen im Dschungel — in den Becken darf man baden.",
+      where: "Kanchanaburi (Abholung in Bangkok)", duration: "ganzer Tag (ca. 13 Std)", priceTHB: 2590, priceNote: "ca.: Tour 2.190 ฿ (Guide, Transport, Mittagessen) + Nationalpark 300 ฿ + Zug 100 ฿ (bar)", provider: "z. B. Click2GoThailand (mind. 2 Personen)", opening: "Park tgl. 8–16:30 Uhr, Einlass bis 15:30 · Abholung ca. 6:20–7:20",
+      url: "https://www.click2gothailand.com/tours/00564", maps: "Erawan Waterfall, Kanchanaburi", tags: [["Natur", "tag-l"], ["Wasser", "tag-w"]],
+      info: ["Erst baden im Erawan-Wasserfall (7 Stufen, bis ganz oben ca. 1,5 km Pfad), dann Höhle Tham Kra Sae, eine Fahrt mit der historischen Todeseisenbahn und die Brücke am Kwai.", "Treffpunkte der Tour u. a. Khao San, Silom, Sukhumvit — von Nord-Bangkok früh losfahren oder Treffpunkt vorher klären."],
+      tip: "Nach Hochwasser war der Park ab 27.09.2026 gesperrt, laut Meldung seit 03.10. wieder offen — im Oktober sind neue Sperrungen nach Starkregen möglich: am Vortag beim Anbieter nachfragen. Lak Si gehört nicht zu den Abholgebieten → zum Treffpunkt (z. B. Sukhumvit) per Grab; zurück geht es bis Khao San, von dort selbst nach Lak Si. Mittagessen: eigenes glutenfreies Essen mitnehmen.",
+      src: [["Tour 2.190 ฿ + Leistungen (Click2GoThailand)", "https://www.click2gothailand.com/tours/00564"], ["Nationalpark: 300 ฿, Zeiten (Thai National Parks, Juni 2026)", "https://www.thainationalparks.com/erawan-national-park"], ["Wieder offen seit 03.10.2026 (ad-hoc-news, 11.10.2026)", "https://www.ad-hoc-news.de/unterhaltung/reisen/erawan-falls-reopened-after-floods-on-3-october/70291123"]] },
+    { id: "bkk1_yaowarat", station: "bkk1", ic: "🏮", name: "Chinatown (Yaowarat) bei Nacht + Vegetarisches Festival", sub: "Neonschilder, Gewusel, Garküchen — und bis So 18.10. das Festival mit gelben Fahnen und Lichtern.",
+      where: "Yaowarat Road, Chinatown-Tor (Odeon Circle)", duration: "Abend", priceFree: true, provider: "öffentlich", opening: "Festival 9.–18.10.2026 (passt für Sa 17. + So 18.10.) · Chinatown abends immer belebt",
+      maps: "Yaowarat Road, Bangkok", tags: [["Abend", "tag-p"], ["kostenlos", "tag-l"]],
+      info: ["Zum Vegetarischen Festival ist die Straße voller Stände mit gelben Fahnen, Lichterketten und Prozessionen von den Schreinen zum Chinatown-Tor.", "Auch ohne Festival ist Yaowarat abends eines der lebendigsten Viertel Bangkoks."],
+      tip: "ZÖLIAKIE: Das Festival-Essen („Jay“) benutzt oft Fleischersatz aus Weizengluten — dort NICHTS essen, nur schauen. Vorher woanders sicher essen. Tasche vorn tragen, im Gedränge zusammenbleiben.",
+      src: [["Festival 9.–18.10.2026 (The Nation)", "https://www.nationthailand.com/thailand/bangkok/40071888"], ["Jay-Fleischersatz aus Weizengluten (Lion Brand)", "https://lionbrand.com.au/jay-is-it-someones-name-a-type-of-food-or-is-it-something-else/"]] },
+    { id: "bkk1_yokkao", station: "bkk1", ic: "🥊", name: "Muay Thai selbst ausprobieren (Yokkao)", sub: "Probestunde Thaiboxen für Anfänger — Pratzen, Tritte, Schwitzen.",
+      where: "Yokkao, Sukhumvit Soi 16 (ca. 5 Min ab BTS Asok)", duration: "1,5 Std", priceNote: "ca. 20 US-$ pro Einheit (90 Min, laut Yokkao-Buchungsseite)", provider: "Yokkao Training Center", opening: "täglich 10:00–11:30 und 17:00–18:30",
+      maps: "YOKKAO Training Center Bangkok", tags: [["Action", "tag-p"], ["Sport", "tag-p"]],
+      info: ["Gruppentraining, Anfänger willkommen. Auch in Bangkok 2 machbar."],
+      tip: "Vorher anmelden. Wasser + Handtuch mitnehmen, Handschuhe meist zum Leihen — vorher fragen.",
+      src: [["Buchung Drop-in 20 US-$ (Yokkao, offiziell)", "https://yokkao.com/collections/booking/products/drop-in-class"], ["Muay Thai in Bangkok: Gyms, Anfänger (Thai Holiday Guide, Okt. 2026)", "https://www.thaiholidayguide.com/muay-thai-bangkok/"]] },
+    { id: "bkk1_bangkrachao", station: "bkk1", ic: "🚲", name: "Fahrradtour im „grünen Dschungel“ Bang Krachao", sub: "Mit dem Rad über schmale Stege durch Palmen und Kanäle — mitten in Bangkok, aber wie auf dem Land.",
+      where: "Bang Krachao (Fähre ab Khlong Toei)", duration: "halber Tag", priceTHB: [100, 350], priceNote: "selbst: Fähre 10–20 ฿ + Leihrad 80–300 ฿ · geführt ca. 1.500–2.200 ฿", provider: "Fähre + Fahrradverleih", opening: "Park Sri Nakhon Khuean Khan ca. 5–19 Uhr · schwimmender Markt Bang Nam Phueng nur Sa + So ca. 8–16 Uhr",
+      maps: "Bang Krachao, Bangkok", tags: [["Natur", "tag-l"], ["günstig", "tag-l"]],
+      info: ["Die „grüne Lunge“ Bangkoks liegt in einer Flussschleife: Radwege auf Betonstegen, der Park Sri Nakhon Khuean Khan (Eintritt frei) und am Wochenende der schwimmende Markt Bang Nam Phueng — passt also zu Sa 17. oder So 18.10."],
+      tip: "Leihrad braucht oft Pass oder 1.000 ฿ Pfand — Pass nicht abgeben, lieber Bargeld-Pfand. Nach Regen sind die Stege rutschig.",
+      src: [["Bang Krachao: Fähre, Leihrad, Preise 2026 (travjoy)", "https://travjoy.com/blog/bangkok-by-bike-a-complete-guide-to-the-city-s-backstreet-and-green-lung-cycling-routes"]] },
+
+    /* ── Koh Phangan (neu) ── */
+    { id: "kpg_scuba", station: "kpg", highlight: true, ic: "🤿", name: "Schnuppertauchen am Sail Rock", sub: "Das erste Mal mit Flasche unter Wasser — am besten Tauchplatz im Golf von Thailand.",
+      where: "Sail Rock Divers, Chaloklum (Nordküste)", duration: "1–1,5 Tage", priceTHB: 4100, priceNote: "2 Tauchgänge inkl. Ausrüstung, Frühstück + Mittag an Bord (Koh Tao/Ang Thong: 4.600 ฿)", provider: "Sail Rock Divers (PADI Discover Scuba)", opening: "nur bei passender See · am besten Mi 21. + Do 22.10.",
+      url: "https://sailrockdiversresort.com/padi-discover-scuba-diving/", maps: "Sail Rock Divers, Chaloklum, Koh Phangan", tags: [["Action", "tag-p"], ["Wasser", "tag-w"]],
+      info: ["Erst Einweisung und Übungen im Pool, dann zwei begleitete Tauchgänge am Sail Rock zwischen Fischschwärmen.", "Teuerster Posten auf der Insel — aber ein echtes Erlebnis, ganz anders als Schnorcheln."],
+      tip: "Medizinischer Fragebogen ist Pflicht (bei Vorerkrankungen ärztliche Freigabe). Nach dem Tauchen mind. 18 Std, besser 24 Std bis zum nächsten Flug. Essen an Bord: Zöliakie vorher melden oder eigenes Essen mitnehmen. Abholung ab Hin Kong nicht genannt → Taxi einplanen.",
+      src: [["Kurs + Preis (Sail Rock Divers)", "https://sailrockdiversresort.com/padi-discover-scuba-diving/"], ["PADI: nach dem Tauchen nicht fliegen", "https://blog.padi.com/de/10-dinge-die-du-niemals-direkt-nach-dem-tauchen-tun-solltest/"]] },
+    { id: "kpg_wakeboard", station: "kpg", ic: "🏄", name: "Wakeboarden hinter dem Boot", sub: "Aufs Brett, hochziehen lassen, über das Wasser gleiten — Anfänger willkommen.",
+      where: "Wake Up!, Chaloklum", duration: "15–60 Min Fahrzeit", priceTHB: [1500, 4500], priceNote: "15 Min 1.500 ฿ · 30 Min 2.700 ฿ · 1 Std 4.500 ฿", provider: "Wake Up! Wakeboarding", opening: "Zeiten beim Anbieter anfragen · nur bei ruhigem Wasser",
+      url: "https://www.wakeupwakeboarding.com/", maps: "Wake Up Wakeboarding, Chaloklum, Koh Phangan", tags: [["Action", "tag-p"], ["Wasser", "tag-w"]],
+      info: ["Boot-Wakeboarden (kein Seilpark). Laut Anbieter für Anfänger bis Fortgeschrittene."],
+      tip: "Teuer — 15 Minuten reichen zum Ausprobieren. Schwimmweste tragen, Schwimmen können ist Voraussetzung.",
+      src: [["Preise + Anfänger (Wake Up!)", "https://www.wakeupwakeboarding.com/"]] },
+    { id: "kpg_diamond", station: "kpg", ic: "🥊", name: "Muay-Thai-Probetraining (Diamond Muay Thai)", sub: "Thaiboxen lernen, wo die Profis trainieren — erste Stunde zum Schnupperpreis.",
+      where: "Nai Wok, bei Thong Sala", duration: "2 Std", priceTHB: 300, priceNote: "erste Schnupperstunde (sonst 400 ฿)", provider: "Diamond Muay Thai", opening: "Mo–Sa 8–10 und 16–18 Uhr (So Ruhetag) → Mi 21., Do 22., Fr 23.10.",
+      url: "https://diamondmuaythai.com/training-packages", maps: "Diamond Muay Thai, Koh Phangan", tags: [["Action", "tag-p"], ["günstig", "tag-l"]],
+      info: ["Gruppentraining mit Pratzen, Beinarbeit und Technik."],
+      tip: "Als Anfängerinnen anmelden, kein Sparring. Freitag 23.10. nur, wenn es zur Fähre nach Samui passt.",
+      src: [["Preise + Zeiten (Diamond Muay Thai)", "https://diamondmuaythai.com/training-packages"]] },
+    { id: "kpg_sup", station: "kpg", ic: "🛶", name: "Stand-up-Paddling oder Kajak", sub: "Günstig selbst aufs Wasser — am Strand von Thong Sala.",
+      where: "Kite Club, Thong Sala Beach", duration: "ab 1 Std", priceTHB: [400, 500], priceNote: "SUP 400 ฿/Std · Kajak 500 ฿/Std (Schwimmweste beim Kajak inkl.)", provider: "Kite Club Koh Phangan", opening: "je nach Wind + See, Bestätigung am selben Morgen",
+      url: "https://kiteclubkohphangan.com/rental/", maps: "Kite Club Koh Phangan, Thong Sala", tags: [["Wasser", "tag-w"], ["günstig", "tag-l"]],
+      info: ["Reine Vermietung (Unterricht extra). Kurz und flexibel einzuschieben."],
+      tip: "Nah an der Küste bleiben, nicht bei ablandigem Wind. Beim SUP Schwimmweste verlangen.",
+      src: [["Preise + Bedingungen (Kite Club)", "https://kiteclubkohphangan.com/rental/"]] },
+    { id: "kpg_khaora", station: "kpg", ic: "⛰️", name: "Gipfelwanderung Khao Ra (627 m)", sub: "Auf den höchsten Berg der Insel — durch Dschungel bis zum Blick über die Küste.",
+      where: "Start: „Khao Ra Terrace“, Inselmitte", duration: "ca. 3 Std", priceNote: "Eintritt laut Besucherberichten ca. 40 ฿ (nicht offiziell bestätigt) + Taxi", provider: "—", opening: "tagsüber, früh starten",
+      maps: "Khao Ra Terrace, Koh Phangan", tags: [["Wandern", "tag-l"], ["Aussicht", "tag-l"]],
+      info: ["Mittelschwer: heiß, feucht, am Ende steile Stufen; der Abstieg ist rutschig.", "Ohne Roller: Fahrer hinbringen lassen und Abholzeit fest vereinbaren."],
+      tip: "Mind. 1 Liter Wasser pro Person, feste Schuhe, Mückenschutz. Nur auf dem markierten Weg, nicht bei Regen, nie im Dunkeln. Jemandem sagen, dass ihr unterwegs seid.",
+      src: [["Khao Ra Wanderung (triptins)", "https://triptins.com/khao-ra-hike-koh-phangan/"], ["Besucherberichte (Wanderlog)", "https://wanderlog.com/place/details/473107/khao-ra"]] },
+    { id: "kpg_dance", station: "kpg", ic: "💃", name: "Tanz-Abend „Human Experience“ (Mi 21.10.)", sub: "Freies Tanzen nach Musik, ohne Handy, ohne Choreografie — typisch Koh Phangan.",
+      where: "AUM Sound Healing Center, Srithanu (Moo 8)", duration: "2–3 Std", priceTHB: 600, provider: "AUM Sound Healing Center", opening: "Mi 21.10.2026 ab 16:30 (Ende 18:30 oder 19:30 — Quellen unterschiedlich)",
+      url: "https://phanganlife.com/events/human-experience/var/ri-6.l-L1/", maps: "AUM Sound Healing Center, Koh Phangan", tags: [["Abend", "tag-p"]],
+      info: ["Geführte „Tanzreise“ durch fünf Elemente mit Live-DJ. Nah bei Hin Kong."],
+      tip: "Zusammen hin- und zurückfahren. Ob die Veranstaltung ausdrücklich alkohol- und drogenfrei ist, steht nirgends.",
+      src: [["Termin 21.10. (Phangan Life)", "https://phanganlife.com/events/human-experience/var/ri-6.l-L1/"], ["Termin + Preis (danz.ly)", "https://danz.ly/events/human-experience-5elements-embodied-dance-journey-2026-10-21"]] },
+    { id: "kpg_kochkurs", station: "kpg", ic: "👩‍🍳", name: "Thai-Kochkurs in Srithanu (nur nach Glutenfrei-Zusage)", sub: "Drei Gerichte selbst kochen — gut für einen Regentag, ganz nah bei Hin Kong.",
+      where: "C&M Koh Phangan Vocational School, Srithanu", duration: "3 Std", priceTHB: 1800, priceNote: "Gruppenkurs (privat zu zweit 5.500 ฿)", provider: "C&M Thai Culture School", opening: "Gruppe Di/Do/Sa 12–15 Uhr → Do 22.10.; Anmeldung 1 Werktag vorher",
+      url: "https://thaiculture.education/our_courses/thai-cooking/", maps: "C&M Koh Phangan Vocational School, Srithanu", tags: [["Erlebnis", "tag-w"]],
+      info: ["Gerichte wie Currys, Tom Yum, Papaya-Salat und Mango Sticky Rice zur Auswahl."],
+      tip: "ZÖLIAKIE: Der Anbieter schreibt nichts zu glutenfrei. Nur buchen, wenn er glutenfreie Soßen und sauberes Kochgerät zusagt — sonst lieber nicht.",
+      src: [["Preise + Kurs (C&M)", "https://thaiculture.education/our_courses/thai-cooking/"], ["Stundenplan (C&M)", "https://thaiculture.education/timetable/"]] },
+
+    /* ── Koh Samui (neu) ── */
+    { id: "sam_elephant", station: "sam", highlight: true, ic: "🐘", name: "Samui Elephant Sanctuary (ohne Reiten)", sub: "Gerettete Elefanten beim Fressen und Baden beobachten und Futter vorbereiten.",
+      where: "Chaweng Noi (von Lamai aus nah)", duration: "3 Std + Abholung", priceTHB: 2900, priceNote: "Sonderpreis bei Online-Buchung bis 30.11.2026 (sonst 3.000 ฿), inkl. Abholung + Rückfahrt, vegetarisches Essen", provider: "Samui Elephant Sanctuary", opening: "9–12 oder 14–17 Uhr · nur mit Buchung, Bezahlung bar vor Ort",
+      url: "https://www.samuielephantsanctuary.org/tour-details", maps: "Samui Elephant Sanctuary Chaweng Noi", tags: [["Erlebnis", "tag-w"], ["Tiere", "tag-l"]],
+      info: ["Kein Reiten, keine Shows, kein Baden mit den Tieren — die Elefanten leben dort im Ruhestand.", "Kürzere Variante: 1,5 Std für 2.000 ฿ (ohne Mahlzeit)."],
+      tip: "Essen ist vegetarisch, aber NICHT automatisch glutenfrei → vorher Zöliakie melden oder eigenes Essen mitnehmen.",
+      src: [["Preise, Zeiten, Leistungen (Samui Elephant Sanctuary)", "https://www.samuielephantsanctuary.org/tour-details"], ["Warum kein Baden (Sanctuary)", "https://www.samuielephantsanctuary.org/why-we-do-not-offer-bathing"]] },
+    { id: "sam_wech", station: "sam", ic: "🥊", name: "Muay-Thai-Training in Lamai (Wech Pinyo)", sub: "Thaiboxen direkt um die Ecke — günstig und kurz.",
+      where: "Wech Pinyo Muay Thai, Lamai", duration: "1,5 Std", priceTHB: 400, priceNote: "pro Einheit (beide am Tag 500 ฿)", provider: "Wech Pinyo Muay Thai", opening: "Mo–Sa 8:30–10:00 und 15:30–17:00 (So kein Training) → Sa 24., Mo 26., Di 27.10.",
+      url: "https://wechpinyo-muaythai.com/", maps: "Wech Pinyo Muay Thai, Lamai, Koh Samui", tags: [["Action", "tag-p"], ["günstig", "tag-l"]],
+      info: ["Gruppentraining für alle Stufen."],
+      tip: "Kein Sparring als Anfängerin. Handschuhe leihen? Vorher fragen.",
+      src: [["Preise + Zeiten (Wech Pinyo)", "https://wechpinyo-muaythai.com/"]] },
+    { id: "sam_atv", station: "sam", ic: "🏍️", name: "Quad-Tour durch den Dschungel (mit Guide)", sub: "Selbst ein Quad über Dschungelwege steuern — mit Aussichtsstopp.",
+      where: "Trail Blazers, Maenam (Abholung in Lamai)", duration: "1 Std Fahrt + Einweisung + Fahrt", priceTHB: [1300, 1600], priceNote: "1.600 ฿ allein auf einem Quad · 2.600 ฿ zu zweit auf einem Quad (= 1.300 ฿ pro Person)", provider: "Trail Blazers ATV Tours", opening: "täglich · Abholung Lamai 8:30, 11:00 oder 13:30",
+      url: "https://kohsamuiatv.com/1-hour-atv-tour-koh-samui-jungle-viewpoints/", maps: "Trail Blazers ATV Tours, Koh Samui", tags: [["Action", "tag-p"]],
+      info: ["Geführte Tour auf Naturwegen, Helm inklusive. Laut Tourseite: Abholung inklusive, Rückfahrt NICHT."],
+      tip: "Geschlossene Schuhe sind Pflicht. Rückfahrt + Gesamtpreis vorher bestätigen. Ob ein Führerschein nötig ist, steht nicht da → fragen und prüfen, ob eure Reiseversicherung Quadfahren abdeckt. Bei Regen verschieben. Pass nie als Pfand.",
+      src: [["Preis, Abholung, ohne Rückfahrt (Trail Blazers)", "https://kohsamuiatv.com/1-hour-atv-tour-koh-samui-jungle-viewpoints/"]] },
+    { id: "sam_kohtan", station: "sam", ic: "🌅", name: "Longtail-Schnorcheln Koh Tan + Koh Madsum mit Sonnenuntergang", sub: "Mit dem traditionellen Holzboot zu zwei kleinen Inseln im Süden — zurück in den Sonnenuntergang.",
+      where: "Abfahrt Thong Krut (Süden)", duration: "ca. 13–20 Uhr inkl. Abholung", priceTHB: 1500, priceNote: "inkl. Abholung, Inselgebühr, Essen, Softdrink, Maske, Schwimmweste, Versicherung", provider: "T.K. Tour Samui", opening: "Abholung 13–14:30 · Boot 15 Uhr · zurück ab 19:30 · Betriebstage beim Anbieter fragen",
+      url: "https://www.tktoursamui.com/sunset-snorkeling-trip/", maps: "TK Tour Thong Krut, Koh Samui", tags: [["Wasser", "tag-w"]],
+      info: ["Schnorcheln bei Koh Tan, Strand und kurzer Aufstieg zum Aussichtspunkt auf Koh Madsum („Schweine-Insel“), Sonnenuntergang auf der Rückfahrt, danach Thai-Essen am Pier."],
+      tip: "Nur bei ruhiger See. Abendessen ist ein Thai-Menü → Zöliakie vorher melden. Die Schweine nur anschauen, nicht füttern. Nicht am Abreisetag 27.10.",
+      src: [["Ablauf, Preis, Leistungen (T.K. Tour)", "https://www.tktoursamui.com/sunset-snorkeling-trip/"]] },
+    { id: "sam_kart", station: "sam", ic: "🏎️", name: "Go-Kart-Rennen am Chaweng Lake", sub: "Gegeneinander auf einer echten Kartbahn — mit Zeitmessung.",
+      where: "EasyKart, Chaweng Lake", duration: "ca. 1 Std mit Einweisung", priceTHB: [699, 1499], priceNote: "1 Rennen Regular Kart 699 ฿ · 2 Rennen Fast Kart 1.499 ฿", provider: "EasyKart Samui", opening: "täglich 10–24 Uhr · Außenbahn",
+      url: "https://easykart.net/samui/", maps: "EasyKart Koh Samui Chaweng Lake", tags: [["Action", "tag-p"], ["Abend", "tag-p"]],
+      info: ["Vollvisierhelm, Einweisung und Streckenposten mit Fernabschaltung."],
+      tip: "Geschlossene Sportschuhe Pflicht (kann man dort leihen). Haare zusammenbinden.",
+      src: [["Preise, Zeiten, Sicherheit (EasyKart)", "https://easykart.net/samui/"]] },
+    { id: "sam_cabaret", station: "sam", ic: "🎭", name: "Paris Follies Cabaret (Chaweng)", sub: "Glitzer, Kostüme, Show — günstiger Abend mit viel Spaß.",
+      where: "Chaweng Beach Road (gegenüber Ark Bar)", duration: "50 Min", priceTHB: [340, 390], priceNote: "Show 340 ฿ · mit Getränk 390 ฿", provider: "Paris Follies Cabaret", opening: "täglich 20:30, 21:30, 22:30 Uhr",
+      url: "https://www.parisfolliescabaret.com/", maps: "Paris Follies Cabaret, Chaweng", tags: [["Abend", "tag-p"], ["günstig", "tag-l"]],
+      info: ["Ein Theater mit Show-Nummern, kein Eintritt in Bars nötig."],
+      tip: "Erste Show nehmen, Rückfahrt nach Lamai vorher organisieren (Grab/Taxi). Chaweng ist Partyviertel: Getränke im Blick behalten.",
+      src: [["Preise + Zeiten (Paris Follies)", "https://www.parisfolliescabaret.com/"]] },
+
+    /* ── Bangkok 2 (neu) ── */
+    { id: "bkk2_biennale", station: "bkk2", highlight: true, ic: "🎨", name: "Bangkok Art Biennale — Eröffnung Do 29.10.", sub: "Moderne Kunst in Tempeln, Museen und Einkaufszentren — ihr seid zur Eröffnung da.",
+      where: "u. a. Wat Arun, Wat Pho, BACC, Museum Siam, One Bangkok, centralwOrld, Siam Paragon", duration: "beliebig", priceNote: "Eintritt 2026 noch nicht veröffentlicht (Tempel + Museen kosten ohnehin Eintritt)", provider: "Bangkok Art Biennale", opening: "29.10.2026 – 28.02.2027 · Zeiten 2026 noch nicht veröffentlicht",
+      url: "https://www.bkkartbiennale.com/", maps: "Bangkok Art and Culture Centre", tags: [["Kultur", "tag-w"], ["günstig", "tag-l"]],
+      info: ["5. Biennale, Thema „Angels & Mara“, Kunst an rund zehn Orten der Stadt. Gut kombinierbar mit Siam/centralwOrld (Einkaufen, Klimaanlage bei Regen)."],
+      tip: "Vor dem Besuch auf bkkartbiennale.com Orte, Zeiten und Eintritt prüfen (für 2026 noch nicht alles veröffentlicht).",
+      src: [["Termine + Orte (Tourism Authority of Thailand, Sept. 2026)", "https://www.tatnews.org/2026/09/tat-spotlights-bangkok-art-biennale-2026-as-a-contemporary-citywide-art-experience/"], ["Termine (Biennale, offiziell)", "https://www.bkkartbiennale.com/press/bangkok-art-biennale-angels-and-mara"], ["Orte (Biennale)", "https://www.bkkartbiennale.com/venues"]] },
+    { id: "bkk2_jodd", station: "bkk2", ic: "🌃", name: "Nachtmarkt Jodd Fairs Ratchada", sub: "Hunderte Stände, Bars mit Livemusik — der Nachtmarkt der jungen Bangkoker.",
+      where: "Ratchadaphisek Road (MRT Thailand Cultural Centre, Ausgang 4)", duration: "Abend", priceFree: true, provider: "Jodd Fairs", opening: "täglich ca. 17–01 Uhr (ab 18 Uhr sind alle Stände da)",
+      maps: "Jodd Fairs Ratchada, Bangkok", tags: [["Abend", "tag-p"], ["Markt", "tag-l"], ["kostenlos", "tag-l"]],
+      info: ["Essen, Cocktails, Livemusik, kleine Läden. Die alten Märkte Rama 9 und DanNeramit gibt es nicht mehr — nur noch Ratchada."],
+      tip: "Spät abends sehr voll. Essen: Zöliakie-Karte zeigen, Frittiertes und Soßen meiden; auch Messer, Bretter, Wok und Frittieröl können Gluten übertragen → im Zweifel eigenes Essen, Obst am besten selbst schälen. Getränke nicht unbeaufsichtigt lassen, Rückfahrt mit Grab.",
+      src: [["Ort, Zeiten, Anfahrt (thaiest)", "https://thaiest.com/blog/jodd-fairs-night-market-bangkok"], ["Stand 2026 (travjoy)", "https://travjoy.com/blog/jodd-fairs-night-market-bangkok-a-complete-2026-guide-to-the-ratchada-site"]] },
+    { id: "bkk2_calypso", station: "bkk2", ic: "🎭", name: "Calypso Cabaret an der Asiatique", sub: "Die bekannteste Travestie-Show Bangkoks — mit Bootsfahrt zum Flussufer.",
+      where: "Asiatique The Riverfront, Warehouse 3", duration: "50–60 Min", priceTHB: [900, 1200], priceNote: "ca. 900 ฿ vorab gebucht · ca. 1.200 ฿ an der Kasse", provider: "Calypso Cabaret", opening: "abends, frühe Show ca. 19:15–19:45 / späte ca. 21:00–21:45 (Zeit laut Ticket)",
+      url: "https://www.calypsocabaret.com/", maps: "Calypso Cabaret, Asiatique, Bangkok", tags: [["Abend", "tag-p"]],
+      info: ["Kostenloses Shuttleboot ab Sathorn Pier (BTS Saphan Taksin, Ausgang 2), ca. 16–23:30 Uhr."],
+      tip: "Vorab buchen spart ca. 300 ฿. 30 Min vor der Show da sein.",
+      src: [["Preise + Zeiten 2026 (travjoy)", "https://travjoy.com/blog/calypso-cabaret-show-tickets-a-complete-guide-to-bangkok-s-riverside-cabaret"], ["Offizielle Seite", "https://www.calypsocabaret.com/"]] },
+    { id: "bkk2_octave", station: "bkk2", ic: "🍸", name: "Rooftop-Bar Octave zum Sonnenuntergang", sub: "Im 45.–49. Stock mit 360°-Blick über Bangkok — teuer, nur wenn das Budget es hergibt.",
+      where: "Bangkok Marriott Sukhumvit, Sukhumvit Soi 57 (BTS Thong Lo, Ausgang 3)", duration: "1–2 Std", priceTHB: 1800, priceNote: "Mindestverzehr pro Person (laut Visit Thailand Today) — teuer, vorher fragen", provider: "Octave Rooftop Lounge & Bar", opening: "täglich ab 17 Uhr (bis ca. 1–2 Uhr)",
+      maps: "Octave Rooftop Lounge and Bar, Bangkok", tags: [["Abend", "tag-p"], ["Aussicht", "tag-w"]],
+      info: ["Drei Etagen ganz oben im Hotel, Rundumblick. Kleiderordnung „casual chic“: keine Flip-Flops, keine Sportkleidung."],
+      tip: "Zum Sonnenuntergang kommen (ca. 18 Uhr). Nur Getränke aus der Bar, nichts von Fremden. Zurück mit Grab.",
+      src: [["Mindestverzehr 1.800 ฿, Zeiten (Visit Thailand Today)", "https://www.visitthailandtoday.com/nightlife/bangkok/octave-rooftop-lounge-and-bar"], ["Octave (Time Out Bangkok)", "https://www.timeout.com/bangkok/bars/octave"], ["Rooftop-Bars Bangkok (Thai Holiday Guide)", "https://www.thaiholidayguide.com/rooftop-bars-bangkok/"]] },
+    { id: "bkk2_ancient", station: "bkk2", ic: "🏯", name: "Ancient City (Muang Boran) mit dem Rad", sub: "Ganz Thailand im Kleinformat: riesige Tempel und Paläste in einem Park — per Fahrrad.",
+      where: "Samut Prakan (Süden, weit von Nord-Bangkok)", duration: "halber Tag + Anfahrt", priceTHB: 800, priceNote: "Ausländer laut offizieller Seite (über Buchungsseiten teils günstiger)", provider: "Muang Boran", opening: "täglich 9–19 Uhr, Kasse bis 18 Uhr",
+      url: "https://www.muangboranmuseum.com/en/ticket/", maps: "Ancient City Muang Boran, Samut Prakan", tags: [["Kultur", "tag-w"]],
+      info: ["Über 100 Nachbauten berühmter Bauwerke auf einem riesigen Gelände; man fährt mit Fahrrad oder Bahn von Ort zu Ort."],
+      tip: "Lange Anfahrt — mit Grab oder BTS bis Kheha + Taxi. Golfcart nur mit Führerschein.",
+      src: [["Eintritt + Zeiten (Muang Boran, offiziell)", "https://www.muangboranmuseum.com/en/ticket/"]] },
+    { id: "bkk2_covankessel", station: "bkk2", ic: "🚴", name: "Fahrradtour durch Altstadt-Gassen (Co van Kessel)", sub: "Mit Guide durch schmale Gassen, zu Tempeln und zum Blumenmarkt.",
+      where: "Start River City (Charoen Krung Soi 24)", duration: "3 Std", priceTHB: 1250, priceNote: "Classic-Tour (5 Std mit Essen: 2.500 ฿)", provider: "Co van Kessel Bangkok Tours", opening: "Start 8:00 und 14:00 Uhr · Abendtour „Co by Night“ ca. 3 Std (Preis beim Anbieter)",
+      url: "https://covankessel.com/", maps: "Co van Kessel Bangkok Tours, River City", tags: [["Erlebnis", "tag-w"]],
+      info: ["Seit vielen Jahren bekannte Radtouren, meist auf ruhigen Gassen mit wenig Verkehr. Rad + Helm inklusive."],
+      tip: "Bei Touren mit Essen: Zöliakie vorher melden.",
+      src: [["Touren + Preise (Co van Kessel)", "https://covankessel.com/"]] },
+    { id: "bkk2_boot", station: "bkk2", ic: "⛴️", name: "Hop-on-hop-off-Boot auf dem Chao Phraya", sub: "Einen Tag lang auf dem Fluss: aussteigen bei Wat Arun, Tha Chang, wieder einsteigen.",
+      where: "Sathorn Pier (BTS Saphan Taksin) ↔ Phra Arthit", duration: "beliebig", priceTHB: [40, 150], priceNote: "Einzelfahrt 40 ฿ · Tageskarte 150 ฿ (laut Quelle, Sept. 2026)", provider: "Chao Phraya Tourist Boat (blaue Flagge)", opening: "ca. 8:30–19:45 Uhr · nachmittags auch bis Asiatique (ca. 12:10–19:40)",
+      url: "https://chaophrayatouristboat.com/", maps: "Sathorn Pier, Bangkok", tags: [["Boot", "tag-w"], ["günstig", "tag-l"]],
+      info: ["Halte u. a. Wat Arun, Tha Chang, Tha Maharaj, Prannok, Phra Arthit. Passt gut zur Biennale (Wat Arun, Wat Pho) und abends zum Calypso Cabaret an der Asiatique."],
+      tip: "Preis beim Kauf bestätigen. Bei Gewitter fahren die Boote evtl. nicht.",
+      src: [["Preise + Fahrplan (MyAsiaTrip, geprüft 07.09.2026)", "https://myasiatrip.com/thailand/bangkok/chao-phraya-river-boats/"], ["Betreiber", "https://chaophrayatouristboat.com/"]] },
+
     /* ── Schöne Ecken (kind: spot) ── */
     { id: "bkk1_goldenmount", station: "bkk1", kind: "spot", ic: "🌇", name: "Golden Mount (Wat Saket) zum Sonnenuntergang", sub: "Tempel auf einem Hügel mitten in der Altstadt — 360°-Blick über Bangkok.",
       where: "Wat Saket, Altstadt", priceTHB: 100, priceNote: "Aufstieg für Ausländer", opening: "täglich ca. 7–19 Uhr", maps: "Wat Saket Golden Mount, Bangkok", tags: [["Aussicht", "tag-w"]],
@@ -1566,7 +1726,33 @@ const TRIP = {
     { id: "sam_walking", station: "sam", kind: "spot", ic: "🏮", name: "Lamai Walking Street (So 25.10.) + Nachtmarkt", sub: "Sonntagabend Straßenmarkt, Nachtmarkt täglich ab 17 Uhr.",
       where: "Lamai Zentrum", priceFree: true, opening: "Walking Street So 17–24 Uhr · Nachtmarkt täglich 17–24 Uhr", maps: "Lamai Night Market, Koh Samui", tags: [["Markt", "tag-l"], ["kostenlos", "tag-l"]],
       info: ["Viele Essensstände. Für dich: Obst, frische Kokosnuss, gegrillter Fisch ohne Marinade — und immer die Zöliakie-Karte zeigen."],
-      src: [["Bangkok Airways: Lamai", "https://blog.bangkokair.com/en/things-to-do-around-lamai-beach/"], ["Walking Street Sonntag (byklo)", "https://www.byklo.rent/sv/city/koh-samui/lamai"]] }
+      src: [["Bangkok Airways: Lamai", "https://blog.bangkokair.com/en/things-to-do-around-lamai-beach/"], ["Walking Street Sonntag (byklo)", "https://www.byklo.rent/sv/city/koh-samui/lamai"]] },
+    /* ── Schöne Ecken (neu 15.10.2026) ── */
+    { id: "bkk1_paknam", station: "bkk1", kind: "spot", ic: "🔮", name: "Wat Paknam — Glas-Stupa unter bunter Kuppel", sub: "Eine gläserne Stupa unter einer schillernden Deckenmalerei, daneben ein 69 m hoher Buddha.",
+      where: "Wat Paknam Phasi Charoen (MRT Bang Phai)", priceFree: true, opening: "täglich 8–18 Uhr", maps: "Wat Paknam Phasi Charoen, Bangkok", tags: [["Fotospot", "tag-l"], ["kostenlos", "tag-l"]],
+      info: ["Die Glas-Stupa steht im obersten Stock des großen weißen Stupa-Gebäudes. Ab MRT Bang Phai ca. 10 Min zu Fuß."],
+      tip: "Schultern + Knie bedeckt, Schuhe aus. Früh am Vormittag ist es ruhiger.",
+      src: [["Wat Paknam (theo-courant, 29.10.2025)", "https://theo-courant.com/en/bangkok-wat-paknam-giant-buddha/"]] },
+    { id: "kpg_maehaad", station: "kpg", kind: "spot", ic: "🐠", name: "Mae Haad + Koh Ma — Schnorcheln vom Strand", sub: "Korallen schon ca. 30 m vom Strand, bei Ebbe eine Sandbank hinüber zur kleinen Insel Koh Ma.",
+      where: "Mae Haad, Nordwestküste", priceNote: "Strand frei · Schnorchel-Leihe vor Ort (Preis nicht geprüft)", opening: "tagsüber, nur bei ruhiger See", maps: "Mae Haad Beach, Koh Phangan", tags: [["Wasser", "tag-w"]],
+      info: ["Die Sandbank kommt nur bei Ebbe heraus; zum Schnorcheln ist mittleres bis hohes Wasser besser. Im Oktober ist die Sandbank nicht garantiert."],
+      tip: "Nicht auf Korallen stehen. Nicht über eine überspülte Sandbank waten. Auf Quallen-Warnungen achten. Taxi hin + Rückfahrt vereinbaren.",
+      src: [["Koh Ma (Thai Holiday Guide)", "https://www.thaiholidayguide.com/attraction/koh-ma/"]] },
+    { id: "kpg_amsterdam", station: "kpg", kind: "spot", ic: "🍹", name: "Amsterdam Bar — Sonnenuntergang über dem Meer", sub: "Hügelbar mit Pool und Kissen über der Westküste — der Sonnenuntergangs-Treff der Insel.",
+      where: "Westküste zwischen Thong Sala und Srithanu (nah bei Hin Kong)", priceNote: "Getränke-Preise nicht geprüft", opening: "täglich 12–01 Uhr · Sonnenuntergang ca. 18 Uhr", maps: "Amsterdam Bar, Koh Phangan", tags: [["Abend", "tag-p"], ["Aussicht", "tag-w"]],
+      info: ["Kurz und steil vom Küstenweg hoch. Ca. eine Stunde vor Sonnenuntergang da sein für einen guten Platz."],
+      tip: "Rückfahrt vorher fest vereinbaren (Taxi) — nicht mit Fremden mitfahren. Keine Buckets, Getränk nie unbeaufsichtigt.",
+      src: [["Amsterdam Bar (Visit Thailand Today, Okt. 2026)", "https://www.visitthailandtoday.com/nightlife/koh-phangan/amsterdam-bar"]] },
+    { id: "kpg_raham", station: "kpg", kind: "spot", ic: "🪸", name: "Koh Raham — Schnorcheln von den Felsen", sub: "Felsen-Restaurant zwischen Haad Yao und Secret Beach: Leitern ins Meer, Fische direkt an den Klippen.",
+      where: "Zwischen Haad Yao und Haad Son (Zugang durch Haad Son Resort)", priceNote: "Zugang frei · Bestellung im Restaurant erwartet", opening: "täglich 8–21:30 Uhr", maps: "Koh Raham, Koh Phangan", tags: [["Wasser", "tag-w"], ["Aussicht", "tag-w"]],
+      info: ["Kein Sandstrand: Man steigt über Plattformen und Stufen ins Wasser. Auch Schaukeln und Sonnenuntergang."],
+      tip: "Riffschuhe! Nur bei ruhiger See ins Wasser. Die Zufahrt ist steil → Taxi statt Roller.",
+      src: [["Koh Raham (Thai Holiday Guide, geprüft Okt. 2026)", "https://www.thaiholidayguide.com/attraction/koh-raham/"]] },
+    { id: "sam_fisherman", station: "sam", kind: "spot", ic: "🏘️", name: "Fisherman's Village Walking Street (Bophut)", sub: "Altes Fischerdorf mit Holzhäusern am Meer — abends Markt mit Musik und Kunsthandwerk.",
+      where: "Fisherman's Village, Bophut (Nordküste)", priceFree: true, opening: "Mo, Mi, Fr, So 17–23 Uhr → Fr 23. (falls früh da), So 25., Mo 26.10.", maps: "Fisherman's Village Walking Street, Bophut", tags: [["Markt", "tag-l"], ["Abend", "tag-p"], ["kostenlos", "tag-l"]],
+      info: ["Bummeln, Musik, Kunsthandwerk. Von Lamai ca. 30 Min mit dem Taxi."],
+      tip: "Kein geprüfter glutenfreier Stand → vorher sicher essen. Rückfahrt + Preis vorher vereinbaren.",
+      src: [["Termine + freier Eintritt (Samui Unlocked)", "https://www.samuiunlocked.com/events/event-detail/1369/15-06-2026"], ["Walking Street (Thai Holiday Guide)", "https://www.thaiholidayguide.com/attraction/fishermans-village-walking-street/"]] },
   ],
 
   restaurants: [
