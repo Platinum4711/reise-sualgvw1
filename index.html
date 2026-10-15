@@ -281,7 +281,7 @@
     #panel-action .dp-now { background: var(--accent); color: #111; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
     #panel-action .dp-arrow { margin-left: auto; color: var(--text-dim); transition: transform .2s; }
     #panel-action .dp-day[open] .dp-arrow { transform: rotate(180deg); }
-    #panel-action .dp-lbl { font-size: 14.5px; margin-top: 3px; }
+    #panel-action .dp-lbl { display: block; font-size: 14.5px; margin-top: 3px; }
     #panel-action .dp-body { padding: 0 14px 12px; border-top: 1px solid var(--border); }
     #panel-action .dp-travel { margin-top: 12px; font-size: 12.5px; color: var(--accent3); background: rgba(240,112,96,.06); border: 1px solid rgba(240,112,96,.25); border-radius: 8px; padding: 8px 12px; }
     #panel-action .dp-slot-t { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin: 14px 0 6px; }
@@ -299,6 +299,11 @@
     #panel-action .dp-btn { flex: 1; min-height: 40px; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; border-radius: 8px; border: 1px solid; cursor: pointer; text-decoration: none; }
     #panel-action .dp-btn.info { background: rgba(232,197,71,.08); border-color: rgba(232,197,71,.35); color: var(--accent); }
     #panel-action .dp-btn.link { background: rgba(123,140,222,.08); border-color: rgba(123,140,222,.35); color: var(--accent4); }
+    /* vier Blöcke mit Karten (15.10.2026 mittags) */
+    #panel-action section.st-block { margin-bottom: 10px; }
+    #panel-action .dp-body .cards { grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); }
+    #panel-action .dp-body .sub-label { margin-top: 20px; }
+    #panel-action .dp-day summary .wx-days { margin-top: 8px; }
     #panel-action .a-footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 12px; }
 
     /* action modal */
@@ -907,7 +912,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 09:02 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 16:16 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1135,7 +1140,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 09:02 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 16:16 Uhr
   </footer>
 </div><!-- /panel-rest -->
 
@@ -1199,8 +1204,7 @@
     </div>
 
   <main>
-    <div class="intro"><div class="intro-label">Das Prinzip</div><p>Ganz oben <strong>🔥 alle Action-Möglichkeiten je Aufenthalt</strong> — euer aktueller Ort ist <strong>gelb markiert</strong> und aufgeklappt, ihr sucht euch aus, was ihr wann macht. Darunter die vier Orte mit allen Karten, schönen Ecken und was ihr meiden solltet. Preise stehen überall dabei (Budget ca. <strong>1.000 €</strong> für alles).</p></div>
-    <section class="dp-wrap" id="action-days"></section>
+    <div class="intro"><div class="intro-label">Das Prinzip</div><p>Vier Aufenthalte zum Aufklappen — euer aktueller Ort ist <strong>gelb markiert</strong> und schon offen. In jedem Block: <strong>🔥 Action am Tag</strong>, <strong>🌙 Abends &amp; Party</strong>, <strong>🏛️ Sehenswürdigkeiten &amp; schöne Ecken</strong> und was ihr <strong>meiden</strong> solltet. Ihr sucht euch aus, was ihr wann macht. 🗓️ = Termine/Zeiten, 💡 = Bedingungen. Termine und Preise vor dem Buchen beim Anbieter bestätigen (Stand 15.10.2026).</p><button type="button" class="dp-today-btn" id="action-jump" hidden>📍 Zu meinem aktuellen Ort</button></div>
     <div id="action-stations"></div>
 
     <!-- QUELLEN -->
@@ -1208,7 +1212,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 09:02 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 16:16 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1307,7 +1311,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "15.10.2026 · 09:02";
+const APP_VERSION = "15.10.2026 · 16:16";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -1519,8 +1523,18 @@ const TRIP = {
       { t: "🌙 Abends & Party", items: [
         { ref: "bkk1_muaythai", when: "samstags World Series" },
         { ref: "bkk1_yaowarat", when: "Festival nur bis So 18.10." },
-        { ref: "bkk2_jodd", when: "täglich 17–01 Uhr" },
-        { ref: "bkk1_chatuchak", when: "nur Sa/So (tagsüber)" } ] } ] },
+        { ref: "bkk2_jodd", when: "täglich 17–01 Uhr" } ] },
+      { t: "🏛️ Sehenswürdigkeiten & schöne Ecken", items: [
+        { ref: "bkk1_tempel", when: "Wat Arun 8–18 · Wat Pho ab 8 Uhr" },
+        { ref: "bkk1_goldenmount", when: "täglich ca. 7–19 Uhr" },
+        { ref: "bkk1_paknam", when: "täglich 8–18 Uhr" },
+        { ref: "bkk1_maeklong", when: "Markt täglich 6–18 Uhr" },
+        { ref: "bkk2_ayutthaya" },
+        { ref: "bkk2_lumphini" },
+        { ref: "bkk2_boot", when: "ca. 8:30–19:45 Uhr" },
+        { ref: "bkk2_ancient", when: "täglich 9–19 Uhr" },
+        { ref: "bkk2_covankessel", when: "Start 8:00 + 14:00 Uhr" },
+        { ref: "bkk1_chatuchak", when: "nur Sa/So (17./18.10.)" } ] } ] },
     { station: "kpg", label: "Koh Phangan", groups: [
       { t: "🔥 Action am Tag", items: [
         { ref: "d_atv_kpg", when: "täglich, Abholung 9:30 / 12:30 / 14:30" },
@@ -1538,7 +1552,14 @@ const TRIP = {
         { ref: "d_seaboard", when: "nur Mi 21.10." },
         { ref: "kpg_dance", when: "nur Mi 21.10." },
         { ref: "d_phangancalling", when: "donnerstags (22.10.), Beginn 20 oder 21 Uhr", hint: "Beginn vorher bestätigen" },
-        { ref: "kpg_amsterdam", when: "täglich, Sonnenuntergang ca. 18 Uhr" } ] } ] },
+        { ref: "kpg_amsterdam", when: "täglich, Sonnenuntergang ca. 18 Uhr" } ] },
+      { t: "🏛️ Sehenswürdigkeiten & schöne Ecken", items: [
+        { ref: "kpg_phaeng", hint: "nach Regen rutschig" },
+        { ref: "kpg_bottle", hint: "nicht bei Nässe, nicht im Dunkeln" },
+        { ref: "kpg_thansadet", when: "täglich 8:30–16 Uhr" },
+        { ref: "kpg_maehaad", hint: "nur bei ruhiger See" },
+        { ref: "kpg_sunset", when: "abends, Sonnenuntergang ca. 18 Uhr" },
+        { ref: "kpg_kochkurs", when: "Gruppe Di/Do/Sa 12–15 Uhr (Do 22.10.)", hint: "nur mit Glutenfrei-Zusage" } ] } ] },
     { station: "sam", label: "Koh Samui", groups: [
       { t: "🔥 Action am Tag", items: [
         { ref: "d_jetski", when: "täglich 10–13 oder 14–17 Uhr" },
@@ -1561,7 +1582,10 @@ const TRIP = {
         { ref: "d_phetchbuncha", when: "Sa 24. · Mo 26.10., 21 Uhr" },
         { ref: "sam_cabaret", when: "täglich 20:30 / 21:30 / 22:30" },
         { ref: "sam_fisherman", when: "Fr 23. · So 25. · Mo 26.10." },
-        { ref: "sam_walking", when: "nur So 25.10." } ] } ] },
+        { ref: "sam_walking", when: "nur So 25.10." } ] },
+      { t: "🏛️ Sehenswürdigkeiten & schöne Ecken", items: [
+        { ref: "sam_namuang", hint: "rutschige Felsen" },
+        { ref: "sam_hinta" } ] } ] },
     { station: "bkk2", label: "Bangkok + Ausflüge (Pattaya)", groups: [
       { t: "🔥 Action am Tag", items: [
         { ref: "d_kohlarn", hint: "ganzer Tag, nur bei ruhiger See" },
@@ -1572,17 +1596,27 @@ const TRIP = {
         { ref: "bkk2_dreamworld" },
         { ref: "d_wake_lumlukka", when: "täglich 9–22 Uhr" },
         { ref: "d_wake_esc", when: "Mo–Fr 11–22 · Sa 9–22 Uhr" },
-        { ref: "d_easykart", when: "Mi/Do bis 21 · Fr/Sa bis 23 Uhr" },
+        { ref: "d_easykart", when: "Di–Do bis 21 · Fr/Sa bis 23 Uhr (Di 27. = Anreisetag)" },
         { ref: "d_nakhonnayok", when: "Abholung 8:15, zurück ca. 18 Uhr", hint: "auf Buchung" },
         { ref: "bkk1_yokkao", when: "täglich 10:00 + 17:00" },
-        { ref: "bkk2_skywalk", when: "täglich 10–24 Uhr" },
-        { ref: "bkk2_biennale", when: "ab Do 29.10." } ] },
+        { ref: "bkk2_skywalk", when: "täglich 10–24 Uhr" } ] },
       { t: "🌙 Abends & Party", items: [
         { ref: "d_onefights", when: "nur Fr 30.10. ab 18:30" },
         { ref: "d_halloween", when: "28.–31.10. (Hauptabend Fr 30.10.)" },
         { ref: "bkk2_calypso", when: "abends, Zeit laut Ticket" },
         { ref: "bkk2_jodd", when: "täglich 17–01 Uhr" },
-        { ref: "bkk2_octave", when: "täglich ab 17 Uhr" } ] } ] }
+        { ref: "bkk2_octave", when: "täglich ab 17 Uhr" } ] },
+      { t: "🏛️ Sehenswürdigkeiten & schöne Ecken", items: [
+        { ref: "bkk1_tempel", when: "Wat Arun 8–18 · Wat Pho ab 8 Uhr" },
+        { ref: "bkk1_goldenmount", when: "täglich ca. 7–19 Uhr" },
+        { ref: "bkk1_paknam", when: "täglich 8–18 Uhr" },
+        { ref: "bkk1_maeklong", when: "Markt täglich 6–18 Uhr" },
+        { ref: "bkk2_ayutthaya" },
+        { ref: "bkk2_lumphini" },
+        { ref: "bkk2_boot", when: "ca. 8:30–19:45 Uhr" },
+        { ref: "bkk2_ancient", when: "täglich 9–19 Uhr" },
+        { ref: "bkk2_covankessel", when: "Start 8:00 + 14:00 Uhr" },
+        { ref: "bkk2_biennale", when: "ab Do 29.10." } ] } ] }
   ],
 
   activities: [
@@ -2685,75 +2719,14 @@ document.querySelectorAll('#rest-filter-bar .filter-btn').forEach(btn => {
   });
 });
 
-/* ── ACTION-LISTE je Aufenthalt (15.10.2026, Team-Lauf Claude + Codex) ─────────── */
-const SP_OPEN = new Set();
-let spLastKey = '';
-function stayItemHTML(it) {
-  const a = TRIP.activities.find(x => x.id === it.ref);
-  if (!a) return '';
-  EX[a.id] = a;
-  const price = priceText(a);
-  const link = safeUrl(a.url);
-  const mark = a.kind === 'day' ? '<span class="dp-new" title="neu">🆕</span>' : '<span class="dp-inapp">📱 auch unten bei den Orten</span>';
-  return `<div class="dp-item">
-      <div class="dp-top"><span class="dp-ic">${escapeHTML(a.ic || '⚡')}</span><div class="dp-txt"><span class="dp-name">${escapeHTML(a.name)}</span> ${mark}${it.when ? `<div class="dp-note">🗓️ ${escapeHTML(it.when)}</div>` : ''}${it.hint ? `<div class="dp-note">💡 ${escapeHTML(it.hint)}</div>` : ''}${price ? `<div class="dp-price">💶 ${escapeHTML(price)}</div>` : ''}</div></div>
-      <div class="dp-btns"><button type="button" class="dp-btn info" data-om="${escapeHTML(a.id)}">ℹ️ Infos</button>${link ? `<a class="dp-btn link" href="${escapeHTML(link)}" target="_blank" rel="noopener noreferrer">🔗 Anbieter</a>` : `<a class="dp-btn link" href="${escapeHTML(mapsSearchUrl(a.maps || a.name))}" target="_blank" rel="noopener noreferrer">🗺️ Karte</a>`}</div>
-    </div>`;
-}
-function renderDayPlan() {
-  const holder = document.getElementById('action-days');
-  if (!holder || !Array.isArray(TRIP.stayplan) || !TRIP.stayplan.length) return;
-  const today = todayTH();
-  const first = TRIP.stations[0].first, last = TRIP.stations[TRIP.stations.length - 1].last;
-  const inTrip = today >= first && today <= last;
-  const cur = currentStation();
-  // aufgeklappte Orte merken (bleiben beim Neuzeichnen offen)
-  holder.querySelectorAll('details[data-st]').forEach(d => { if (d.open) SP_OPEN.add(d.dataset.st); else SP_OPEN.delete(d.dataset.st); });
-  // bei Orts-/Phasenwechsel: aktuellen Ort öffnen, nach der Reise alles schließen (Codex Runde 4)
-  const key = inTrip ? cur.id : (today < first ? 'vorher' : 'nachher');
-  if (key !== spLastKey) {
-    SP_OPEN.clear();
-    if (inTrip) SP_OPEN.add(cur.id);
-    else if (today < first) SP_OPEN.add(TRIP.stayplan[0].station);
-    spLastKey = key;
-  }
-  const head = `<div class="dp-head"><div class="dp-label">🔥 Action — alles auf einen Blick</div>
-      <div class="dp-title">Was ihr <em>dort</em> machen könnt</div>
-      <div class="dp-sub">Pro Aufenthalt alle Action-Möglichkeiten — ihr sucht euch aus, was ihr wann macht. 🗓️ = Termine/Zeiten, 💡 = Bedingungen. 🆕 = neu recherchiert · 📱 = steht auch unten bei den Orten. Quellen und Prüfstand unter „ℹ️ Infos“ (Stand ${escapeHTML(TRIP.stayplanAsOf || '')}) — Termine und Preise vor dem Buchen beim Anbieter bestätigen.</div>
-      ${inTrip ? '<button type="button" class="dp-today-btn" data-dp-today>📍 Zu meinem aktuellen Ort</button>' : ''}</div>`;
-  const body = TRIP.stayplan.map(sp => {
-    const st = stationById(sp.station);
-    if (!st) return '';
-    const place = TRIP.places[st.place] || { name: '' };
-    const isCur = inTrip && st.id === cur.id;
-    const isPast = today > st.last && !isCur;
-    const count = (sp.groups || []).reduce((n, g) => n + (g.items || []).length, 0);
-    const groups = (sp.groups || []).map(g => `<div class="dp-slot-t">${escapeHTML(g.t)}</div>${(g.items || []).map(stayItemHTML).join('')}`).join('');
-    return `<details class="dp-day${isCur ? ' today' : ''}${isPast ? ' past' : ''}" data-st="${escapeHTML(st.id)}"${SP_OPEN.has(st.id) ? ' open' : ''}>
-      <summary><div class="dp-row"><span class="dp-date">${escapeHTML(st.stay)}</span><span class="dp-place">${escapeHTML(place.name)}</span>${isCur ? '<span class="dp-now">Du bist hier</span>' : ''}<span class="dp-arrow">▾</span></div><div class="dp-lbl">${escapeHTML(sp.label)} · ${count} Möglichkeiten</div></summary>
-      <div class="dp-body">${st.note ? `<div class="dp-travel">🧳 ${escapeHTML(st.note)}</div>` : ''}${groups}</div>
-    </details>`;
-  }).join('');
-  holder.innerHTML = head + body;
-}
-document.addEventListener('click', e => {
-  if (!e.target.closest('[data-dp-today]')) return;
-  const el = document.querySelector(`#action-days details[data-st="${currentStation().id}"]`);
-  if (!el) return;
-  el.open = true;
-  // Abstand = tatsächliche Höhe der festen Kopfzeile (auf dem Handy höher als am PC)
-  const nav = document.getElementById('top-nav');
-  el.style.scrollMarginTop = ((nav ? nav.offsetHeight : 0) + 12) + 'px';
-  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-
 /* ── ACTION: 4 STATIONEN ────────────────────────────────────── */
 const EX = {};
-function activityCardHTML(a) {
+function activityCardHTML(a, it) {
+  it = it && typeof it === 'object' ? it : {};
   EX[a.id] = a;
   const tags = (a.tags || []).map(t => `<span class="tag ${escapeHTML(t[1] || 'tag-l')}">${escapeHTML(t[0])}</span>`).join('');
   const det = [
-    ['📍', a.where], ['⏰', a.duration], ['💶', priceText(a)], ['🏢', a.provider], ['🚗', a.travel], ['🕐', a.opening]
+    ['🗓️', it.when], ['💡', it.hint], ['📍', a.where], ['⏰', a.duration], ['💶', priceText(a)], ['🏢', a.provider], ['🚗', a.travel], ['🕐', a.opening]
   ].filter(d => d[1]).map(d => `<li><span class="k">${d[0]}</span>${escapeHTML(d[1])}</li>`).join('');
   const link = safeUrl(a.url);
   return `<div class="card${a.highlight ? ' hl' : ''}" data-price-eur="${priceEur(a)}" data-route="${escapeHTML(a.maps || a.where || '')}">
@@ -2763,26 +2736,54 @@ function activityCardHTML(a) {
     <div class="card-btns"><button class="btn-info" type="button" data-om="${escapeHTML(a.id)}">ℹ️ Was ist das?</button>${link ? `<a class="btn-link" href="${escapeHTML(link)}" target="_blank" rel="noopener noreferrer">🔗 Anbieter</a>` : `<a class="btn-link" href="${mapsSearchUrl(a.maps || a.name)}" target="_blank" rel="noopener noreferrer">🗺️ Karte</a>`}<button class="btn-fav ${isFav('action', a.id) ? 'active' : ''}" type="button" data-fav-key="${escapeHTML(a.id)}"><span class="fav-heart">❤️</span>${isFav('action', a.id) ? 'Gespeichert' : 'Favorit'}</button></div>
   </div>`;
 }
+/* ── ACTION-REITER: vier aufklappbare Aufenthalte (15.10.2026, Wolli + Jennifer: nur noch diese vier Blöcke) ──
+   Je Block: Wetter · Reise-Hinweis · 🔥 Action am Tag · 🌙 Abends & Party · 🏛️ Sehenswürdigkeiten & schöne Ecken · ⚠️ Meiden.
+   Karten = activityCardHTML (Herz, Infos, Anbieter, Status/€/Notiz bleiben). Liste aus TRIP.stayplan. */
+const SP_OPEN = new Set();
+let spLastKey = '';
 function renderAction() {
-  renderDayPlan();
   const holder = document.getElementById('action-stations');
   if (!holder) return;
+  const today = todayTH();
+  const first = TRIP.stations[0].first, last = TRIP.stations[TRIP.stations.length - 1].last;
+  const inTrip = today >= first && today <= last;
   const cur = currentStation();
+  // aufgeklappte Blöcke merken (bleiben beim Neuzeichnen offen)
+  holder.querySelectorAll('details[data-st]').forEach(d => { if (d.open) SP_OPEN.add(d.dataset.st); else SP_OPEN.delete(d.dataset.st); });
+  // bei Orts-/Phasenwechsel: aktuellen Ort öffnen, nach der Reise alles schließen
+  const key = inTrip ? cur.id : (today < first ? 'vorher' : 'nachher');
+  if (key !== spLastKey) {
+    SP_OPEN.clear();
+    if (inTrip) SP_OPEN.add(cur.id);
+    else if (today < first) SP_OPEN.add(TRIP.stations[0].id);
+    spLastKey = key;
+  }
+  const btn = document.getElementById('action-jump');
+  if (btn) btn.hidden = !inTrip;
   holder.innerHTML = TRIP.stations.map((s, idx) => {
     const place = TRIP.places[s.place];
-    const acts = TRIP.activities.filter(a => a.station === s.id && a.kind !== 'spot' && a.kind !== 'day');
-    const spots = TRIP.activities.filter(a => (a.station === s.id || (a.station === s.place && s.id === stationsOfPlace(s.place)[0])) && a.kind === 'spot');
-    const isCur = s.id === cur.id;
-    return `<section data-station="${escapeHTML(s.id)}" class="${isCur ? 'st-current' : ''}" id="st-${escapeHTML(s.id)}">
-      <div class="sec-head"><div class="sec-num" data-date="${escapeHTML(s.first)}">${String(idx + 1).padStart(2, '0')}</div>
-        <div class="sec-meta"><div class="sec-date">${escapeHTML(s.stay)} · ${escapeHTML(place.area)}${isCur ? '<span class="sec-now">Du bist hier</span>' : ''}</div>
-        <div class="sec-title">${escapeHTML(place.name)} <em>${escapeHTML(s.id === 'bkk2' ? 'zum Abschluss' : (s.id === 'bkk1' ? 'zum Ankommen' : 'Inselzeit'))}</em></div>
-        <div class="wx-days" data-wx-station="${escapeHTML(s.id)}"></div></div></div>
-      <div class="sub-label">⚡ Action</div>
-      ${acts.length ? `<div class="cards">${acts.map(activityCardHTML).join('')}</div>` : '<div class="empty-note">Aktivitäten folgen — werden gerade recherchiert und geprüft.</div>'}
-      <div class="sub-label">🌅 Schöne Ecken</div>
-      ${spots.length ? `<div class="cards">${spots.map(activityCardHTML).join('')}</div>` : '<div class="empty-note">Schöne Ecken folgen.</div>'}
-      <div class="avoid-box"><div class="avoid-label">⚠️ Meiden in ${escapeHTML(place.name)}</div>${avoidHTML(s.place, false) || '<div class="avoid-item">Siehe „Überall in Thailand“ im Reiter Mein Urlaub.</div>'}</div>
+    const sp = (TRIP.stayplan || []).find(x => x.station === s.id) || { groups: [] };
+    const isCur = inTrip && s.id === cur.id;
+    const isPast = today > s.last && !isCur;
+    const count = sp.groups.reduce((n, g) => n + (g.items || []).length, 0);
+    const groups = sp.groups.map(g => {
+      const cards = (g.items || []).map(it => { const a = TRIP.activities.find(x => x.id === it.ref); return a ? activityCardHTML(a, it) : ''; }).join('');
+      return `<div class="sub-label">${escapeHTML(g.t)}</div>${cards ? `<div class="cards">${cards}</div>` : '<div class="empty-note">Noch nichts eingetragen.</div>'}`;
+    }).join('');
+    return `<section data-station="${escapeHTML(s.id)}" class="st-block${isCur ? ' st-current' : ''}" id="st-${escapeHTML(s.id)}">
+      <details class="dp-day${isCur ? ' today' : ''}${isPast ? ' past' : ''}" data-st="${escapeHTML(s.id)}"${SP_OPEN.has(s.id) ? ' open' : ''}>
+        <summary>
+          <span class="dp-row"><span class="dp-date">${escapeHTML(s.stay)}</span><span class="dp-place">${escapeHTML(place.name)}</span>${isCur ? '<span class="dp-now">Du bist hier</span>' : ''}<span class="dp-arrow">▾</span></span>
+          <span class="dp-lbl">${escapeHTML(sp.label || place.area)} · ${count} Möglichkeiten</span>
+          <span class="sec-num" hidden>${String(idx + 1).padStart(2, '0')}</span><span class="sec-title" hidden>${escapeHTML(place.name)} ${escapeHTML(s.stay)}</span>
+          <span class="wx-days" data-wx-station="${escapeHTML(s.id)}"></span>
+        </summary>
+        <div class="dp-body">
+          ${s.note ? `<div class="dp-travel">🧳 ${escapeHTML(s.note)}</div>` : ''}
+          ${groups}
+          <div class="avoid-box"><div class="avoid-label">⚠️ Meiden in ${escapeHTML(place.name)}</div>${avoidHTML(s.place, false) || '<div class="avoid-item">Siehe „Überall in Thailand“ im Reiter Mein Urlaub.</div>'}</div>
+        </div>
+      </details>
     </section>`;
   }).join('');
   holder.querySelectorAll('[data-fav-key]').forEach(btn => btn.addEventListener('click', e => {
@@ -2799,6 +2800,20 @@ function renderAction() {
   }
   renderWeatherBadges();
 }
+document.addEventListener('click', e => {
+  if (!e.target.closest('#action-jump')) return;
+  const el = document.querySelector(`#action-stations details[data-st="${currentStation().id}"]`);
+  if (!el) return;
+  el.open = true;
+  // Abstand = tatsächliche Höhe der festen Kopfzeile (auf dem Handy höher als am PC)
+  const nav = document.getElementById('top-nav');
+  el.style.scrollMarginTop = ((nav ? nav.offsetHeight : 0) + 12) + 'px';
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+// Status-/Kosten-Felder neu aufbauen, wenn ein Block erstmals aufgeklappt wird (Karten bekommen ihre Werkzeuge)
+document.addEventListener('toggle', e => {
+  if (e.target && e.target.matches && e.target.matches('#action-stations details[data-st]') && e.target.open) augmentTravelCards(false);
+}, true);
 function stationsOfPlace(placeKey) { return TRIP.stations.filter(s => s.place === placeKey).map(s => s.id); }
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-om]');
@@ -2809,9 +2824,9 @@ function om(k) {
   document.getElementById('md-ic').textContent = a.ic || 'ℹ️';
   document.getElementById('md-t').textContent = a.name;
   const st = stationById(a.station);
-  document.getElementById('md-s').textContent = (st ? TRIP.places[st.place].name + ' · ' + st.stay : '') + (priceText(a) ? ' · ' + priceText(a) : '');
+  document.getElementById('md-s').textContent = (st ? TRIP.places[st.place].name : '') + (priceText(a) ? ' · ' + priceText(a) : '');
   const paras = (a.info || []).map(p => `<p>${escapeHTML(p)}</p>`).join('');
-  // Codex Runde 6: neue Einträge (nur in der Action-Liste) zeigen Ort/Dauer/Zeiten/Anbieter im Info-Fenster
+  // neue Einträge (kind day): Ort/Dauer/Zeiten/Anbieter auch im Info-Fenster
   const facts = a.kind === 'day' ? [['📍', a.where], ['⏰', a.duration], ['🕐', a.opening], ['🏢', a.provider]].filter(f => f[1]).map(f => `<p style="font-size:13px;margin-bottom:6px;">${f[0]} ${escapeHTML(f[1])}</p>`).join('') : '';
   const tip = a.tip ? `<div class="tip">💡 ${escapeHTML(a.tip)}</div>` : '';
   const src = (a.src || []).length ? `<p style="font-size:12px;color:var(--text-muted);margin-top:12px;">Quelle: ${(a.src || []).map(srcLink).join(' · ')}</p>` : '';
@@ -2892,7 +2907,7 @@ function renderWeatherBadges() {
       if (!w) return '';
       const s = w.midday || w.morning || w.evening;
       const rain = Math.max(w.morning?.rain || 0, w.midday?.rain || 0, w.evening?.rain || 0);
-      return `<div class="wx-day${d === today ? ' today' : ''}"><span class="w-label">${weekdayShort(d)} ${d.slice(8)}.</span><span class="w-icon">${wxIcon(s.code)}</span><span class="w-temp">${s.temp}°</span>${rain > 20 ? `<span class="w-rain">💧${rain}%</span>` : ''}</div>`;
+      return `<span class="wx-day${d === today ? ' today' : ''}"><span class="w-label">${weekdayShort(d)} ${d.slice(8)}.</span><span class="w-icon">${wxIcon(s.code)}</span><span class="w-temp">${s.temp}°</span>${rain > 20 ? `<span class="w-rain">💧${rain}%</span>` : ''}</span>`;
     }).join('');
     el.innerHTML = html || `<span class="wx-none">Noch keine Vorhersage (Wetter gibt es max. 16 Tage im Voraus).</span>`;
   });
@@ -2980,6 +2995,7 @@ function setBooking(key, value) {
   const state = loadTripState();
   state.bookings[key] = value || 'idea';
   saveTripState(state);
+  augmentTravelCards(true);
   renderPlan();
 }
 function setCost(key, value) {
@@ -2988,6 +3004,7 @@ function setCost(key, value) {
   if (Number.isFinite(n) && n > 0) state.costs[key] = Math.round(n * 100) / 100;
   else delete state.costs[key];
   saveTripState(state);
+  augmentTravelCards(true);
   renderPlan();
 }
 function editTripNote(key, label) {
@@ -3120,7 +3137,8 @@ function budgetRows(state) {
     ...Object.keys(favs.action || {}),
     ...Object.keys(favs.rest || {}).map(id => 'rest_' + id)
   ]);
-  return allTravelItems().filter(item =>
+  const seenKeys = new Set();
+  return allTravelItems().filter(item => !seenKeys.has(item.key) && seenKeys.add(item.key)).filter(item =>
     favKeys.has(item.key) || state.costs[item.key] != null || state.spent[item.key] != null ||
     ['requested', 'booked', 'paid', 'done'].includes(state.bookings[item.key])
   ).map(item => {
