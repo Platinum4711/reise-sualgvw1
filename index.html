@@ -904,6 +904,32 @@
     /* Update-Hinweis */
     .update-banner { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 1300; display: none; background: #e8c547; color: #0f0f0f; border: none; border-radius: 999px; padding: 11px 18px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.85rem; box-shadow: 0 6px 24px rgba(0,0,0,.5); cursor: pointer; max-width: calc(100% - 28px); }
     .update-banner.show { display: block; }
+
+    /* ══ LESBARKEIT IN ALLEN REITERN (Wolli + Jennifer 15.10.2026) ══════════════
+       1. Keine grauen Texte: alle Grau-Variablen und fest grauen Texte → helles Weiß (#e8e4dc).
+       2. Halbfette Schrift (600) wie die Kartennamen — Zier-Überschriften (DM Serif Display) behalten ihre Stärke.
+       Notfall-Fenster und Zöliakie-Karte bleiben unverändert. */
+    #panel-rest, #panel-fav { --color-text-muted: #e8e4dc; --color-text-faint: #e8e4dc; }
+    #panel-action, #panel-plan { --text-muted: #e8e4dc; --text-dim: #e8e4dc; }
+    #panel-plan .w-label, #panel-plan .em-src, #panel-plan .info-src,
+    .tab-panel .manual-save-toggle, .tab-panel .toggle-arrow, .tab-panel .google-search-label, .tab-panel .gsearch-label-place,
+    #panel-fav .fav-clear-btn, #panel-rest .src-line, #panel-rest .detail-label, #panel-rest .r-footer { color: #e8e4dc; }
+    .tab-panel .btn-fav:not(.active):not(:hover) { color: #e8e4dc; }
+    .tab-panel input::placeholder, .tab-panel textarea::placeholder { color: #c9c4bb; opacity: 1; }
+
+    #panel-plan *, #panel-rest *, #panel-action *, #panel-fav * { font-weight: 600 !important; }
+    #panel-plan strong, #panel-rest strong, #panel-action strong, #panel-fav strong, #panel-plan b, #panel-rest b, #panel-action b, #panel-fav b,
+    #panel-plan .gf-open, #panel-rest .gf-open { font-weight: 700 !important; }
+    #panel-action .a-header h1, #panel-action .a-header h1 *, #panel-action .sec-num, #panel-action .sec-title, #panel-action .sec-title *,
+    #panel-action .dp-title, #panel-action .dp-title *, #panel-action .modal-ti h3,
+    #panel-plan h1, #panel-plan h1 *, #panel-plan .plan-metric strong, #panel-plan .plan-block h2, #panel-plan .station-now .st-name, #panel-plan .info-cell .v, #panel-plan .budget-total-val,
+    #panel-fav .fav-hero h1, #panel-fav .fav-hero h1 *, #panel-fav .fav-section-title,
+    #panel-rest .gf-hint-inner h3 { font-weight: 400 !important; }
+    /* fest eingestellte Grautöne (#7a7670), teils als style-Attribut → mit !important */
+    .tab-panel .map-open-note, .tab-panel .trip-note-preview, .tab-panel .budget-row.head span, .tab-panel .budget-name .bn-auto,
+    .tab-panel .budget-total-label, .tab-panel .budget-empty, .tab-panel .budget-cell::before, .tab-panel .em-place-meta, .tab-panel .em-note,
+    .tab-panel .st-meta, .tab-panel .station-switch-label, .tab-panel .offline-state, .tab-panel .info-cell .k, .tab-panel .cur-calc span,
+    .tab-panel .empty-note, #panel-plan .budget-add label { color: #e8e4dc !important; }
 </style>
 </head>
 <body>
@@ -919,7 +945,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 16:30 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 16:48 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1147,7 +1173,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 16:30 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 16:48 Uhr
   </footer>
 </div><!-- /panel-rest -->
 
@@ -1219,7 +1245,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 16:30 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 16:48 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1318,7 +1344,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "15.10.2026 · 16:30";
+const APP_VERSION = "15.10.2026 · 16:48";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
