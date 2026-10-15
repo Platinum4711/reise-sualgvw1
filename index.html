@@ -261,6 +261,44 @@
     #panel-action .src { font-size: 12px; color: var(--text-muted); line-height: 2; }
     #panel-action .src a { color: var(--accent4); text-decoration: none; }
     #panel-action .src a:hover { text-decoration: underline; }
+
+    /* ── ACTION-TAGESPLAN nach Datum (15.10.2026) ── */
+    #panel-action .dp-wrap { margin-bottom: 46px; }
+    #panel-action .dp-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent3); }
+    #panel-action .dp-title { font-family: 'DM Serif Display', serif; font-size: 26px; margin-top: 4px; line-height: 1.2; }
+    #panel-action .dp-title em { font-style: normal; color: var(--accent); }
+    #panel-action .dp-sub { font-size: 13px; color: var(--text-muted); margin-top: 6px; }
+    #panel-action .dp-today-btn { margin-top: 12px; min-height: 44px; padding: 10px 18px; border-radius: 10px; border: 1px solid rgba(232,197,71,.5); background: rgba(232,197,71,.12); color: var(--accent); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; }
+    #panel-action .dp-group { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent2); margin: 24px 0 8px; }
+    #panel-action .dp-day { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; scroll-margin-top: 110px; overflow: hidden; }
+    #panel-action .dp-day.today { border-color: rgba(232,197,71,.75); box-shadow: 0 0 0 1px rgba(232,197,71,.3); }
+    #panel-action .dp-day.past { opacity: .6; }
+    #panel-action .dp-day summary { list-style: none; cursor: pointer; padding: 12px 16px; min-height: 44px; display: block; }
+    #panel-action .dp-day summary::-webkit-details-marker { display: none; }
+    #panel-action .dp-row { display: flex; align-items: center; gap: 10px; }
+    #panel-action .dp-date { font-weight: 600; color: var(--accent); }
+    #panel-action .dp-place { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); }
+    #panel-action .dp-now { background: var(--accent); color: #111; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
+    #panel-action .dp-arrow { margin-left: auto; color: var(--text-dim); transition: transform .2s; }
+    #panel-action .dp-day[open] .dp-arrow { transform: rotate(180deg); }
+    #panel-action .dp-lbl { font-size: 14.5px; margin-top: 3px; }
+    #panel-action .dp-body { padding: 0 14px 12px; border-top: 1px solid var(--border); }
+    #panel-action .dp-travel { margin-top: 12px; font-size: 12.5px; color: var(--accent3); background: rgba(240,112,96,.06); border: 1px solid rgba(240,112,96,.25); border-radius: 8px; padding: 8px 12px; }
+    #panel-action .dp-slot-t { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin: 14px 0 6px; }
+    #panel-action .dp-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+    #panel-action .dp-top { display: flex; gap: 10px; }
+    #panel-action .dp-ic { font-size: 20px; line-height: 1.25; }
+    #panel-action .dp-txt { flex: 1; min-width: 0; font-size: 14px; }
+    #panel-action .dp-name { font-weight: 600; }
+    #panel-action .dp-or { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent4); border: 1px solid rgba(123,140,222,.45); border-radius: 20px; padding: 1px 7px; margin-right: 6px; vertical-align: 1px; }
+    #panel-action .dp-new { font-size: 12px; }
+    #panel-action .dp-inapp { font-size: 11px; color: var(--text-dim); }
+    #panel-action .dp-note { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+    #panel-action .dp-price { font-size: 12.5px; color: var(--accent2); margin-top: 2px; overflow-wrap: anywhere; }
+    #panel-action .dp-btns { display: flex; gap: 8px; margin-top: 8px; }
+    #panel-action .dp-btn { flex: 1; min-height: 40px; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; border-radius: 8px; border: 1px solid; cursor: pointer; text-decoration: none; }
+    #panel-action .dp-btn.info { background: rgba(232,197,71,.08); border-color: rgba(232,197,71,.35); color: var(--accent); }
+    #panel-action .dp-btn.link { background: rgba(123,140,222,.08); border-color: rgba(123,140,222,.35); color: var(--accent4); }
     #panel-action .a-footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 12px; }
 
     /* action modal */
@@ -869,7 +907,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 01:16 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 09:02 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1097,7 +1135,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 01:16 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 09:02 Uhr
   </footer>
 </div><!-- /panel-rest -->
 
@@ -1161,7 +1199,8 @@
     </div>
 
   <main>
-    <div class="intro"><div class="intro-label">Das Prinzip</div><p>Vier Orte, jeder mit eigenem Abschnitt. Der Ort, an dem du gerade bist, ist <strong>gelb markiert</strong>. Budget im Blick: ca. <strong>1.000 € für alles</strong> — deshalb viele günstige Highlights und kostenlose schöne Ecken. Jede Karte hat ihre <strong>eigene</strong> Erklärung — Klick auf „Was ist das?".</p></div>
+    <div class="intro"><div class="intro-label">Das Prinzip</div><p>Ganz oben <strong>🔥 alle Action-Möglichkeiten je Aufenthalt</strong> — euer aktueller Ort ist <strong>gelb markiert</strong> und aufgeklappt, ihr sucht euch aus, was ihr wann macht. Darunter die vier Orte mit allen Karten, schönen Ecken und was ihr meiden solltet. Preise stehen überall dabei (Budget ca. <strong>1.000 €</strong> für alles).</p></div>
+    <section class="dp-wrap" id="action-days"></section>
     <div id="action-stations"></div>
 
     <!-- QUELLEN -->
@@ -1169,7 +1208,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 01:16 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 09:02 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1268,7 +1307,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "15.10.2026 · 01:16";
+const APP_VERSION = "15.10.2026 · 09:02";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -1457,6 +1496,95 @@ const TRIP = {
 
   /* Inhalte — Stand 13.10.2026, Recherche Claude (Aktivitäten/Ecken/Einkauf) + Codex (glutenfrei), gegenseitig geprüft.
      Preise in Baht (Euro wird automatisch umgerechnet). „ca.“ = Preis von Buchungsseiten/Reiseführern, beim Anbieter prüfen. */
+
+  /* ══ ACTION-LISTE je Aufenthalt (15.10.2026, Team-Lauf Claude + Codex) — kein fester Tagesplan: alles, was in dem Zeitraum geht.
+        ref = TRIP.activities[].id · when (🗓️) = nur Termine/Zeiten/Ruhetage · hint (💡) = Bedingungen ══ */
+  stayplanAsOf: "15.10.2026",
+  stayplan: [
+    { station: "bkk1", label: "Bangkok + Ausflüge (Pattaya, Nakhon Nayok)", groups: [
+      { t: "🔥 Action am Tag", items: [
+        { ref: "d_skydive", when: "täglich · Shuttle 9:30 ab Siam", hint: "ganzer Tag einplanen" },
+        { ref: "d_xbungy", when: "täglich 10–17:30" },
+        { ref: "d_nakhonnayok", when: "Abholung 8:15, zurück ca. 18 Uhr", hint: "auf Buchung" },
+        { ref: "d_ramayana", when: "täglich 11–18 Uhr (mittwochs zu)" },
+        { ref: "d_kohlarn", hint: "ganzer Tag, nur bei ruhiger See" },
+        { ref: "d_wake_esc", when: "Mo–Fr 11–22 · Sa/So 9–22 Uhr" },
+        { ref: "d_wake_lumlukka", when: "täglich 9–22 Uhr" },
+        { ref: "d_siampark", when: "täglich 10–18 Uhr" },
+        { ref: "bkk2_dreamworld" },
+        { ref: "d_easykart", when: "Sa/So bis 23 · Mo/Di bis 21 Uhr" },
+        { ref: "bkk1_yokkao", when: "täglich 10:00 + 17:00" },
+        { ref: "bkk1_erawan" },
+        { ref: "bkk1_bangkrachao", when: "schwimmender Markt nur Sa/So" } ] },
+      { t: "🌙 Abends & Party", items: [
+        { ref: "bkk1_muaythai", when: "samstags World Series" },
+        { ref: "bkk1_yaowarat", when: "Festival nur bis So 18.10." },
+        { ref: "bkk2_jodd", when: "täglich 17–01 Uhr" },
+        { ref: "bkk1_chatuchak", when: "nur Sa/So (tagsüber)" } ] } ] },
+    { station: "kpg", label: "Koh Phangan", groups: [
+      { t: "🔥 Action am Tag", items: [
+        { ref: "d_atv_kpg", when: "täglich, Abholung 9:30 / 12:30 / 14:30" },
+        { ref: "kpg_scuba", hint: "1–1,5 Tage, Boot morgens, nur bei passender See" },
+        { ref: "d_freediving", when: "Boot 8–14 Uhr", hint: "1 Tag vorher anmelden" },
+        { ref: "d_efoil", hint: "auf Termin, geht auch ohne Wind" },
+        { ref: "kpg_wakeboard", hint: "Zeiten beim Anbieter anfragen" },
+        { ref: "d_kite", hint: "nur bei Wind (Oktober windarm)" },
+        { ref: "kpg_kohtao", hint: "ganzer Tag, nur bei ruhiger See" },
+        { ref: "kpg_diamond", when: "Mo–Sa 8–10 + 16–18 Uhr" },
+        { ref: "kpg_khaora", hint: "früh starten, nicht bei Regen" },
+        { ref: "kpg_sup", hint: "je nach Wind" },
+        { ref: "kpg_raham", when: "täglich 8–21:30", hint: "nur bei ruhiger See" } ] },
+      { t: "🌙 Abends & Party", items: [
+        { ref: "d_seaboard", when: "nur Mi 21.10." },
+        { ref: "kpg_dance", when: "nur Mi 21.10." },
+        { ref: "d_phangancalling", when: "donnerstags (22.10.), Beginn 20 oder 21 Uhr", hint: "Beginn vorher bestätigen" },
+        { ref: "kpg_amsterdam", when: "täglich, Sonnenuntergang ca. 18 Uhr" } ] } ] },
+    { station: "sam", label: "Koh Samui", groups: [
+      { t: "🔥 Action am Tag", items: [
+        { ref: "d_jetski", when: "täglich 10–13 oder 14–17 Uhr" },
+        { ref: "d_watersports", when: "täglich 9–18 Uhr (Lamai)" },
+        { ref: "d_buggy", when: "9–15 Uhr", hint: "Führerschein nötig" },
+        { ref: "d_kohtao_dive", when: "nicht am 27.10. (Flug am Abend)", hint: "ganzer Tag" },
+        { ref: "sam_atv", when: "täglich, Abholung 8:30 / 11 / 13:30" },
+        { ref: "sam_zipline" },
+        { ref: "d_parasail", hint: "Betrieb vorher bestätigen" },
+        { ref: "sam_angthong", hint: "ganzer Tag, nur bei ruhiger See" },
+        { ref: "sam_kohtan", when: "13–20 Uhr" },
+        { ref: "sam_kart", when: "täglich 10–24 Uhr" },
+        { ref: "sam_wech", when: "Mo–Sa 8:30 + 15:30 Uhr" },
+        { ref: "sam_elephant", when: "9–12 oder 14–17 Uhr" } ] },
+      { t: "🌙 Abends & Party", items: [
+        { ref: "d_elephantbeach", when: "nur Sa 24.10. ab 20 Uhr" },
+        { ref: "d_arkbar", when: "Feuershow täglich · Pool-Party Fr 23.10." },
+        { ref: "d_beatboat", when: "sonntags 15 Uhr bis ca. 1:30", hint: "25.10. noch nicht einzeln gelistet" },
+        { ref: "d_samuistadium", when: "Fr 23. (Ankunftsabend) · So 25.10., 21 Uhr" },
+        { ref: "d_phetchbuncha", when: "Sa 24. · Mo 26.10., 21 Uhr" },
+        { ref: "sam_cabaret", when: "täglich 20:30 / 21:30 / 22:30" },
+        { ref: "sam_fisherman", when: "Fr 23. · So 25. · Mo 26.10." },
+        { ref: "sam_walking", when: "nur So 25.10." } ] } ] },
+    { station: "bkk2", label: "Bangkok + Ausflüge (Pattaya)", groups: [
+      { t: "🔥 Action am Tag", items: [
+        { ref: "d_kohlarn", hint: "ganzer Tag, nur bei ruhiger See" },
+        { ref: "d_skydive", when: "täglich · Shuttle 9:30 ab Siam", hint: "ganzer Tag einplanen" },
+        { ref: "d_xbungy", when: "täglich 10–17:30" },
+        { ref: "d_ramayana", when: "täglich 11–18 Uhr, Mi 28.10. geschlossen" },
+        { ref: "d_siampark", when: "täglich 10–18 Uhr" },
+        { ref: "bkk2_dreamworld" },
+        { ref: "d_wake_lumlukka", when: "täglich 9–22 Uhr" },
+        { ref: "d_wake_esc", when: "Mo–Fr 11–22 · Sa 9–22 Uhr" },
+        { ref: "d_easykart", when: "Mi/Do bis 21 · Fr/Sa bis 23 Uhr" },
+        { ref: "d_nakhonnayok", when: "Abholung 8:15, zurück ca. 18 Uhr", hint: "auf Buchung" },
+        { ref: "bkk1_yokkao", when: "täglich 10:00 + 17:00" },
+        { ref: "bkk2_skywalk", when: "täglich 10–24 Uhr" },
+        { ref: "bkk2_biennale", when: "ab Do 29.10." } ] },
+      { t: "🌙 Abends & Party", items: [
+        { ref: "d_onefights", when: "nur Fr 30.10. ab 18:30" },
+        { ref: "d_halloween", when: "28.–31.10. (Hauptabend Fr 30.10.)" },
+        { ref: "bkk2_calypso", when: "abends, Zeit laut Ticket" },
+        { ref: "bkk2_jodd", when: "täglich 17–01 Uhr" },
+        { ref: "bkk2_octave", when: "täglich ab 17 Uhr" } ] } ] }
+  ],
+
   activities: [
     /* ── Bangkok 1 (Sa 17. – Di 20.10.) ── */
     { id: "bkk1_chatuchak", station: "bkk1", highlight: true, ic: "🛍️", name: "Chatuchak Weekend Market", sub: "Riesiger Wochenendmarkt — genau am Ankunftswochenende (Sa 17. + So 18.10.).",
@@ -1703,6 +1831,175 @@ const TRIP = {
       info: ["Halte u. a. Wat Arun, Tha Chang, Tha Maharaj, Prannok, Phra Arthit. Passt gut zur Biennale (Wat Arun, Wat Pho) und abends zum Calypso Cabaret an der Asiatique."],
       tip: "Preis beim Kauf bestätigen. Bei Gewitter fahren die Boote evtl. nicht.",
       src: [["Preise + Fahrplan (MyAsiaTrip, geprüft 07.09.2026)", "https://myasiatrip.com/thailand/bangkok/chao-phraya-river-boats/"], ["Betreiber", "https://chaophrayatouristboat.com/"]] },
+
+
+    /* ══ NEU 15.10.2026 vormittags — ACTION-Liste je Aufenthalt (kind: "day" = nur in der Action-Liste oben, nicht als Karte) · Team-Lauf Claude + Codex, an Quellen geprüft ══ */
+    /* ── Bangkok + Pattaya ── */
+    { id: "d_nakhonnayok", station: "bkk1", kind: "day", ic: "🛶", name: "Rafting + Quad + Paintball in Nakhon Nayok", sub: "Abenteuer-Tag: Wildwasser, Quad, Paintball und Wasserfall.",
+      where: "Nakhon Nayok (Abholung in Bangkok)", duration: "ca. 10 Std (8:15–18 Uhr)", priceTHB: 4000, priceNote: "inkl. Abholung, Essen, Eintritte", provider: "TakeMeTour (lokaler Guide)", opening: "auf Buchung · Treffen 8:00, Abfahrt 8:15",
+      url: "https://www.takemetour.com/trip/adventure-day-from-bangkok-paintball-atv-waterfall-and-rafting", maps: "Nakhon Nayok River rafting",
+      info: ["Ablauf laut Anbieter: Markt, Baden am Sarika-Wasserfall, Mittagessen, Paintball, Quad fahren, dann Wildwasser-Rafting auf dem Nakhon-Nayok-Fluss (Stufe 1–3).", "Liegt nordöstlich von Bangkok — von Lak Si aus günstig."],
+      tip: "Termin vorher bestätigen lassen, Rafting-Stufe und Ausrüstung (Helm, Weste) erfragen. Mittagessen: Zöliakie vorher melden oder eigenes Essen mitnehmen.",
+      src: [["Ablauf + Preis (TakeMeTour)", "https://www.takemetour.com/trip/adventure-day-from-bangkok-paintball-atv-waterfall-and-rafting"]] },
+    { id: "d_skydive", station: "bkk1", kind: "day", ic: "🪂", name: "Tandem-Fallschirmsprung aus 4.000 m", sub: "Höchster Tandemsprung Thailands — ca. 1 Minute freier Fall.",
+      where: "Thai Sky Adventures, Nong Khor Reservoir bei Si Racha (Pattaya)", duration: "ganzer Tag mit Shuttle", priceTHB: [8950, 9700], priceNote: "offizielle Preisliste 2026: 8.950 ฿ · Buchungsseite 9.700 ฿ · Video ab 3.800 ฿ extra · Bangkok-Shuttle 500 ฿ hin+zurück", provider: "Thai Sky Adventures", opening: "täglich · Shuttle ab Novotel Siam Square: 9:15 da sein, Abfahrt 9:30",
+      url: "https://thaiskyadventures.com/begin-your-booking/", maps: "Thai Sky Adventures, Si Racha",
+      info: ["Sprung aus 13.000 Fuß (ca. 4.000 m) mit einem Tandem-Lehrer.", "Der Shuttle fährt erst zurück, wenn alle Mitfahrenden gesprungen sind — Abend frei halten.", "Gewicht 25–115 kg."],
+      tip: "Morgens ist es meist weniger windig. Vorher den Gesamtpreis inkl. Video und Shuttle schriftlich bestätigen lassen.",
+      src: [["Preisliste 2026 (Thai Sky Adventures)", "https://thaiskyadventures.com/wp-content/uploads/Price-list-TSA-2026.pdf"], ["Buchung (Thai Sky Adventures)", "https://thaiskyadventures.com/begin-your-booking/"], ["Anreise + Shuttle (Thai Sky Adventures)", "https://thaiskyadventures.com/travel-information/"]] },
+    { id: "d_xbungy", station: "bkk1", kind: "day", ic: "🪢", name: "Bungee 60 m über dem See (Xbungy Pattaya)", sub: "Kopfüber aus 60 m — Video und Sprungversicherung inklusive.",
+      where: "Xbungy, Pattaya", duration: "1–2 Std vor Ort", priceTHB: 2500, priceNote: "inkl. Video, Zertifikat, Sprungversicherung (Human Slingshot 1.400 ฿)", provider: "Xbungy Pattaya", opening: "täglich ab 10 Uhr, letzter Sprung 17:30",
+      url: "https://pattayabungy.com/", maps: "Xbungy Pattaya Bungy Jump",
+      info: ["Solo 40–120 kg; auch Paarsprung möglich (zusammen max. 150 kg).", "Bei Sturm/Gewitter kein Sprung, dann volles Geld zurück."],
+      tip: "Normale Reiseversicherungen schließen Bungee oft aus — die Sprungversicherung ist im Preis. Pass- oder Ausweisnummer bei der Anmeldung nötig.",
+      src: [["Preis, Zeiten, Versicherung (Xbungy)", "https://pattayabungy.com/"]] },
+    { id: "d_ramayana", station: "bkk1", kind: "day", ic: "🌊", name: "Ramayana — größter Wasserpark Thailands", sub: "Riesenrutschen und Wellenbad bei Pattaya.",
+      where: "Ramayana Water Park, Pattaya", duration: "halber bis ganzer Tag", priceTHB: [1099, 1199], priceNote: "Tourist Full Day: online 1.099 ฿ · Kasse 1.199 ฿", provider: "Ramayana Water Park", opening: "11–18 Uhr · MITTWOCHS GESCHLOSSEN",
+      url: "https://www.ramayanawaterpark.com/buy-tickets/", maps: "Ramayana Water Park, Pattaya",
+      info: ["Online-Tickets für denselben Tag nur bis 11 Uhr. Schließfach, Handtuch extra.", "Bei Dauerregen gibt es Gutscheine bzw. Ersatzticket."],
+      tip: "Gut kombinierbar mit Bungee (Pattaya). Mittwoch zu — also nicht am 28.10.",
+      src: [["Zeiten (Ramayana)", "https://www.ramayanawaterpark.com/"], ["Preise (Ramayana)", "https://www.ramayanawaterpark.com/buy-tickets/"]] },
+    { id: "d_wake_esc", station: "bkk1", kind: "day", ic: "🏄", name: "Cable-Wakeboard-Kurs — Thai Wake Park ESC Rangsit", sub: "Am Seil übers Wasser — Anfängerkurs mit Trainer im Wasser, ca. 25 Min ab Don Mueang.",
+      where: "Thai Wake Park ESC Rangsit (neben ESC Park Hotel)", duration: "2,5 Std", priceTHB: 995, priceNote: "Anfängerkurs (Low-Speed-Session 595 ฿ / 2 Std) · Board + Schwimmweste inklusive", provider: "Thai Wake Park", opening: "Mo–Fr 11–22 · Sa/So 9–22 Uhr · Kurszeit vorher buchen",
+      url: "https://www.thaiwakepark.com/en/esc", maps: "Thai Wake Park ESC Rangsit",
+      info: ["Neuester Park von Thai Wake Park, nah an eurer Unterkunft im Norden. Abends 20–22 Uhr gibt es auch eine „Late Night Sesh“ (695 ฿)."],
+      tip: "Kursbeginn vorher buchen. Am Weiterreisetag nur, wenn genug Zeit bis zur Abfahrt bleibt.",
+      src: [["Preise, Standorte, Zeiten (Thai Wake Park)", "https://www.thaiwakepark.com/en"], ["ESC Rangsit (Thai Wake Park)", "https://www.thaiwakepark.com/en/esc"], ["Kurstermine (Thai Wake Park)", "https://www.thaiwakepark.com/en/schedule"]] },
+    { id: "d_wake_lumlukka", station: "bkk2", kind: "day", ic: "🏄", name: "Cable-Wakeboard-Kurs — Thai Wake Park Lumlukka", sub: "Der Hauptpark seit 2009 — Anfängerkurs mit Trainer im Wasser.",
+      where: "Thai Wake Park Lumlukka (ca. 30 Min von beiden Flughäfen)", duration: "2,5 Std", priceTHB: 995, priceNote: "Anfängerkurs (Low-Speed-Session 595 ฿ / 2 Std) · Board + Schwimmweste inklusive", provider: "Thai Wake Park", opening: "täglich 9–22 Uhr · Kurszeit vorher buchen",
+      url: "https://www.thaiwakepark.com/en", maps: "Thai Wake Park Lumlukka",
+      info: ["Mit Café und Restaurant. Abends 20–22 Uhr „Late Night Sesh“ (695 ฿)."],
+      tip: "Kursbeginn vorher buchen. Essen im Café: Zöliakie-Karte zeigen.",
+      src: [["Preise, Standorte, Zeiten (Thai Wake Park)", "https://www.thaiwakepark.com/en"], ["Kurstermine (Thai Wake Park)", "https://www.thaiwakepark.com/en/schedule"]] },    { id: "d_kohlarn", station: "bkk2", kind: "day", ic: "🚤", name: "Koh Larn: Speedboot, Parasailing, Jetski, Banana Boat", sub: "Insel vor Pattaya — Wassersport am Strand Tawaen.",
+      where: "Koh Larn (ab Pattaya)", duration: "ganzer Tag", priceNote: "Pakete ab Pattaya ca. 68–72 US-$ inkl. Mittag (Buchungsseite) · vor Ort grob: Parasailing ca. 600 ฿, Banana ca. 300 ฿, Jetski ca. 1.200 ฿/30 Min (ältere Angaben) · Fähre 30 ฿", provider: "verschiedene Anbieter", opening: "tagsüber, nur bei ruhiger See",
+      maps: "Tawaen Beach, Koh Larn",
+      info: ["Mit der Fähre (30 ฿) oder im Paket mit Speedboot rüber. Am Strand Tawaen gibt es Parasailing, Jetski, Banana Boat und Schnorcheln."],
+      tip: "Preis und Dauer VOR der Fahrt fest ausmachen. Jetski nur im betreuten Paket, vorher Fotos vom Jetski machen, Pass nie als Pfand.",
+      src: [["Koh-Larn-Guide (The Thailand Life)", "https://www.thethailandlife.com/koh-larn-guide"], ["Paket mit Parasailing (Expedia)", "https://www.expedia.com/things-to-do/pattaya-coral-island-speed-boatparasailinglunch.a1260822.activity-details"]] },
+    { id: "d_easykart", station: "bkk2", kind: "day", ic: "🏎️", name: "Go-Kart-Halle EasyKart RCA", sub: "Überdachte Kartbahn — auch bei Regen Vollgas.",
+      where: "RCA Plaza, Rama 9 Road", duration: "ca. 1 Std", priceTHB: [699, 1499], priceNote: "Regular 1 Rennen 699 ฿ · Fast Kart (200 ccm) 2 Rennen 1.499 ฿", provider: "EasyKart Bangkok", opening: "Mo–Do 13–21 · Fr–So 13–23 Uhr",
+      url: "https://easykart.net/bangkok/", maps: "EasyKart Bangkok RCA",
+      info: ["Vollvisierhelm, Einweisung, Streckenposten mit Fernabschaltung. Fast Kart ab 150 cm."],
+      tip: "Geschlossene Schuhe Pflicht. Jodd Fairs (Nachtmarkt) liegt in derselben Gegend.",
+      src: [["Preise + Zeiten (EasyKart)", "https://easykart.net/bangkok/"]] },
+    { id: "d_siampark", station: "bkk2", kind: "day", ic: "🎢", name: "Siam Amazing Park — Achterbahnen + Wasserpark", sub: "Hängende Achterbahn, 75-m-Freifallturm, Speed-Rutsche.",
+      where: "Suan Siam Rd., Khan Na Yao (Pink Line Nopparat)", duration: "ganzer Tag", priceTHB: [700, 750], priceNote: "ca. mit Buffet über Veranstalter (kein offizieller Ausländerpreis belegt)", provider: "Siam Amazing Park", opening: "Park 10–18 · Wasserpark 10–17 Uhr",
+      url: "https://www.siamamazingpark.com/index", maps: "Siam Amazing Park, Bangkok",
+      info: ["Vortex (hängende Achterbahn), Boomerang (80 km/h), Giant Drop (75 m), 7-stöckige Speed-Rutsche, Wellenbad."],
+      tip: "Buffet = nicht glutenfrei zugesagt → eigenes Essen oder vorher fragen.",
+      src: [["Betreiber", "https://www.siamamazingpark.com/index"], ["Fahrgeschäfte, Zeiten (The Better Vacation, 08.04.2026)", "https://thebettervacation.com/bangkok-city/siam-amazing-park-bangkok/"], ["Buffet-Angebot (Oriental Escape)", "https://www.orientalescape.com/tour/thailand/bangkok/siampark"]] },
+    { id: "d_onefights", station: "bkk2", kind: "day", ic: "🥊", name: "ONE Friday Fights im Lumpinee-Stadion (Fr 30.10.)", sub: "Profi-Kämpfe live — das Stadion liegt nah an Lak Si.",
+      where: "Lumpinee Boxing Stadium, 6 Ram Inthra Rd, Bang Khen", duration: "Abend", priceNote: "ab ca. 1.000 ฿ (Kat. 3) bis 5.000 ฿ Ringside", provider: "ONE Championship", opening: "Fr 30.10.2026 ab 18:30 Uhr (am 23.10. keine Show)",
+      url: "https://www.onefc.com/events/one-friday-fights-176/", maps: "Lumpinee Boxing Stadium Ram Inthra",
+      info: ["Wöchentliche Kampfabend-Serie von ONE Championship; für Fr 30.10. gelistet."],
+      tip: "Tickets nur beim Veranstalter oder bekannten Händlern, nicht auf der Straße.",
+      src: [["Termine Oktober 2026 (Bangkok Vacay)", "https://www.bangkokvacay.com/events/one-friday-fights-lumpinee"], ["ONE Friday Fights 176 (ONE)", "https://www.onefc.com/events/one-friday-fights-176/"]] },
+    { id: "d_halloween", station: "bkk2", kind: "day", ic: "🎃", name: "Halloween-Partys Bangkok", sub: "Rooftop-, Pool- und Clubpartys am 30./31.10.",
+      where: "u. a. Silom, Sukhumvit, Rama 9", duration: "Nacht", priceNote: "Eintritt je Party (nicht überall genannt)", provider: "verschiedene Clubs", opening: "u. a. Fr 30.10.: Burning City Bangkok, Sacred Rave (HORN BKK) · Sa 31.10.: Foam Party Cassia Rama 9 ab 17 Uhr, Rooftop-Partys · 28.–31.10.: Baia Horror Show",
+      url: "https://www.bkmagazine.com/article/the-big-list-of-halloween-events-in-bangkok-for-2026/", maps: "Silom, Bangkok",
+      info: ["BK Magazine sammelt alle Halloween-Events 2026 mit Links zu den Veranstaltern."],
+      tip: "Zusammenbleiben, Getränke selbst holen und nie unbeaufsichtigt lassen, Heimfahrt mit Grab vorher planen. Pass oder Foto vom Pass mitnehmen (Clubs kontrollieren).",
+      src: [["Halloween in Bangkok 2026 (BK Magazine)", "https://www.bkmagazine.com/article/the-big-list-of-halloween-events-in-bangkok-for-2026/"]] },
+
+    /* ── Koh Phangan ── */
+    { id: "d_atv_kpg", station: "kpg", kind: "day", ic: "🏍️", name: "Quad-Dschungeltour zu den Aussichtspunkten", sub: "Mit Guide über schlammige Wege und Hügel.",
+      where: "Jungle Flight Adventure Park, Ban Tai", duration: "1,5 / 2,5 / 3,5 Std", priceNote: "ab ca. 2.200 ฿ (je nach Dauer)", provider: "Oh-Hoo (Siam Scape Journeys)", opening: "Abholung 9:30, 12:30 oder 14:30 (nur ausgewählte Hotels)",
+      url: "https://www.oh-hoo.com/tour/koh-phangan-atv-jungle-viewpoints-adventure", maps: "Jungle Flight Adventure Park, Koh Phangan",
+      info: ["Inklusive Guide, Sicherheitsausrüstung, Unfallversicherung für Fahrerin und Beifahrerin.", "Bei schlechtem Wetter: neuer Termin oder Geld zurück."],
+      tip: "Schäden am Quad sind NICHT versichert — vorher Fotos machen. Abholung ab Hin Kong und Aufpreis bestätigen lassen.",
+      src: [["Tour, Preis, Bewertungen 2026 (Oh-Hoo)", "https://www.oh-hoo.com/tour/koh-phangan-atv-jungle-viewpoints-adventure"]] },
+    { id: "d_efoil", station: "kpg", kind: "day", ic: "🛸", name: "E-Foil — übers Wasser schweben", sub: "Elektrisches Brett mit Unterwasserflügel — klappt auch ohne Wind.",
+      where: "Kite Club Koh Phangan (Ort beim Buchen erfragen)", duration: "30–60 Min privat", priceTHB: [2000, 3500], priceNote: "30 Min Intro 2.000 ฿ · 1 Std 3.500 ฿", provider: "Kite Club Koh Phangan", opening: "auf Termin, ganzjährig unabhängig vom Wind",
+      url: "https://kiteclubkohphangan.com/courses/", maps: "Kite Club Koh Phangan",
+      info: ["Einzelunterricht. Im Oktober (windarme Zeit) die beste Wassersport-Wahl auf Phangan."],
+      tip: "Nur bei ruhiger See. Schwimmweste/Helm nach Ansage.",
+      src: [["Kurse + Preise (Kite Club)", "https://kiteclubkohphangan.com/courses/"]] },
+    { id: "d_kite", station: "kpg", kind: "day", ic: "🪁", name: "Kitesurf- oder Wingfoil-Schnupperkurs", sub: "Erste Züge am Schirm — nur bei genug Wind.",
+      where: "Kite Club, Thong Sala", duration: "2 Std", priceTHB: 3500, priceNote: "Kite Discovery oder Wingfoil Discovery, inkl. Ausrüstung", provider: "Kite Club Koh Phangan", opening: "auf Buchung · Oktober ist windarme Zeit",
+      url: "https://kiteclubkohphangan.com/wing-foil/", maps: "Kite Club Koh Phangan, Thong Sala",
+      info: ["Hauptsaison ist Januar–April. Im Oktober nur, wenn der Wind passt — sonst E-Foil."],
+      tip: "Am Vorabend nach der Windvorhersage fragen.",
+      src: [["Kurse (Kite Club)", "https://kiteclubkohphangan.com/courses/"], ["Wingfoil 3.500 ฿ / 2 Std (Kite Club)", "https://kiteclubkohphangan.com/wing-foil/"]] },
+    { id: "d_freediving", station: "kpg", kind: "day", ic: "🧜‍♀️", name: "Freediving-Schnupperkurs am Sail Rock", sub: "Ohne Flasche, nur mit einem Atemzug, an der Leine abtauchen.",
+      where: "Apnea Koh Phangan, Boot ab Chaloklum", duration: "8–14 Uhr", priceTHB: 4500, priceNote: "inkl. Ausrüstung, Frühstück + Mittag", provider: "Apnea Koh Phangan", opening: "mind. 1 Tag vorher anmelden · Boot 8 Uhr",
+      url: "https://apneakohphangan.com/freediving-courses/", maps: "Chaloklum Pier, Koh Phangan",
+      info: ["Atemtechnik, Druckausgleich, betreute Übungen (bis max. 12 m).", "Kostenlose Abholung erst ab 3 Personen — für euch zwei gegen kleine Gebühr."],
+      tip: "Essen ist nicht glutenfrei zugesagt → melden oder eigenes Essen mitnehmen. Absage bis 18 Uhr am Vortag kostenlos.",
+      src: [["Kurs, Preis, Ablauf (Apnea Koh Phangan)", "https://apneakohphangan.com/freediving-courses/"]] },
+    { id: "d_seaboard", station: "kpg", kind: "day", ic: "🎶", name: "Seaboard Beach Party + Bizarre Bazaar (Mi 21.10.)", sub: "Strandparty mit DJs und Markt — direkt bei Hin Kong.",
+      where: "Seaboard, Haad Yao", duration: "Abend", priceFree: true, provider: "Seaboard Bar", opening: "Mi 21.10.2026 ca. 18–24 Uhr (DJs bis Mitternacht)",
+      url: "https://phanganlife.com/catalog/bars-and-clubs/beach-bars/seaboard-bar/?pl_month=2026-10", maps: "Seaboard Bungalows, Haad Yao, Koh Phangan",
+      info: ["Elektronische Musik am Strand plus Kunstmarkt. Eintritt frei."],
+      tip: "Rücktaxi nach Hin Kong vorher ausmachen. Keine Buckets, Getränk nie unbeaufsichtigt.",
+      src: [["Termin 21.10. (Phangan Life)", "https://phanganlife.com/catalog/bars-and-clubs/beach-bars/seaboard-bar/?pl_month=2026-10"], ["Kalender (phangan.events)", "https://phangan.events/whats-going-on/"]] },
+    { id: "d_phangancalling", station: "kpg", kind: "day", ic: "🪩", name: "Clubnacht „Phangan Calling“ (Do 22.10.)", sub: "Elektronische Clubnacht im Chill Up.",
+      where: "Chill Up, Ban Tai", duration: "bis ca. 2 Uhr", priceFree: true, provider: "Chill Up", opening: "donnerstags (22.10.), Beginn 20 oder 21 Uhr (Kalender widersprüchlich) — vorher bestätigen; Eintritt frei laut Kalender",
+      url: "https://phangan.events/whats-going-on/", maps: "Chill Up, Ban Tai, Koh Phangan",
+      info: ["Wöchentliche Donnerstags-Party laut Veranstaltungskalender."],
+      tip: "Beginn laut Kalender 20 oder 21 Uhr — vorher bestätigen. Zusammenbleiben, Getränke einzeln bestellen, Heimweg (Taxi) vorher fest ausmachen. Keine Drogen — hohe Strafen.",
+      src: [["Kalender (phangan.events)", "https://phangan.events/whats-going-on/"]] },
+
+    /* ── Koh Samui ── */
+    { id: "d_jetski", station: "sam", kind: "day", ic: "🚤", name: "Jetski-Safari mit Guide (3 Std)", sub: "Mit dem Jetski zu Koh Tan und den Five Islands.",
+      where: "Jet Ski Samui (Abholung inklusive)", duration: "3 Std (10–13 oder 14–17 Uhr)", priceTHB: 6500, priceNote: "pro Jetski für 1–2 Personen (= 3.250 ฿ p. P.) · Kurztour 1 Std: 3.500 ฿", provider: "Jet Ski Samui", opening: "täglich · Route je nach Wetter",
+      url: "https://www.jetskisamui.com/", maps: "Jet Ski Samui",
+      info: ["Englischsprachiger Guide, Schwimmwesten, Unfallversicherung, Hotel-Transfer hin und zurück.", "Keine Strand-Vermietung, sondern geführte Tour."],
+      tip: "Vor Zahlung Schadenshaftung und Versicherung schriftlich klären. Kein Alkohol vorher.",
+      src: [["Touren + Preise (Jet Ski Samui)", "https://www.jetskisamui.com/"], ["Tour mit TAT-Lizenzangabe (Koh Sanuk)", "https://www.kohsanuk.com/activities/jet-ski-safari"]] },
+    { id: "d_watersports", station: "sam", kind: "day", ic: "💦", name: "Flyboard, Banana Boat, Aqua-Park in Lamai", sub: "Vom Wasserstrahl in die Luft gehoben — direkt in Lamai.",
+      where: "Koh Samui Watersports, Lamai / Lipa Noi", duration: "1–3 Std", priceTHB: [200, 2500], priceNote: "Flyboard 1.500 ฿/10 Min · Banana Boat 600 ฿ p. P./10 Min (mind. 2 Pers.) · Aqua-Park 200 ฿/Std · Wakeboard 1.000 ฿/10 Min · Sofa zu zweit 600 ฿ p. P. · Transfer 500 ฿ je Strecke", provider: "Koh Samui Watersports", opening: "täglich 9–18 Uhr",
+      url: "https://www.kohsamuiwatersports.com/family-watersports", maps: "Koh Samui Watersports Lamai",
+      info: ["Parasailing gibt es bei diesem Anbieter derzeit NICHT (dafür Khalifa in Chaweng)."],
+      tip: "Strand (Lamai oder Lipa Noi) beim Buchen bestätigen lassen. Bei Wellen verschieben.",
+      src: [["Preise + Zeiten (Koh Samui Watersports)", "https://www.kohsamuiwatersports.com/family-watersports"]] },
+    { id: "d_parasail", station: "sam", kind: "day", ic: "🪂", name: "Parasailing in Chaweng", sub: "Am Fallschirm hinter dem Boot über die Bucht.",
+      where: "Khalifa, bei Centara Grand Chaweng", duration: "kurz", priceTHB: 2000, priceNote: "pro Person", provider: "Khalifa Samui", opening: "Betriebszeiten nicht genannt — vorher bestätigen",
+      url: "https://www.khalifasamui.com/water-sports.html", maps: "Centara Grand Beach Resort Samui",
+      info: ["Weitere Angebote dort: Flyboard 2.000 ฿/15 Min, Banana 1.600 ฿/15 Min."],
+      tip: "Nur nach Bestätigung von Boot, Crew und Versicherung. Windabhängig.",
+      src: [["Wassersport-Preise (Khalifa)", "https://www.khalifasamui.com/water-sports.html"]] },
+    { id: "d_buggy", station: "sam", kind: "day", ic: "🚙", name: "Buggy-Dschungeltour (Xquad)", sub: "Zu zweit im Buggy auf Bergpisten, zum Big Buddha über Lamai und zum Wasserfall.",
+      where: "Xquad Samui (Abholung ca. 8 Uhr)", duration: "9–15 Uhr", priceTHB: 4600, priceNote: "9.200 ฿ für zwei Personen in einem Buggy · inkl. Thai-Buffet", provider: "Xquad Samui", opening: "auf Buchung",
+      url: "https://destination-kohsamui.com/product/atv-quad-buggy/", maps: "Xquad Samui",
+      info: ["Aussichtspunkt, Big Standing Buddha über der Lamai-Bucht, Mittag im Jungle Route 360, Baden am versteckten Wasserfall."],
+      tip: "FÜHRERSCHEIN NÖTIG. Haftung/Versicherung klären. Buffet nicht glutenfrei zugesagt.",
+      src: [["Tour, Preis, Ablauf (Destination Koh Samui)", "https://destination-kohsamui.com/product/atv-quad-buggy/"]] },
+    { id: "d_kohtao_dive", station: "sam", kind: "day", ic: "🤿", name: "Schnuppertauchen bei Koh Tao (Speedboot)", sub: "Mit dem Speedboot nach Koh Tao, zwei Tauchgänge bis 12 m.",
+      where: "Discovery Divers (Abholung ca. 8 Uhr)", duration: "ganzer Tag", priceTHB: 5467, priceNote: "plus MwSt. · mit Tauchschein: Tagesfahrt 4.510 ฿ + MwSt.", provider: "Discovery Divers Samui", opening: "täglich · Boot ca. 8:45, ca. 90 Min Fahrt",
+      url: "https://discoverydivers.com/padi-discover-scuba-diving-koh-samui", maps: "Discovery Divers Koh Samui",
+      info: ["Erster Tauchgang in ruhigen, flachen Buchten, zweiter an einem Platz um Koh Tao."],
+      tip: "Flug nach Bangkok am 27.10. abends beim Buchen nennen — nach dem Tauchen mindestens 18–24 Std bis zum Flug. Essen nicht glutenfrei zugesagt.",
+      src: [["Schnuppertauchen (Discovery Divers)", "https://discoverydivers.com/padi-discover-scuba-diving-koh-samui"], ["Tagesfahrt Koh Tao (Discovery Divers)", "https://discoverydivers.com/scuba-diving-day-trips-koh-samui"]] },
+    { id: "d_samuistadium", station: "sam", kind: "day", ic: "🥊", name: "Thaiboxen live: Samui International Stadium", sub: "Kampfabend dienstags, freitags und sonntags.",
+      where: "Soi Reggae, Chaweng", duration: "ab 21 Uhr", priceTHB: [1500, 3000], priceNote: "Standard 1.500 ฿ · Ringside 2.000 ฿ · VIP 2.500 ฿ · Premium 3.000 ฿ (mit Getränk)", provider: "Samui International Muay Thai Stadium", opening: "Di, Fr, So · Einlass 20 Uhr, Kämpfe ab 21 Uhr",
+      url: "https://www.samuithaiboxing.com/", maps: "Samui International Muay Thai Stadium",
+      info: ["Kampfabende dienstags, freitags und sonntags — für euch passen Fr 23.10. (Ankunftsabend) und So 25.10."],
+      tip: "Rückfahrt nach Lamai vorher organisieren.",
+      src: [["Tage + Preise (Stadion)", "https://www.samuithaiboxing.com/"]] },
+    { id: "d_phetchbuncha", station: "sam", kind: "day", ic: "🥊", name: "Thaiboxen live: Phetchbuncha-Stadion", sub: "Kampfabend montags, mittwochs und samstags.",
+      where: "Chaweng-Choeng-Mon Road, Chaweng", duration: "21–23:50 Uhr", priceTHB: [1500, 2000], priceNote: "Normal 1.500 ฿ · Ringside 2.000 ฿ (online; an der Kasse evtl. teurer)", provider: "Phetchbuncha Stadium", opening: "Mo, Mi, Sa 21–23:50 Uhr",
+      url: "https://phetchbuncha.com/", maps: "Phetchbuncha Boxing Stadium Koh Samui",
+      info: ["Kampfabende montags, mittwochs und samstags — für euch passen Sa 24. und Mo 26.10."],
+      tip: "Online vorab buchen. Rückfahrt nach Lamai vorher organisieren.",
+      src: [["Tage + Preise (Phetchbuncha)", "https://phetchbuncha.com/"]] },
+    { id: "d_elephantbeach", station: "sam", kind: "day", ic: "🔥", name: "Elephant Beach Club: „Boiler Room Vibes“ (Sa 24.10.)", sub: "Beachparty mit DJs und Feuershow in Chaweng.",
+      where: "Elephant Beach Club, Chaweng", duration: "ab 20 Uhr", priceFree: true, provider: "Elephant Beach Club", opening: "Sa 24.10. ab 20 Uhr (Club bis 2:30) · Feuershow täglich 19:30–23:30",
+      url: "https://elephantbeachclubresort.com/en/events", maps: "Elephant Beach Club Koh Samui",
+      info: ["DJs Evgeny Sviridov, Dragos, Tootechs. Eintritt frei."],
+      tip: "Gemeinsames Rücktaxi nach Lamai. Abstand zur Feuershow, Getränke im Blick.",
+      src: [["Oktober-Programm (Elephant Beach Club)", "https://elephantbeachclubresort.com/en/events"]] },
+    { id: "d_arkbar", station: "sam", kind: "day", ic: "🔥", name: "ARKbar Chaweng: Pool-Party + Feuershow", sub: "Mi + Fr Pool-Party, jeden Abend Feuershow am Strand.",
+      where: "ARKbar Beach Club, Chaweng Beach", duration: "Abend", priceFree: true, provider: "ARKbar", opening: "Feuershow täglich 20–24 Uhr · Pool-Party Mi + Fr ab 14 Uhr, DJs ab 20 Uhr",
+      url: "https://www.ark-bar.com/best-beach-club-koh-samui/best-fire-show-koh-samui/", maps: "ARKbar Beach Club, Chaweng",
+      info: ["Eintritt frei, nur Essen/Getränke zahlen. Feuershow jeden Abend; Pool-Party mittwochs und freitags (für euch: Fr 23.10.)."],
+      tip: "Heimfahrt vorher organisieren, Getränke nie unbeaufsichtigt.",
+      src: [["Feuershow + Partys (ARKbar)", "https://www.ark-bar.com/best-beach-club-koh-samui/best-fire-show-koh-samui/"]] },
+    { id: "d_beatboat", station: "sam", kind: "day", ic: "🛥️", name: "Beat Boat — Partyboot nach Phangan (sonntags)", sub: "DJ-Boot von Samui zur Beachparty im Bambu (Haad Yuan) und nachts zurück.",
+      where: "Ab Bangrak Pier (Samui)", duration: "15 Uhr bis ca. 1:30 Uhr", priceTHB: 2120, priceNote: "inkl. Rückfahrt, Wasser, Softdrinks, Snacks", provider: "Nauti Oceanic (The Beat Boat)", opening: "sonntags · 25.10. noch nicht einzeln gelistet",
+      url: "https://samuilifeguide.com/events/the-beat-boat/var/ri-7.l-L1/", maps: "Bangrak Pier, Koh Samui",
+      info: ["15 Uhr ab Bangrak, Stopp Haad Rin, Party im Bambu (Haad Yuan), Rückfahrt 24 Uhr."],
+      tip: "Nur buchen, wenn die Rückfahrt fest bestätigt ist. Bei rauer See nicht fahren. Zusammenbleiben, keine Drogen, Getränke im Blick.",
+      src: [["Ablauf + Preis (Samui Life Guide)", "https://samuilifeguide.com/events/the-beat-boat/var/ri-7.l-L1/"], ["Betreiber (Nauti Oceanic)", "https://nautioceanic.com/nautibeat/"]] },
 
     /* ── Schöne Ecken (kind: spot) ── */
     { id: "bkk1_goldenmount", station: "bkk1", kind: "spot", ic: "🌇", name: "Golden Mount (Wat Saket) zum Sonnenuntergang", sub: "Tempel auf einem Hügel mitten in der Altstadt — 360°-Blick über Bangkok.",
@@ -2388,6 +2685,68 @@ document.querySelectorAll('#rest-filter-bar .filter-btn').forEach(btn => {
   });
 });
 
+/* ── ACTION-LISTE je Aufenthalt (15.10.2026, Team-Lauf Claude + Codex) ─────────── */
+const SP_OPEN = new Set();
+let spLastKey = '';
+function stayItemHTML(it) {
+  const a = TRIP.activities.find(x => x.id === it.ref);
+  if (!a) return '';
+  EX[a.id] = a;
+  const price = priceText(a);
+  const link = safeUrl(a.url);
+  const mark = a.kind === 'day' ? '<span class="dp-new" title="neu">🆕</span>' : '<span class="dp-inapp">📱 auch unten bei den Orten</span>';
+  return `<div class="dp-item">
+      <div class="dp-top"><span class="dp-ic">${escapeHTML(a.ic || '⚡')}</span><div class="dp-txt"><span class="dp-name">${escapeHTML(a.name)}</span> ${mark}${it.when ? `<div class="dp-note">🗓️ ${escapeHTML(it.when)}</div>` : ''}${it.hint ? `<div class="dp-note">💡 ${escapeHTML(it.hint)}</div>` : ''}${price ? `<div class="dp-price">💶 ${escapeHTML(price)}</div>` : ''}</div></div>
+      <div class="dp-btns"><button type="button" class="dp-btn info" data-om="${escapeHTML(a.id)}">ℹ️ Infos</button>${link ? `<a class="dp-btn link" href="${escapeHTML(link)}" target="_blank" rel="noopener noreferrer">🔗 Anbieter</a>` : `<a class="dp-btn link" href="${escapeHTML(mapsSearchUrl(a.maps || a.name))}" target="_blank" rel="noopener noreferrer">🗺️ Karte</a>`}</div>
+    </div>`;
+}
+function renderDayPlan() {
+  const holder = document.getElementById('action-days');
+  if (!holder || !Array.isArray(TRIP.stayplan) || !TRIP.stayplan.length) return;
+  const today = todayTH();
+  const first = TRIP.stations[0].first, last = TRIP.stations[TRIP.stations.length - 1].last;
+  const inTrip = today >= first && today <= last;
+  const cur = currentStation();
+  // aufgeklappte Orte merken (bleiben beim Neuzeichnen offen)
+  holder.querySelectorAll('details[data-st]').forEach(d => { if (d.open) SP_OPEN.add(d.dataset.st); else SP_OPEN.delete(d.dataset.st); });
+  // bei Orts-/Phasenwechsel: aktuellen Ort öffnen, nach der Reise alles schließen (Codex Runde 4)
+  const key = inTrip ? cur.id : (today < first ? 'vorher' : 'nachher');
+  if (key !== spLastKey) {
+    SP_OPEN.clear();
+    if (inTrip) SP_OPEN.add(cur.id);
+    else if (today < first) SP_OPEN.add(TRIP.stayplan[0].station);
+    spLastKey = key;
+  }
+  const head = `<div class="dp-head"><div class="dp-label">🔥 Action — alles auf einen Blick</div>
+      <div class="dp-title">Was ihr <em>dort</em> machen könnt</div>
+      <div class="dp-sub">Pro Aufenthalt alle Action-Möglichkeiten — ihr sucht euch aus, was ihr wann macht. 🗓️ = Termine/Zeiten, 💡 = Bedingungen. 🆕 = neu recherchiert · 📱 = steht auch unten bei den Orten. Quellen und Prüfstand unter „ℹ️ Infos“ (Stand ${escapeHTML(TRIP.stayplanAsOf || '')}) — Termine und Preise vor dem Buchen beim Anbieter bestätigen.</div>
+      ${inTrip ? '<button type="button" class="dp-today-btn" data-dp-today>📍 Zu meinem aktuellen Ort</button>' : ''}</div>`;
+  const body = TRIP.stayplan.map(sp => {
+    const st = stationById(sp.station);
+    if (!st) return '';
+    const place = TRIP.places[st.place] || { name: '' };
+    const isCur = inTrip && st.id === cur.id;
+    const isPast = today > st.last && !isCur;
+    const count = (sp.groups || []).reduce((n, g) => n + (g.items || []).length, 0);
+    const groups = (sp.groups || []).map(g => `<div class="dp-slot-t">${escapeHTML(g.t)}</div>${(g.items || []).map(stayItemHTML).join('')}`).join('');
+    return `<details class="dp-day${isCur ? ' today' : ''}${isPast ? ' past' : ''}" data-st="${escapeHTML(st.id)}"${SP_OPEN.has(st.id) ? ' open' : ''}>
+      <summary><div class="dp-row"><span class="dp-date">${escapeHTML(st.stay)}</span><span class="dp-place">${escapeHTML(place.name)}</span>${isCur ? '<span class="dp-now">Du bist hier</span>' : ''}<span class="dp-arrow">▾</span></div><div class="dp-lbl">${escapeHTML(sp.label)} · ${count} Möglichkeiten</div></summary>
+      <div class="dp-body">${st.note ? `<div class="dp-travel">🧳 ${escapeHTML(st.note)}</div>` : ''}${groups}</div>
+    </details>`;
+  }).join('');
+  holder.innerHTML = head + body;
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('[data-dp-today]')) return;
+  const el = document.querySelector(`#action-days details[data-st="${currentStation().id}"]`);
+  if (!el) return;
+  el.open = true;
+  // Abstand = tatsächliche Höhe der festen Kopfzeile (auf dem Handy höher als am PC)
+  const nav = document.getElementById('top-nav');
+  el.style.scrollMarginTop = ((nav ? nav.offsetHeight : 0) + 12) + 'px';
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
 /* ── ACTION: 4 STATIONEN ────────────────────────────────────── */
 const EX = {};
 function activityCardHTML(a) {
@@ -2405,12 +2764,13 @@ function activityCardHTML(a) {
   </div>`;
 }
 function renderAction() {
+  renderDayPlan();
   const holder = document.getElementById('action-stations');
   if (!holder) return;
   const cur = currentStation();
   holder.innerHTML = TRIP.stations.map((s, idx) => {
     const place = TRIP.places[s.place];
-    const acts = TRIP.activities.filter(a => a.station === s.id && a.kind !== 'spot');
+    const acts = TRIP.activities.filter(a => a.station === s.id && a.kind !== 'spot' && a.kind !== 'day');
     const spots = TRIP.activities.filter(a => (a.station === s.id || (a.station === s.place && s.id === stationsOfPlace(s.place)[0])) && a.kind === 'spot');
     const isCur = s.id === cur.id;
     return `<section data-station="${escapeHTML(s.id)}" class="${isCur ? 'st-current' : ''}" id="st-${escapeHTML(s.id)}">
@@ -2451,10 +2811,12 @@ function om(k) {
   const st = stationById(a.station);
   document.getElementById('md-s').textContent = (st ? TRIP.places[st.place].name + ' · ' + st.stay : '') + (priceText(a) ? ' · ' + priceText(a) : '');
   const paras = (a.info || []).map(p => `<p>${escapeHTML(p)}</p>`).join('');
+  // Codex Runde 6: neue Einträge (nur in der Action-Liste) zeigen Ort/Dauer/Zeiten/Anbieter im Info-Fenster
+  const facts = a.kind === 'day' ? [['📍', a.where], ['⏰', a.duration], ['🕐', a.opening], ['🏢', a.provider]].filter(f => f[1]).map(f => `<p style="font-size:13px;margin-bottom:6px;">${f[0]} ${escapeHTML(f[1])}</p>`).join('') : '';
   const tip = a.tip ? `<div class="tip">💡 ${escapeHTML(a.tip)}</div>` : '';
   const src = (a.src || []).length ? `<p style="font-size:12px;color:var(--text-muted);margin-top:12px;">Quelle: ${(a.src || []).map(srcLink).join(' · ')}</p>` : '';
   const route = a.maps || a.where ? `<p style="margin-top:10px;"><a class="map-open-btn" href="${mapsRouteUrl(a.maps || a.where)}" target="_blank" rel="noopener noreferrer">🧭 Route in Google Maps</a></p>` : '';
-  document.getElementById('md-b').innerHTML = paras + tip + route + src;
+  document.getElementById('md-b').innerHTML = facts + paras + tip + route + src;
   document.getElementById('md').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
