@@ -304,6 +304,13 @@
     #panel-action .dp-body .cards { grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); }
     #panel-action .dp-body .sub-label { margin-top: 20px; }
     #panel-action .dp-day summary .wx-days { margin-top: 8px; }
+    /* Lesbarkeit (Wolli + Jennifer 15.10.2026): Pfeile doppelt so groß + hellweiß, keine grauen Texte */
+    #panel-action .dp-arrow { font-size: 32px; line-height: 1; color: #ffffff; }
+    #panel-action .card-d { font-size: 15px; color: var(--text); }
+    #panel-action .det { border-top: 1px solid rgba(232,228,220,.5); }
+    #panel-action .det .k, #panel-action .dp-place, #panel-action .w-label, #panel-action .src, #panel-action .a-sub, #panel-action .a-sub span, #panel-action .trip-note-preview, #panel-action .modal-ti p, #panel-action .empty-note { color: var(--text); }
+    #panel-action .btn-fav:not(.active):not(:hover) { color: var(--text); }
+    #panel-action .google-search-label, #panel-action .gsearch-label-place, #panel-action .manual-save-toggle, #panel-action .toggle-arrow { color: var(--text); }
     #panel-action .a-footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 12px; }
 
     /* action modal */
@@ -912,7 +919,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 16:16 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 16:30 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1140,7 +1147,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 16:16 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 16:30 Uhr
   </footer>
 </div><!-- /panel-rest -->
 
@@ -1212,7 +1219,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 16:16 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 16:30 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1311,7 +1318,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "15.10.2026 · 16:16";
+const APP_VERSION = "15.10.2026 · 16:30";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
