@@ -952,6 +952,103 @@
     #panel-rest .card.card-big .btn-fav { font-size: 1.05rem; padding: 9px 16px; }
     #panel-rest .btn-web { text-decoration: none; color: #7b8cde !important; border-color: rgba(123,140,222,.6); }
     #panel-rest .nobr { white-space: nowrap; }
+
+    /* ══ GROSSE SCHRIFT wie im Reiter Essen — Mein Urlaub, Action, Favoriten (Wolli 15.10.2026) ══
+       Maßstab Essen: Fließtext/Werte ≈ 1,1–1,15rem, Bezeichnungen/Schildchen ≈ 0,85–0,9rem, Knöpfe 1rem (mind. 44 px hoch),
+       Eingabefelder 16 px (iPhone zoomt sonst beim Antippen). Zier-Überschriften und Notfall-Fenster bleiben. */
+
+    /* ── Mein Urlaub ── */
+    #panel-plan .plan-kicker, #panel-plan .plan-metric span, #panel-plan .plan-pill, #panel-plan .station-switch-label,
+    #panel-plan .station-mode, #panel-plan .info-cell .k, #panel-plan .em-sub, #panel-plan .em-place-name .em-tag,
+    #panel-plan .budget-total-label, #panel-plan .budget-row.head span, #panel-plan .budget-cell::before { font-size: 0.9rem !important; letter-spacing: 0.04em; }
+    #panel-plan .plan-lede, #panel-plan .plan-mini, #panel-plan .plan-list, #panel-plan .st-meta, #panel-plan .em-place-meta,
+    #panel-plan .em-note, #panel-plan .budget-hint, #panel-plan .budget-empty, #panel-plan .offline-state, #panel-plan .avoid-item,
+    #panel-plan .budget-add label, #panel-plan .cur-calc span { font-size: 1.1rem !important; line-height: 1.5; }
+    #panel-plan .em-place-name { font-size: 1.2rem !important; }
+    #panel-plan .em-src, #panel-plan .info-src, #panel-plan .src { font-size: 0.95rem !important; line-height: 1.5; }
+    #panel-plan .avoid-label { font-size: 0.95rem !important; }
+    #panel-plan .em-btn, #panel-plan .plan-btn, #panel-plan .plan-file-btn, #panel-plan .station-switch button,
+    #panel-plan .plan-place-actions a, #panel-plan .plan-item button { font-size: 1rem !important; min-height: 44px; }
+    #panel-plan .em-call .lbl { font-size: 0.9rem !important; }
+    #panel-plan .em-call .hint { font-size: 0.85rem !important; }
+    #panel-plan .budget-name { font-size: 1.05rem !important; white-space: normal; }
+    #panel-plan .budget-name .bn-auto { font-size: 0.85rem !important; }
+    #panel-plan .budget-x { width: 36px; height: 36px; font-size: 1rem !important; }
+
+    /* ── Action ── */
+    #panel-action .card { padding: 14px; }
+    #panel-action .dp-body { padding: 0 10px 12px; }
+    #panel-action .card-t { font-size: 1.2rem; line-height: 1.3; }
+    #panel-action .card-d { font-size: 1.1rem; line-height: 1.45; }
+    #panel-action .det { font-size: 1.1rem; gap: 6px; }
+    #panel-action .det li { line-height: 1.45; }
+    #panel-action .tag { font-size: 0.85rem; padding: 3px 9px; }
+    #panel-action .sub-label { font-size: 1rem; }
+    #panel-action .dp-place, #panel-action .a-label, #panel-action .a-map-label, #panel-action .intro-label { font-size: 0.9rem; }
+    #panel-action .dp-date { font-size: 1.15rem; }
+    #panel-action .dp-lbl, #panel-action .a-sub, #panel-action .intro p { font-size: 1.1rem; line-height: 1.5; }
+    #panel-action .dp-travel, #panel-action .avoid-item { font-size: 1.05rem !important; line-height: 1.5; }
+    #panel-action .avoid-label { font-size: 0.95rem; }
+    #panel-action .src, #panel-action .map-open-note, #panel-action .google-search-label { font-size: 0.95rem; line-height: 1.6; }
+    #panel-action .btn-info, #panel-action .btn-link, #panel-action .btn-fav, #panel-action .map-open-btn, #panel-action .dp-today-btn { font-size: 1rem; min-height: 44px; padding: 10px 8px; }
+    #panel-action .card-btns { flex-wrap: wrap; }
+    #panel-action .trip-tools button { font-size: 1rem; min-height: 44px; }
+    #panel-action .trip-note-preview { font-size: 1rem; }
+    #panel-action .modal-b p { font-size: 1.1rem; line-height: 1.55; }
+    #panel-action .modal-b .tip { font-size: 1.05rem; line-height: 1.5; }
+    #panel-action .modal-ti p { font-size: 0.95rem; }
+    #panel-action .modal-ti h3 { font-size: 1.4rem; }
+
+    /* ── Favoriten ── */
+    #panel-fav .fav-hero p, #panel-fav .fav-empty { font-size: 1.1rem; line-height: 1.5; }
+    #panel-fav .fav-section-count { font-size: 0.9rem; }
+    #panel-fav .fav-item-name { font-size: 1.2rem; white-space: normal; overflow: visible; text-overflow: clip; }
+    #panel-fav .fav-item-sub { font-size: 1rem; line-height: 1.45; }
+    #panel-fav .fav-item-link, #panel-fav .fav-item-remove, #panel-fav .fav-clear-btn { font-size: 1rem; padding: 9px 16px; min-height: 44px; display: inline-flex; align-items: center; }
+    #panel-fav .friend-card-name { font-size: 1.2rem; }
+    #panel-fav .friend-card-addr, #panel-fav .friend-card-phone { font-size: 1.05rem; }
+    #panel-fav .fav-grid { grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); }
+
+    /* ── überall: Wetter-Kacheln lesbar, Eingabefelder 16 px, Zusatzfelder groß ── */
+    .tab-panel .w-label, .tab-panel .w-rain { font-size: 0.8rem !important; }
+    .tab-panel .w-temp { font-size: 1rem !important; }
+    .tab-panel input, .tab-panel select, .tab-panel textarea { font-size: 16px !important; }
+    .tab-panel .manual-save-toggle, .tab-panel .manual-save-btn { font-size: 1rem !important; min-height: 44px; }
+    /* Reste nach Messung */
+    #panel-plan .gf-warn-list li { font-size: 1.1rem !important; line-height: 1.5; }
+    #panel-plan .gf-warn-list a, #panel-plan .gf-warn-list span { font-size: 0.95rem !important; }
+    #panel-plan .place-add button { font-size: 1rem !important; min-height: 44px; }
+    #panel-action .dp-now { font-size: 0.8rem; padding: 3px 10px; }
+    #panel-action .google-search-btn, #panel-rest .google-search-btn { font-size: 1rem; }
+    #panel-action .sec-date { font-size: 0.9rem; }
+    .tab-panel .a-footer, .tab-panel .r-footer { font-size: 0.95rem !important; }
+    #panel-fav .fav-item-remove:not(:hover) { color: #e8e4dc; border-color: #555; }
+    #panel-action .dp-now { font-size: 0.85rem; }
+    /* Essen außerhalb der Karten (Kopf, Zahlen, Legende, Filter, Warnliste, Karten-Knopf, Suche) — Karten selbst unverändert */
+    #panel-rest .r-eyebrow, #panel-rest .stat-label { font-size: 0.9rem; }
+    #panel-rest .r-hero-desc, #panel-rest .section-sub { font-size: 1.1rem; line-height: 1.5; }
+    #panel-rest .legend-item, #panel-rest .filter-btn { font-size: 1rem; }
+    #panel-rest .filter-btn { min-height: 40px; padding: 0.45rem 1rem; }
+    #panel-rest .gf-warn-list li { font-size: 1.1rem !important; line-height: 1.5; }
+    #panel-rest .gf-warn-list a, #panel-rest .gf-warn-list span { font-size: 0.95rem !important; }
+    #panel-rest .map-open-btn { font-size: 1rem; min-height: 44px; }
+    #panel-rest .map-open-note, #panel-rest .google-search-label, #panel-rest .gsearch-label-place { font-size: 0.95rem; }
+    #panel-rest .gf-bar button, #panel-rest button:not(.btn-fav):not(.filter-btn) { font-size: 1rem; }
+    /* Handy: Breite besser nutzen wie bei Essen (kleinere Außen-/Innenabstände) */
+    @media (max-width: 600px) {
+      #panel-plan .plan-shell { padding-left: 12px !important; padding-right: 12px !important; }
+      #panel-plan .plan-block { padding: 14px !important; }
+      #panel-plan .em-place { padding: 12px !important; }
+      #panel-plan .em-btn { flex: 1 1 100% !important; }
+      #panel-action main, #panel-action .a-header, #panel-action .a-map-section { padding-left: 12px !important; padding-right: 12px !important; }
+      #panel-fav .fav-sections, #panel-fav .fav-hero { padding-left: 12px !important; padding-right: 12px !important; }
+      #panel-fav .fav-item { padding: 14px; }
+    }
+    /* Notfall: Telefonnummern nie umbrechen */
+    .nobr { white-space: nowrap; }
+    /* Action: Knöpfe einzeilig, weichen bei Platzmangel in die nächste Zeile aus (wie Essen) */
+    #panel-action .card-btns { gap: 10px; }
+    #panel-action .card-btns .btn-info, #panel-action .card-btns .btn-link, #panel-action .card-btns .btn-fav { flex: 1 1 auto; white-space: normal; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; }
 </style>
 </head>
 <body>
@@ -967,7 +1064,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 17:40 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 18:01 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1195,7 +1292,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 17:40 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 18:01 Uhr
   </footer>
 </div><!-- /panel-rest -->
 
@@ -1267,7 +1364,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 17:40 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 18:01 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1366,7 +1463,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "15.10.2026 · 17:40";
+const APP_VERSION = "15.10.2026 · 18:01";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -2416,7 +2513,7 @@ function emergencyHTML(place, station) {
       <div class="em-place-name">${escapeHTML(p.name)}${p.kind ? `<span class="em-tag${p.warn ? ' warn' : ''}">${escapeHTML(p.kind)}</span>` : ''}</div>
       <div class="em-place-meta">📍 ${escapeHTML(p.address || '')}${p.info ? '<br>' + escapeHTML(p.info) : ''}</div>
       <div class="em-actions">
-        ${(p.tels || []).map(t => `<a class="em-btn tel" href="${telHref(t[1])}">📞 ${escapeHTML(t[0])} ${escapeHTML(t[2])}</a>`).join('')}
+        ${(p.tels || []).map(t => `<a class="em-btn tel" href="${telHref(t[1])}">📞 ${escapeHTML(t[0])} <span class="nobr">${escapeHTML(t[2])}</span></a>`).join('')}
         <a class="em-btn route" href="${emergencyRouteUrl(p)}" target="_blank" rel="noopener noreferrer">🧭 Route Google</a>
         ${hasCoords(p) ? `<a class="em-btn route" href="${appleRouteUrl(p)}" target="_blank" rel="noopener noreferrer">🍎 Apple Karten</a>` : ''}
       </div>
@@ -2447,7 +2544,7 @@ function embassyCard(e) {
       <div class="em-place-name">${escapeHTML(e.name)}</div>
       <div class="em-place-meta">📍 ${escapeHTML(e.address)}<br>🕐 ${escapeHTML(e.hours)}${e.emergencyHours ? '<br>🚨 ' + escapeHTML(e.emergencyHours) : ''}</div>
       <div class="em-actions">
-        ${(e.tels || []).map(t => `<a class="em-btn tel" href="${telHref(t[1])}">📞 ${escapeHTML(t[0])} ${escapeHTML(t[2])}</a>`).join('')}
+        ${(e.tels || []).map(t => `<a class="em-btn tel" href="${telHref(t[1])}">📞 ${escapeHTML(t[0])} <span class="nobr">${escapeHTML(t[2])}</span></a>`).join('')}
         <a class="em-btn route" href="${emergencyRouteUrl(e)}" target="_blank" rel="noopener noreferrer">🧭 Route Google</a>
         <a class="em-btn route" href="${appleRouteUrl(e)}" target="_blank" rel="noopener noreferrer">🍎 Apple Karten</a>
       </div>
