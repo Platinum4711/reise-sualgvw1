@@ -931,31 +931,27 @@
     .tab-panel .st-meta, .tab-panel .station-switch-label, .tab-panel .offline-state, .tab-panel .info-cell .k, .tab-panel .cur-calc span,
     .tab-panel .empty-note, #panel-plan .budget-add label { color: #e8e4dc !important; }
 
-    /* TEST 15.10.2026 (nur Sunshine Market): große Schrift im ganzen Feld + Website unten neben Favorit */
-    #panel-rest .card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-    #panel-rest .btn-web { text-decoration: none; color: #7b8cde !important; border-color: rgba(123,140,222,.6); }
-    #panel-rest .card.card-big .tag { font-size: 0.9rem; }
-    #panel-rest .card.card-big .detail-icon { font-size: 1.1rem; }
-    #panel-rest .card.card-big .detail-label { font-size: 0.9rem; }
-    #panel-rest .card.card-big .detail-value { font-size: 1.15rem; line-height: 1.45; }
-    #panel-rest .card.card-big .tip-box { font-size: 1.15rem; line-height: 1.5; }
-    #panel-rest .card.card-big .src-line { font-size: 1rem; line-height: 1.5; }
-    #panel-rest .card.card-big .btn-fav { font-size: 1.05rem; padding: 9px 16px; }
-
-    /* Runde 2: Breite nutzen (nur Testkarte) */
+    /* ══ Reiter Essen: Sunshine-Aufbau für ALLE Restaurant- und Laden-Karten (Wolli 15.10.2026) ══
+       große Schrift im ganzen Feld · Nummer links neben dem Namen · Symbol neben der Überschrift, Wert darunter in voller Breite ·
+       „🔗 Website“ unten neben „Favorit“ (gleiche Größe) · Wortgruppen zusammen · schöner Umbruch, Silbentrennung nur im Fließtext */
     #panel-rest .card.card-big { grid-template-columns: 1fr; padding: 14px; }
-    #panel-rest .card.card-big .card-number.in-row { display: inline-flex; width: 30px; height: 30px; margin: 0 4px 0 0; font-size: 0.85rem; vertical-align: middle; }
-    #panel-rest .card.card-big .detail-item { display: block; }
-    #panel-rest .card.card-big .detail-icon { display: inline; margin-right: 6px; }
-    #panel-rest .card.card-big .detail-item > div { display: inline; }
-    #panel-rest .card.card-big .detail-label { display: inline; }
-    #panel-rest .card.card-big .detail-value { display: block; margin-top: 2px; text-wrap: pretty; hyphens: none; }
-    #panel-rest .card.card-big .detail-value.dv-text, #panel-rest .card.card-big .tip-box { hyphens: auto; text-wrap: pretty; }
-    #panel-rest .card.card-big .card-details { grid-template-columns: 1fr; gap: 0.7rem; }
-    #panel-rest .nobr { white-space: nowrap; }
     #panel-rest .card.card-big .card-name-row { flex-wrap: nowrap; align-items: flex-start; gap: 8px; }
     #panel-rest .card.card-big .card-name { min-width: 0; }
-    #panel-rest .card.card-big .card-number.in-row { flex-shrink: 0; margin: 0; }
+    #panel-rest .card.card-big .card-number.in-row { display: inline-flex; flex-shrink: 0; width: 30px; height: 30px; margin: 0; font-size: 0.85rem; }
+    #panel-rest .card.card-big .tag { font-size: 0.9rem; }
+    #panel-rest .card.card-big .card-details { grid-template-columns: 1fr; gap: 0.7rem; }
+    #panel-rest .card.card-big .detail-item { display: block; }
+    #panel-rest .card.card-big .detail-icon { display: inline; margin-right: 6px; font-size: 1.1rem; }
+    #panel-rest .card.card-big .detail-item > div { display: inline; }
+    #panel-rest .card.card-big .detail-label { display: inline; font-size: 0.9rem; }
+    #panel-rest .card.card-big .detail-value { display: block; margin-top: 2px; font-size: 1.15rem; line-height: 1.45; text-wrap: pretty; hyphens: none; }
+    #panel-rest .card.card-big .detail-value.dv-text, #panel-rest .card.card-big .tip-box { hyphens: auto; text-wrap: pretty; }
+    #panel-rest .card.card-big .tip-box { font-size: 1.15rem; line-height: 1.5; }
+    #panel-rest .card.card-big .src-line { font-size: 1rem; line-height: 1.5; }
+    #panel-rest .card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    #panel-rest .card.card-big .btn-fav { font-size: 1.05rem; padding: 9px 16px; }
+    #panel-rest .btn-web { text-decoration: none; color: #7b8cde !important; border-color: rgba(123,140,222,.6); }
+    #panel-rest .nobr { white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -971,7 +967,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 17:21 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 17:40 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1199,7 +1195,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 17:21 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 17:40 Uhr
   </footer>
 </div><!-- /panel-rest -->
 
@@ -1271,7 +1267,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 17:21 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 17:40 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1370,7 +1366,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "15.10.2026 · 17:21";
+const APP_VERSION = "15.10.2026 · 17:40";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -2675,9 +2671,12 @@ function filterPlace() {
   if (['bkk', 'kpg', 'sam'].includes(currentFilter)) return currentFilter;
   return null;
 }
+/* Reiter Essen (Wolli 15.10.2026): zusammengehörige Wortgruppen nicht trennen — nur Anzeige, Daten bleiben unverändert (Codex: nowrap beim Rendern).
+   Wochentage („Mo–Sa“, „So geschlossen“, „Sa/So geschlossen“, „Mo–Mi + Sa“), Uhrzeiten („8:30–18:00“, „9–17 Uhr“), Soi/Moo/Sukhumvit + Nummer,
+   Ortsnamen aus zwei Wörtern, Preise („ca. 200–400 ฿ p. P.“). Eingabe ist bereits escaped. */
+const KEEP_RE = /(?<![A-Za-zÄÖÜäöüß\d])((?:ca\. )?\d[\d.]*(?:–\d[\d.]*)? ฿(?: p\. P\.)?|(?:Mo|Di|Mi|Do|Fr|Sa|So)(?:[–\/](?:Mo|Di|Mi|Do|Fr|Sa|So))?(?: \+ (?:Mo|Di|Mi|Do|Fr|Sa|So))?(?: geschlossen)?|\d{1,2}(?::\d{2})?–\d{1,2}(?::\d{2})?(?!\d)(?: Uhr)?|\d{1,2}(?::\d{2})? Uhr|(?:Soi|Moo|Sukhumvit) \d+|Khlong Toei|Phra Nakhon|Phra Athit|Baan Tai|Pad Thai)(?![A-Za-zÄÖÜäöüß\d])/g;
 function keepTogether(html) {
-  // zusammengehörige Wortgruppen nicht trennen (Wolli 15.10.2026, Codex: nowrap beim Rendern)
-  return html.replace(/(So geschlossen|Khlong Toei|Soi \d+|\d{1,2}:\d{2}–\d{1,2}:\d{2}|Mo–Sa)/g, '<span class="nobr">$1</span>');
+  return String(html).replace(KEEP_RE, '<span class="nobr">$1</span>');
 }
 function renderCards() {
   const placeKey = filterPlace();
@@ -2694,13 +2693,11 @@ function renderCards() {
   filtered.forEach((r, i) => {
     const lvl = GF_LEVELS[r.gf] || GF_LEVELS.ask;
     const key = String(r.id);
-    const card = document.createElement('div'); card.className = 'card' + (r.id === 'r_sunshine' ? ' card-big' : ''); card.dataset.id = r.id;
+    const card = document.createElement('div'); card.className = 'card card-big'; card.dataset.id = r.id;
     card.innerHTML = `
-      ${r.id === 'r_sunshine' ? '' : `<div class="card-number ${lvl.cls}">${i + 1}</div>`}
       <div class="card-body">
         <div class="card-name-row">
-          ${r.id === 'r_sunshine' ? `<span class="card-number in-row ${lvl.cls}">${i + 1}</span>` : ''}<span class="card-name">${escapeHTML(r.name)}</span>
-          ${r.id !== 'r_sunshine' && safeUrl(r.website) ? `<a class="website-link" href="${escapeHTML(safeUrl(r.website))}" target="_blank" rel="noopener noreferrer" data-stop><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Website</a>` : ''}
+          <span class="card-number in-row ${lvl.cls}">${i + 1}</span><span class="card-name">${escapeHTML(r.name)}</span>
         </div>
         <div class="card-tags">
           <span class="tag ${lvl.tag}">${escapeHTML(lvl.label)}</span>
@@ -2709,9 +2706,9 @@ function renderCards() {
           ${r.farNote ? `<span class="tag tag-cuisine">${escapeHTML(r.farNote)}</span>` : ''}
         </div>
         <div class="card-details">
-          <div class="detail-item"><span class="detail-icon">🕐</span><div><span class="detail-label">Öffnungszeiten</span><span class="detail-value">${r.id === 'r_sunshine' ? keepTogether(escapeHTML(r.openingHours || 'nicht geprüft')) : escapeHTML(r.openingHours || 'nicht geprüft')}</span></div></div>
-          <div class="detail-item"><span class="detail-icon">📍</span><div><span class="detail-label">Adresse</span><span class="detail-value">${r.id === 'r_sunshine' ? keepTogether(escapeHTML(r.address || '')) : escapeHTML(r.address || '')}</span></div></div>
-          <div class="detail-item"><span class="detail-icon">💶</span><div><span class="detail-label">Preis</span><span class="detail-value">${r.id === 'r_sunshine' ? keepTogether(escapeHTML(r.price || 'nicht geprüft')) : escapeHTML(r.price || 'nicht geprüft')}</span></div></div>
+          <div class="detail-item"><span class="detail-icon">🕐</span><div><span class="detail-label">Öffnungszeiten</span><span class="detail-value">${keepTogether(escapeHTML(r.openingHours || 'nicht geprüft'))}</span></div></div>
+          <div class="detail-item"><span class="detail-icon">📍</span><div><span class="detail-label">Adresse</span><span class="detail-value">${keepTogether(escapeHTML(r.address || ''))}</span></div></div>
+          <div class="detail-item"><span class="detail-icon">💶</span><div><span class="detail-label">Preis</span><span class="detail-value">${keepTogether(escapeHTML(r.price || 'nicht geprüft'))}</span></div></div>
           <div class="detail-item"><span class="detail-icon">🍳</span><div><span class="detail-label">Küche / Kreuzkontamination</span><span class="detail-value dv-text">${escapeHTML(r.cross || '')}</span></div></div>
         </div>
         ${r.tip ? `<div class="tip-box"><strong>Tipp:</strong> ${escapeHTML(r.tip)}</div>` : ''}
@@ -2721,7 +2718,7 @@ function renderCards() {
       <div class="card-actions" style="margin-top:8px;padding-top:8px;border-top:1px solid var(--color-border);grid-column:1 / -1;">
         <button class="btn-fav ${isFav('rest', key) ? 'active' : ''}" type="button" data-rest-fav="${escapeHTML(key)}">
           <span class="fav-heart">❤️</span>${isFav('rest', key) ? 'Gespeichert' : 'Favorit'}
-        </button>${r.id === 'r_sunshine' && safeUrl(r.website) ? `<a class="btn-fav btn-web" href="${escapeHTML(safeUrl(r.website))}" target="_blank" rel="noopener noreferrer" data-stop>🔗 Website</a>` : ''}
+        </button>${safeUrl(r.website) ? `<a class="btn-fav btn-web" href="${escapeHTML(safeUrl(r.website))}" target="_blank" rel="noopener noreferrer" data-stop>🔗 Website</a>` : ''}
       </div>`;
     const favBtn = card.querySelector('[data-rest-fav]');
     if (favBtn) favBtn.addEventListener('click', e => {
@@ -2744,27 +2741,25 @@ function renderShops() {
   holder.innerHTML = list.length ? '' : '<div class="empty-note">Für diese Auswahl gibt es noch keine geprüften Läden.</div>';
   list.forEach((s, i) => {
     const key = String(s.id);
-    const card = document.createElement('div'); card.className = 'card'; card.dataset.shopId = s.id;
+    const card = document.createElement('div'); card.className = 'card card-big'; card.dataset.shopId = s.id;
     card.innerHTML = `
-      <div class="card-number ${s.kind === 'gf' ? 'gem' : 'mid'}">${s.kind === 'gf' ? 'GF' : '🛒'}</div>
       <div class="card-body">
-        <div class="card-name-row"><span class="card-name">${escapeHTML(s.name)}</span>
-          ${safeUrl(s.website) ? `<a class="website-link" href="${escapeHTML(safeUrl(s.website))}" target="_blank" rel="noopener noreferrer" data-stop>Website</a>` : ''}</div>
+        <div class="card-name-row"><span class="card-number in-row ${s.kind === 'gf' ? 'gem' : 'mid'}">${s.kind === 'gf' ? 'GF' : '🛒'}</span><span class="card-name">${escapeHTML(s.name)}</span></div>
         <div class="card-tags">
           <span class="tag ${s.kind === 'gf' ? 'tag-gf100' : 'tag-gfmenu'}">${s.kind === 'gf' ? 'b) mit glutenfreiem Angebot' : 'a) normaler Einkauf'}</span>
           <span class="tag tag-extra">📍 ${escapeHTML(TRIP.places[s.place].name)}</span>
           ${s.farNote ? `<span class="tag tag-cuisine">${escapeHTML(s.farNote)}</span>` : ''}
         </div>
         <div class="card-details">
-          <div class="detail-item"><span class="detail-icon">🕐</span><div><span class="detail-label">Öffnungszeiten</span><span class="detail-value">${escapeHTML(s.openingHours || 'nicht geprüft')}</span></div></div>
-          <div class="detail-item"><span class="detail-icon">📍</span><div><span class="detail-label">Adresse</span><span class="detail-value">${escapeHTML(s.address || '')}</span></div></div>
+          <div class="detail-item"><span class="detail-icon">🕐</span><div><span class="detail-label">Öffnungszeiten</span><span class="detail-value">${keepTogether(escapeHTML(s.openingHours || 'nicht geprüft'))}</span></div></div>
+          <div class="detail-item"><span class="detail-icon">📍</span><div><span class="detail-label">Adresse</span><span class="detail-value">${keepTogether(escapeHTML(s.address || ''))}</span></div></div>
         </div>
         ${s.what ? `<div class="tip-box"><strong>Was es gibt:</strong> ${escapeHTML(s.what)}</div>` : ''}
         <div class="src-line">Quelle: ${(s.src || []).map(srcLink).join(' · ')}</div>
       </div>
       <div class="card-meta"></div>
-      <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--color-border);grid-column:1 / -1;">
-        <button class="btn-fav ${isFav('rest', key) ? 'active' : ''}" type="button" data-rest-fav="${escapeHTML(key)}"><span class="fav-heart">❤️</span>${isFav('rest', key) ? 'Gespeichert' : 'Favorit'}</button>
+      <div class="card-actions" style="margin-top:8px;padding-top:8px;border-top:1px solid var(--color-border);grid-column:1 / -1;">
+        <button class="btn-fav ${isFav('rest', key) ? 'active' : ''}" type="button" data-rest-fav="${escapeHTML(key)}"><span class="fav-heart">❤️</span>${isFav('rest', key) ? 'Gespeichert' : 'Favorit'}</button>${safeUrl(s.website) ? `<a class="btn-fav btn-web" href="${escapeHTML(safeUrl(s.website))}" target="_blank" rel="noopener noreferrer" data-stop>🔗 Website</a>` : ''}
       </div>`;
     card.querySelector('[data-rest-fav]').addEventListener('click', e => {
       e.stopPropagation();
