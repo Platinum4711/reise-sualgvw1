@@ -1049,6 +1049,25 @@
     /* Action: Knöpfe einzeilig, weichen bei Platzmangel in die nächste Zeile aus (wie Essen) */
     #panel-action .card-btns { gap: 10px; }
     #panel-action .card-btns .btn-info, #panel-action .card-btns .btn-link, #panel-action .card-btns .btn-fav { flex: 1 1 auto; white-space: normal; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; }
+    /* ══ Reiter Essen: Knopf „ℹ️ Was ist das?“ + Info-Fenster (Wolli 15.10.2026), gleiche Größe wie Favorit/Website ══ */
+    #panel-rest .btn-einfo { color: #e8c547 !important; border-color: rgba(232,197,71,.6); background: rgba(232,197,71,.08); }
+    #panel-rest .btn-einfo:hover { background: rgba(232,197,71,.18); }
+    #panel-rest .card-actions .btn-einfo { max-width: 100%; white-space: normal; text-align: center; }
+    #panel-rest .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 16px; }
+    #panel-rest .modal-overlay.active { display: flex; }
+    #panel-rest .modal { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 16px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 20px; }
+    #panel-rest .modal-h { display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid var(--color-border); padding-bottom: 14px; margin-bottom: 14px; }
+    #panel-rest .modal-ic { font-size: 28px; line-height: 1.2; }
+    #panel-rest .modal-ti { flex: 1; min-width: 0; }
+    #panel-rest .modal-ti h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; line-height: 1.25; color: var(--color-text); overflow-wrap: break-word; hyphens: auto; }
+    #panel-rest .modal-ti p { font-size: 0.95rem; color: var(--color-text); margin-top: 4px; }
+    #panel-rest .modal-x { background: none; border: 1px solid var(--color-border); color: var(--color-text); width: 44px; height: 44px; border-radius: 10px; cursor: pointer; font-size: 20px; flex-shrink: 0; }
+    #panel-rest .modal-x:hover { border-color: #e8c547; color: #e8c547; }
+    #panel-rest .modal-b p { font-size: 1.1rem; line-height: 1.55; color: var(--color-text); margin-bottom: 12px; text-wrap: pretty; hyphens: auto; overflow-wrap: break-word; }
+    #panel-rest .modal-b .tip { background: rgba(232,197,71,.06); border-left: 2px solid #e8c547; padding: 10px 14px; border-radius: 6px; font-size: 1.05rem; line-height: 1.5; color: var(--color-text); margin-top: 8px; }
+    #panel-rest .modal-b .map-open-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(123,140,222,.6); color: #7b8cde; text-decoration: none; font-size: 1rem; }
+    #panel-rest .modal-b .emd-src { font-size: 1rem; line-height: 1.5; margin-top: 14px; }
+    #panel-rest .modal-b .emd-src a { color: #7b8cde; }
 </style>
 </head>
 <body>
@@ -1064,7 +1083,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 18:01 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 20:47 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1292,8 +1311,10 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 18:01 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 20:47 Uhr
   </footer>
+  <!-- ESSEN: Info-Fenster „Was ist das?“ -->
+  <div class="modal-overlay" id="emd" role="dialog" aria-modal="true" aria-labelledby="emd-t"><div class="modal"><div class="modal-h"><div class="modal-ic" id="emd-ic">ℹ️</div><div class="modal-ti"><h3 id="emd-t">Titel</h3><p id="emd-s">Untertitel</p></div><button class="modal-x" type="button" aria-label="Schließen" onclick="closeEssenInfo()">×</button></div><div class="modal-b" id="emd-b"></div></div></div>
 </div><!-- /panel-rest -->
 
 <!-- ════════════════════════════════════════════════════════════
@@ -1364,7 +1385,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 18:01 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 20:47 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1463,7 +1484,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "15.10.2026 · 18:01";
+const APP_VERSION = "15.10.2026 · 20:47";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -2775,6 +2796,130 @@ const KEEP_RE = /(?<![A-Za-zÄÖÜäöüß\d])((?:ca\. )?\d[\d.]*(?:–\d[\d.]*)
 function keepTogether(html) {
   return String(html).replace(KEEP_RE, '<span class="nobr">$1</span>');
 }
+/* ── Reiter Essen: „ℹ️ Was ist das?“ je Restaurant und Laden (Wolli 15.10.2026) ──
+   info = kurze Beschreibung (Absätze), tip = Hinweis, src = Belege nur für diese Beschreibung.
+   hours = geprüfte Öffnungszeiten, ersetzen „nicht geprüft“ auf der Karte (Betreiber/offizielle Seite oder Reiseführer – Herkunft steht in Klammern dabei). Recherche 15.10.2026. */
+const ESSEN_INFO = {
+  r_sunshine: {
+    info: ["Bio- und Gesundheitsladen mit eigener glutenfreier Bäckerei (seit 2010). Laut Betreiber ist alles, was dort gebacken wird, glutenfrei und milchfrei.",
+           "Rund 15 Brotsorten – z. B. Sandwichbrot, süße Brote, Burgerbrötchen –, dazu Nussmus aus eigener Röstung, Snacks und Bio-Lebensmittel. Laut FAQ gibt es in Soi 22 auch ein Café."],
+    src: [["Betreiber: Bäckerei + Sortiment", "https://sunshinemarket.co.th/th/blogs/news/gluten-free-bread-bangkok-celiac-safe"], ["FAQ: Laden + Café Soi 22", "https://sunshinemarket.co.th/th/a/gluten-free-celiac-faq"]] },
+  r_tama: {
+    info: ["Kleine, komplett glutenfreie Bäckerei im AREA81 Hideout Hostel bei der Khaosan Road (Legal Nomads).",
+           "Es gibt Pizza, Brot, Cookies, Croissants und Kuchen. Im GF-Verzeichnis 4,9 Sterne; Gäste loben z. B. die vegane Zimtschnecke.",
+           "Zeiten laut Verzeichnis: Mo geschlossen, Di–Fr 11–21 Uhr, Sa 10–20 Uhr, So 12–22 Uhr – nicht vom Betreiber bestätigt."],
+    src: [["Legal Nomads Thailand", "https://www.legalnomads.com/gluten-free/thailand/"], ["GF-Verzeichnis (senzagluten)", "https://senzagluten.app/place/gluten-free-bakery-tama-khaosan"]] },
+  r_theera: {
+    info: ["Helles Café mit Bäckerei, seit 2014 – laut Betreiber die erste glutenfreie und vegane Bäckerei Bangkoks. Gehört zu „Steps“, einem Sozialunternehmen, das neurodivergente Menschen ausbildet.",
+           "Statt Weizen wird mit Naturreis-, Mandel- und Buchweizenmehl gebacken. Es gibt Kuchen, Brot, Snacks und warme Gerichte. Legal Nomads empfiehlt z. B. den veganen Pancake-Stapel; glutenfreies Brot kostet ca. 50 ฿ Aufpreis."],
+    tip: "Es wird auch mit Weizen gebacken – bei der Bestellung sagen, dass es Zöliakie ist.",
+    src: [["Betreiber", "https://www.theerahealthybakeroom.com/"], ["Legal Nomads Thailand", "https://www.legalnomads.com/gluten-free/thailand/"]] },
+  r_nopparat: {
+    info: ["Kleines, schön eingerichtetes Thai-Restaurant an der Phra Athit Road in der Altstadt, nahe dem Phra-Sumen-Fort. Etwa 200–400 ฿ pro Person.",
+           "Gäste loben Pad Thai, Thai-Salate und gefülltes Hähnchen. Laut Legal Nomads lässt sich der Großteil der Karte glutenfrei kochen, es gibt glutenfreie Sojasoße.",
+           "Zeiten laut Restaurant Guru: Di–So 11–14:30 Uhr und 17:30–21 Uhr, Mo geschlossen – also Mittagspause! Nicht vom Betreiber bestätigt."],
+    src: [["Legal Nomads Thailand", "https://www.legalnomads.com/gluten-free/thailand/"], ["Restaurant Guru", "https://restaurantguru.com/amp/Nopparat-cuisine-and-gallery-Bangkok"]] },
+  r_eatco: {
+    info: ["Gesundes Café-Restaurant in Srithanu mit internationaler Karte: Frühstück (Waffeln, Bowls), mittags Toasts und Salate, abends Burger, Bowls und Currys, dazu Smoothies und frische Säfte.",
+           "Als GF gekennzeichnet sind u. a. Loaded Waffles (320 ฿), Burrito Bowl (300 ฿), Dahl (240 ฿) und Detox-Suppe (200 ฿)."],
+    src: [["Eigene Karte", "https://www.eat.co/menu-koh-phangan"]] },
+  r_orion: {
+    hours: "täglich 8:30–22 Uhr (letzte Bestellung 21:30, laut Betreiberseite)",
+    info: ["Café im Orion Healing Centre in Srithanu, mit Blick auf den Pool und die Bucht.",
+           "Laut Betreiber ohne Milchprodukte, Eier, raffinierten Zucker und Konservierungsstoffe; gekocht wird vor allem mit Kokos- und Olivenöl. Viele Gerichte als GF markiert, z. B. Thai-Currys um 200 ฿."],
+    src: [["Betreiber: Orion Café", "https://www.orionhealing.com/orion-cafe/"], ["Eigene Karte (PDF)", "https://www.orionhealing.com/wp-content/uploads/2025/01/Orion-Cafe-Menu-A4.pdf"]] },
+  r_devi: {
+    info: ["Pflanzliches Feinkost-Café seit Januar 2019: veganer Käse, Schokolade, Kakao-Getränke, Rohkost-Kuchen und Herzhaftes – zum Hieressen oder Mitnehmen.",
+           "Laut Betreiber eine große Auswahl an glutenfreien Produkten. Welche genau, steht nicht dabei – einzeln nachfragen."],
+    src: [["Betreiber", "https://shop.devideli.com/"]] },
+  r_annie: {
+    info: ["Café in Lamai mit Frühstück, Mittag- und Abendessen, eigener Bäckerei/Süßem und veganem Eis, täglich 8–22 Uhr.",
+           "Laut Legal Nomads: glutenfreie Pancakes, Salat- und Açaí-Bowls, Granola mit glutenfreiem Hafer, glutenfreie Brownies und Cheesecakes. Allergen-Übersicht per QR-Code vor Ort."],
+    src: [["Eigener Shop (Karte, Zeiten)", "https://annie-lamai.ps.me/category/general"], ["Legal Nomads Thailand", "https://www.legalnomads.com/gluten-free/thailand/"]] },
+  r_nanatam: {
+    info: ["Thai-Restaurant in Lamai seit 2008: alles frisch auf Bestellung, in einem Garten voller Laternen. Die Currypasten werden laut Betreiber jeden Morgen von Hand gestampft.",
+           "Hausfavoriten: Pad Thai mit Garnelen, Tom Yam, Pad Kra Pao (Basilikum) und Tom Kha Gai. Ausdrücklich glutenfrei markiert sind nur Reisteller, Klebreis mit Mango und Obstteller. Laut Betreiber lassen sich die meisten Gerichte glutenfrei anpassen – bei Zöliakie die konkrete Zubereitung abklären."],
+    src: [["Eigene Karte", "https://nanatam.com/menu"]] },
+  r_barrio: {
+    info: ["Kleines italienisches Café-Restaurant, etwas versteckt im Zentrum von Lamai. Gegründet von Sara, die aus Italien kam – hausgemachte Küche: Pasta, Piadina, Focaccia, Kuchen, Espresso.",
+           "Gäste 2026: glutenfreies Brot, Sandwiches, Pasta, Kuchen und Cookies. Laut einer Bewertung (08/2026) hat die Inhaberin selbst Zöliakie – nicht vom Betreiber bestätigt, vor Ort nachfragen."],
+    src: [["Tripadvisor (Eintrag + Bewertungen)", "https://www.tripadvisor.ca/Restaurant_Review-g1188000-d1816071-Reviews-Barrio_Samui-Lamai_Beach_Maret_Ko_Samui_Surat_Thani_Province.html"]] },
+
+  s_villa_cw: {
+    info: ["„Thailands ursprünglicher internationaler Supermarkt“ (Villa Market) – viele Importwaren. Die Filiale in der Mall Charn at The Avenue hat rund 1.000 m².",
+           "Die Mall liegt ca. 100 m von der MRT-Station Chaengwattana 14 (Pink Line)."],
+    src: [["Villa Market (eigene Seite)", "https://shop.villamarket.com/promotions/8000002884"], ["Mall + Mieter (Brand Buffet)", "https://www.brandbuffet.in.th/2023/10/charn-at-the-avenue-chaengwattana-14/"]] },
+  s_lemon_cw: {
+    info: ["Laden-Kette für Gesundheits-Lebensmittel; in Charn at The Avenue steht laut Brand Buffet ihre neue Hauptfiliale.",
+           "Gut für glutenfreie Snacks: z. B. Bio-Naturreis-Waffeln, im Lemon-Farm-Shop als „glutenfrei, zuckerfrei“ gekennzeichnet."],
+    src: [["Mall + Mieter (Brand Buffet)", "https://www.brandbuffet.in.th/2023/10/charn-at-the-avenue-chaengwattana-14/"], ["GF-Reiswaffeln im Shop", "https://shop.lemonfarm.com/en/products/perfect-earth-organic-brown-rice-cakes-150g"], ["Filialseite Lemon Farm", "https://www.lemonfarm.com/storelocator/"]] },
+  s_thongsala: {
+    info: ["Big C ist eine große Supermarktkette: thailändische und internationale Lebensmittel, Obst, Fertiggerichte, Drogerie und Strandsachen. Preise etwa wie auf dem Festland, günstiger als die kleinen Inselläden; täglich 8–22 Uhr.",
+           "Makro (Großmarkt) und Lotus's liegen ebenfalls in Thong Sala."],
+    src: [["Big C Koh Phangan (visitthailandtoday)", "https://www.visitthailandtoday.com/markets-shopping/koh-phangan/big-c-market-koh-pha-ngan"], ["Thong Sala Überblick (Islanders)", "https://islanders-properties.com/blog/tong-sala-phangan-108"]] },
+  s_devi: {
+    info: ["Das Feinkost-Café (siehe Restaurants) verkauft auch zum Mitnehmen: veganen Käse, Schokolade, Kakao, Nussmus und Feinkost.",
+           "Laut Betreiber viele glutenfreie Produkte – welche genau, einzeln nachfragen."],
+    src: [["Betreiber", "https://shop.devideli.com/"]] },
+  s_nuturella: {
+    info: ["Vegane Feinkost-Bäckerei in Baan Tai, 4,9 Sterne bei 210 Google-Bewertungen.",
+           "Laut eatphangan gibt es fast alles auch glutenfrei – aber nur auf Vorbestellung. Frisches Brot ist tagsüber schnell weg. Im Haus wird auch normales Brot gebacken."],
+    src: [["kohphangan.life", "https://kohphangan.life/listing/nuturella---vegan-deli-bakery"], ["eatphangan", "https://eatphangan.com/en"]] },
+  s_makro_lamai: {
+    hours: "täglich 6–22 Uhr (laut Makro)",
+    info: ["Großmarkt für Lebensmittel und Haushaltswaren (Großhandel). Gut für große Mengen Wasser, Obst und Snacks."],
+    src: [["Makro (offiziell)", "https://www.makro.co.th/en/contact-us/77/Lamai"]] },
+  s_lotus_lamai: {
+    info: ["Klimatisierter Großmarkt in einer kleinen Mall: Lebensmittel, frisches Obst und Gemüse, Brot, Getränke, günstige Kleidung.",
+           "Im Haus: Food Court (abends voller), Geldwechsel (laut Gästen gute Kurse), Bank und Handyläden. Täglich 9–22 Uhr, morgens am ruhigsten."],
+    src: [["Lotus's Lamai (visitthailandtoday)", "https://www.visitthailandtoday.com/markets-shopping/koh-samui/lotuss-lamai"]] },
+  s_barrio: {
+    info: ["Das italienische Café von Sara (siehe Restaurants) – glutenfreies Brot, Kuchen und Cookies auch zum Mitnehmen (laut Gästebewertungen 2026)."],
+    src: [["Tripadvisor (Eintrag + Bewertungen)", "https://www.tripadvisor.ca/Restaurant_Review-g1188000-d1816071-Reviews-Barrio_Samui-Lamai_Beach_Maret_Ko_Samui_Surat_Thani_Province.html"]] },
+  s_tops_central: {
+    hours: "täglich 8–23 Uhr (laut Reiseführer)",
+    info: ["Klimatisierter Supermarkt mit Garküchen in der Mall Central Samui: Obst, Gemüse, thailändische Grundnahrung und ein gutes Regal Importwaren.",
+           "Abends voll mit Wocheneinkäufen, vormittags ruhiger. Die Garküchen sind nicht glutenfrei geprüft."],
+    src: [["Tops Food Hall Central Samui (visitthailandtoday)", "https://www.visitthailandtoday.com/markets-shopping/koh-samui/tops-food-hall-central-samui"], ["Tops GF-Sortiment", "https://www.tops.co.th/en/shop-by-concept/healthiful/pantry-and-ingredients/flour-noodles-and-pasta/pasta-and-spaghetti"]] }
+};
+// geprüfte Öffnungszeiten auf die Karten übernehmen
+[...TRIP.restaurants, ...TRIP.shops].forEach(x => { const e = ESSEN_INFO[x.id]; if (e && e.hours) x.openingHours = e.hours; });
+let essenInfoBack = null; // Knopf, der das Fenster geöffnet hat (Fokus kommt beim Schließen dorthin zurück)
+function openEssenInfo(x, kindLabel) {
+  const e = ESSEN_INFO[x.id]; if (!e) return;
+  essenInfoBack = document.activeElement;
+  document.getElementById('emd-ic').textContent = x.kind ? '🛒' : '🍽️';
+  document.getElementById('emd-t').textContent = x.name;
+  document.getElementById('emd-s').textContent = TRIP.places[x.place].name + ' · ' + kindLabel;
+  const paras = (e.info || []).map(p => `<p>${keepTogether(escapeHTML(p))}</p>`).join('');
+  const tip = e.tip ? `<div class="tip">💡 ${escapeHTML(e.tip)}</div>` : '';
+  const route = `<p style="margin-top:12px;"><a class="map-open-btn" href="${mapsRouteUrl(x.maps || (x.name + ' ' + (x.address || '')))}" target="_blank" rel="noopener noreferrer">🧭 Route in Google Maps</a></p>`;
+  const src = (e.src || []).length ? `<p class="emd-src">Quelle: ${e.src.map(srcLink).join(' · ')}</p>` : '';
+  document.getElementById('emd-b').innerHTML = paras + tip + route + src;
+  document.getElementById('emd').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  document.querySelector('#emd .modal-x').focus();
+}
+function closeEssenInfo() {
+  const m = document.getElementById('emd');
+  if (!m.classList.contains('active')) return;
+  m.classList.remove('active');
+  document.body.style.overflow = '';
+  if (essenInfoBack && essenInfoBack.focus) essenInfoBack.focus();
+  essenInfoBack = null;
+}
+// Tab-Taste: Fokus bleibt im offenen Info-Fenster (Codex Runde 18)
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Tab') return;
+  const m = document.getElementById('emd');
+  if (!m || !m.classList.contains('active')) return;
+  const f = [...m.querySelectorAll('a[href], button')];
+  if (!f.length) return;
+  const first = f[0], last = f[f.length - 1];
+  if (!m.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+  else if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+});
 function renderCards() {
   const placeKey = filterPlace();
   let filtered = TRIP.restaurants.filter(r => {
@@ -2813,10 +2958,12 @@ function renderCards() {
       </div>
       <div class="card-meta"></div>
       <div class="card-actions" style="margin-top:8px;padding-top:8px;border-top:1px solid var(--color-border);grid-column:1 / -1;">
-        <button class="btn-fav ${isFav('rest', key) ? 'active' : ''}" type="button" data-rest-fav="${escapeHTML(key)}">
+        ${ESSEN_INFO[r.id] ? `<button class="btn-fav btn-einfo" type="button" data-einfo>ℹ️ Was ist das?</button>` : ''}<button class="btn-fav ${isFav('rest', key) ? 'active' : ''}" type="button" data-rest-fav="${escapeHTML(key)}">
           <span class="fav-heart">❤️</span>${isFav('rest', key) ? 'Gespeichert' : 'Favorit'}
         </button>${safeUrl(r.website) ? `<a class="btn-fav btn-web" href="${escapeHTML(safeUrl(r.website))}" target="_blank" rel="noopener noreferrer" data-stop>🔗 Website</a>` : ''}
       </div>`;
+    const infoBtn = card.querySelector('[data-einfo]');
+    if (infoBtn) infoBtn.addEventListener('click', e => { e.stopPropagation(); openEssenInfo(r, lvl.label); });
     const favBtn = card.querySelector('[data-rest-fav]');
     if (favBtn) favBtn.addEventListener('click', e => {
       e.stopPropagation();
@@ -2856,8 +3003,10 @@ function renderShops() {
       </div>
       <div class="card-meta"></div>
       <div class="card-actions" style="margin-top:8px;padding-top:8px;border-top:1px solid var(--color-border);grid-column:1 / -1;">
-        <button class="btn-fav ${isFav('rest', key) ? 'active' : ''}" type="button" data-rest-fav="${escapeHTML(key)}"><span class="fav-heart">❤️</span>${isFav('rest', key) ? 'Gespeichert' : 'Favorit'}</button>${safeUrl(s.website) ? `<a class="btn-fav btn-web" href="${escapeHTML(safeUrl(s.website))}" target="_blank" rel="noopener noreferrer" data-stop>🔗 Website</a>` : ''}
+        ${ESSEN_INFO[s.id] ? `<button class="btn-fav btn-einfo" type="button" data-einfo>ℹ️ Was ist das?</button>` : ''}<button class="btn-fav ${isFav('rest', key) ? 'active' : ''}" type="button" data-rest-fav="${escapeHTML(key)}"><span class="fav-heart">❤️</span>${isFav('rest', key) ? 'Gespeichert' : 'Favorit'}</button>${safeUrl(s.website) ? `<a class="btn-fav btn-web" href="${escapeHTML(safeUrl(s.website))}" target="_blank" rel="noopener noreferrer" data-stop>🔗 Website</a>` : ''}
       </div>`;
+    const infoBtnS = card.querySelector('[data-einfo]');
+    if (infoBtnS) infoBtnS.addEventListener('click', e => { e.stopPropagation(); openEssenInfo(s, s.kind === 'gf' ? 'Laden mit glutenfreiem Angebot' : 'normaler Einkauf'); });
     card.querySelector('[data-rest-fav]').addEventListener('click', e => {
       e.stopPropagation();
       toggleFav('rest', key, { id: key, name: s.name, sub: s.kind === 'gf' ? 'Laden mit GF-Angebot' : 'Einkauf', ic: '🛒', link: s.website || '', extra: TRIP.places[s.place].name });
@@ -2995,7 +3144,8 @@ function cm() {
   document.body.style.overflow = '';
 }
 document.getElementById('md').addEventListener('click', function(e) { if (e.target === this) cm(); });
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { cm(); closeSOS(); closeGf(); } });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { cm(); closeSOS(); closeGf(); closeEssenInfo(); } });
+document.getElementById('emd').addEventListener('click', function(e) { if (e.target === this) closeEssenInfo(); });
 
 /* ── WETTER (Open-Meteo, kostenlos, ohne Schlüssel) ─────────── */
 const WX = {};
