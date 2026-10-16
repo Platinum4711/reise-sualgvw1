@@ -1097,6 +1097,7 @@
     #panel-rest .es-count { font-weight: 600; }
     #panel-rest .dp-body .empty-note { color: var(--text); font-size: 1rem; }
     /* Kopf Essen (Wolli 16.10.2026): Hinweise „Vor jeder Bestellung“ zugeklappt, gleicher Pfeil wie die Blöcke */
+    #panel-rest .gf-hint-inner { border-left: 1px solid var(--color-border); } /* roter Streifen links weg (Wolli 16.10.2026), Rand ringsum gleich */
     #panel-rest .gf-more { margin-top: 12px; border-top: 1px solid var(--color-border); }
     #panel-rest .gf-more summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; min-height: 44px; padding-top: 10px; font-size: 1.05rem; font-weight: 700; color: #e8e4dc; }
     #panel-rest .gf-more summary::-webkit-details-marker { display: none; }
@@ -1122,7 +1123,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 16.10.2026 · 17:52 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 16.10.2026 · 18:00 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1340,7 +1341,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 16.10.2026 · 17:52 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 16.10.2026 · 18:00 Uhr
   </footer>
   <!-- ESSEN: Info-Fenster „Was ist das?“ -->
   <div class="modal-overlay" id="emd" role="dialog" aria-modal="true" aria-labelledby="emd-t"><div class="modal"><div class="modal-h"><div class="modal-ic" id="emd-ic">ℹ️</div><div class="modal-ti"><h3 id="emd-t">Titel</h3><p id="emd-s">Untertitel</p></div><button class="modal-x" type="button" aria-label="Schließen" onclick="closeEssenInfo()">×</button></div><div class="modal-b" id="emd-b"></div></div></div>
@@ -1411,7 +1412,7 @@
 
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 16.10.2026 · 17:52 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 16.10.2026 · 18:00 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1510,7 +1511,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "16.10.2026 · 17:52";
+const APP_VERSION = "16.10.2026 · 18:00";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
