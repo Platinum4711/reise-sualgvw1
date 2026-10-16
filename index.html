@@ -1123,7 +1123,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 16.10.2026 · 18:00 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 16.10.2026 · 18:07 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1335,13 +1335,13 @@
 
   <section class="es-wrap" aria-labelledby="es-title">
     <h2 class="section-heading" id="es-title">🍽️ Essen je Aufenthalt</h2>
-    <p class="es-intro">Vier Aufenthalte zum Aufklappen — euer aktueller Ort ist <strong>gelb markiert</strong> und schon offen. In jedem Block zuerst 100 % glutenfrei, dann GF gekennzeichnet, dann auf Nachfrage, unten 🛒 Einkaufen. Klick auf eine Karte öffnet Google Maps.</p>
+    <p class="es-intro">Vier Aufenthalte zum Aufklappen — alle sind zu, bis ihr einen antippt. Euer aktueller Ort ist <strong>gelb markiert</strong>. In jedem Block zuerst 100 % glutenfrei, dann GF gekennzeichnet, dann auf Nachfrage, unten 🛒 Einkaufen. Klick auf eine Karte öffnet Google Maps.</p>
     <div class="es-btns"><button type="button" class="dp-today-btn" id="essen-jump" hidden>📍 Zu meinem aktuellen Ort</button><button type="button" class="filter-btn" id="essen-gf100" aria-pressed="false">Nur 100 % GF</button></div>
     <div id="essen-stations"></div>
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 16.10.2026 · 18:00 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 16.10.2026 · 18:07 Uhr
   </footer>
   <!-- ESSEN: Info-Fenster „Was ist das?“ -->
   <div class="modal-overlay" id="emd" role="dialog" aria-modal="true" aria-labelledby="emd-t"><div class="modal"><div class="modal-h"><div class="modal-ic" id="emd-ic">ℹ️</div><div class="modal-ti"><h3 id="emd-t">Titel</h3><p id="emd-s">Untertitel</p></div><button class="modal-x" type="button" aria-label="Schließen" onclick="closeEssenInfo()">×</button></div><div class="modal-b" id="emd-b"></div></div></div>
@@ -1407,12 +1407,12 @@
     </div>
 
   <main>
-    <div class="intro"><div class="intro-label">Das Prinzip</div><p>Vier Aufenthalte zum Aufklappen — euer aktueller Ort ist <strong>gelb markiert</strong> und schon offen. In jedem Block: <strong>🔥 Action am Tag</strong>, <strong>🌙 Abends &amp; Party</strong>, <strong>🏛️ Sehenswürdigkeiten &amp; schöne Ecken</strong> und was ihr <strong>meiden</strong> solltet. Ihr sucht euch aus, was ihr wann macht. 🗓️ = Termine/Zeiten, 💡 = Bedingungen. Termine und Preise vor dem Buchen beim Anbieter bestätigen (Stand 15.10.2026).</p><button type="button" class="dp-today-btn" id="action-jump" hidden>📍 Zu meinem aktuellen Ort</button></div>
+    <div class="intro"><div class="intro-label">Das Prinzip</div><p>Vier Aufenthalte zum Aufklappen — alle sind zu, bis ihr einen antippt. Euer aktueller Ort ist <strong>gelb markiert</strong>. In jedem Block: <strong>🔥 Action am Tag</strong>, <strong>🌙 Abends &amp; Party</strong>, <strong>🏛️ Sehenswürdigkeiten &amp; schöne Ecken</strong> und was ihr <strong>meiden</strong> solltet. Ihr sucht euch aus, was ihr wann macht. 🗓️ = Termine/Zeiten, 💡 = Bedingungen. Termine und Preise vor dem Buchen beim Anbieter bestätigen (Stand 15.10.2026).</p><button type="button" class="dp-today-btn" id="action-jump" hidden>📍 Zu meinem aktuellen Ort</button></div>
     <div id="action-stations"></div>
 
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 16.10.2026 · 18:00 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 16.10.2026 · 18:07 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1511,7 +1511,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "16.10.2026 · 18:00";
+const APP_VERSION = "16.10.2026 · 18:07";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -3642,13 +3642,12 @@ function renderCards() {
   const first = TRIP.stations[0].first, last = TRIP.stations[TRIP.stations.length - 1].last;
   const inTrip = today >= first && today <= last;
   const cur = currentStation();
-  // aufgeklappte Blöcke merken; bei Orts-/Phasenwechsel aktuellen Ort öffnen, vor der Reise den ersten, nach der Reise keinen
+  // aufgeklappte Blöcke merken; beim App-Start und bei Orts-/Phasenwechsel alle vier zu (Wolli 16.10.2026, wie Action);
+  // der aktuelle Ort bleibt gelb markiert, „Zu meinem aktuellen Ort“ öffnet ihn
   holder.querySelectorAll('details[data-est]').forEach(d => { if (d.open) ES_OPEN.add(d.dataset.est); else ES_OPEN.delete(d.dataset.est); });
   const key = inTrip ? cur.id : (today < first ? 'vorher' : 'nachher');
   if (key !== esLastKey) {
     ES_OPEN.clear();
-    if (inTrip) ES_OPEN.add(cur.id);
-    else if (today < first) ES_OPEN.add(TRIP.stations[0].id);
     esLastKey = key;
   }
   const jump = document.getElementById('essen-jump');
@@ -3740,12 +3739,11 @@ function renderAction() {
   const cur = currentStation();
   // aufgeklappte Blöcke merken (bleiben beim Neuzeichnen offen)
   holder.querySelectorAll('details[data-st]').forEach(d => { if (d.open) SP_OPEN.add(d.dataset.st); else SP_OPEN.delete(d.dataset.st); });
-  // bei Orts-/Phasenwechsel: aktuellen Ort öffnen, nach der Reise alles schließen
+  // beim App-Start und bei Orts-/Phasenwechsel: alle vier Blöcke zu (Wolli 16.10.2026: nicht sofort erschlagen werden);
+  // der aktuelle Ort bleibt gelb markiert, „Zu meinem aktuellen Ort“ öffnet ihn
   const key = inTrip ? cur.id : (today < first ? 'vorher' : 'nachher');
   if (key !== spLastKey) {
     SP_OPEN.clear();
-    if (inTrip) SP_OPEN.add(cur.id);
-    else if (today < first) SP_OPEN.add(TRIP.stations[0].id);
     spLastKey = key;
   }
   const btn = document.getElementById('action-jump');
