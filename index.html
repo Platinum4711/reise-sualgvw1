@@ -1123,7 +1123,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 16.10.2026 · 18:07 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 16.10.2026 · 18:13 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1341,7 +1341,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 16.10.2026 · 18:07 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 16.10.2026 · 18:13 Uhr
   </footer>
   <!-- ESSEN: Info-Fenster „Was ist das?“ -->
   <div class="modal-overlay" id="emd" role="dialog" aria-modal="true" aria-labelledby="emd-t"><div class="modal"><div class="modal-h"><div class="modal-ic" id="emd-ic">ℹ️</div><div class="modal-ti"><h3 id="emd-t">Titel</h3><p id="emd-s">Untertitel</p></div><button class="modal-x" type="button" aria-label="Schließen" onclick="closeEssenInfo()">×</button></div><div class="modal-b" id="emd-b"></div></div></div>
@@ -1412,7 +1412,7 @@
 
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 16.10.2026 · 18:07 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 16.10.2026 · 18:13 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1511,7 +1511,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "16.10.2026 · 18:07";
+const APP_VERSION = "16.10.2026 · 18:13";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -3707,6 +3707,21 @@ document.addEventListener('click', e => {
   el.style.scrollMarginTop = ((nav ? nav.offsetHeight : 0) + 12) + 'px';
   el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+/* Wolli 16.10.2026: Auch nach kurzem Wechsel in eine andere App (z. B. Google Maps) beim Zurückkommen alle Blöcke zu —
+   Essen + Action (vier Aufenthalte) und „Wichtige Hinweise“; Seite springt nach oben, damit man nicht mitten im Text landet. */
+function closeAllBlocks() {
+  if (typeof ES_OPEN !== 'undefined') ES_OPEN.clear();
+  if (typeof SP_OPEN !== 'undefined') SP_OPEN.clear();
+  let any = false;
+  document.querySelectorAll('#essen-stations details[open], #action-stations details[open], #gf-more-rest[open]').forEach(d => { d.open = false; any = true; });
+  if (any) window.scrollTo(0, 0);
+}
+let esWasHidden = false;
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') esWasHidden = true;
+  else if (esWasHidden) { esWasHidden = false; closeAllBlocks(); }
+});
+window.addEventListener('pageshow', e => { if (e.persisted) closeAllBlocks(); });
 
 /* ── ACTION: 4 STATIONEN ────────────────────────────────────── */
 const EX = {};
