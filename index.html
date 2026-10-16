@@ -1068,6 +1068,40 @@
     #panel-rest .modal-b .map-open-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(123,140,222,.6); color: #7b8cde; text-decoration: none; font-size: 1rem; }
     #panel-rest .modal-b .emd-src { font-size: 1rem; line-height: 1.5; margin-top: 14px; }
     #panel-rest .modal-b .emd-src a { color: #7b8cde; }
+    /* ══ Reiter Essen: vier aufklappbare Aufenthalte wie im Reiter Action (Wolli 16.10.2026) ══
+       Regeln aus tagesplan_css.css für #panel-rest übernommen (Action selbst unverändert); keine grauen Texte. */
+    #panel-rest .es-wrap { --surface: #1a1a1a; --border: #2e2e2e; --accent: #e8c547; --text: #e8e4dc; max-width: 960px; margin: 1.5rem auto 0; padding: 0 1.5rem; }
+    #panel-rest .es-intro { font-size: 1.1rem; line-height: 1.5; color: var(--text); margin: 0.25rem 0 0.9rem; }
+    #panel-rest .es-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1rem; }
+    #panel-rest .es-btns .filter-btn, #panel-rest .dp-today-btn { min-height: 44px; padding: 10px 18px; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    #panel-rest .dp-today-btn { border: 1px solid rgba(232,197,71,.5); background: rgba(232,197,71,.12); color: var(--accent); }
+    #panel-rest .es-btns .filter-btn { color: var(--text); }
+    #panel-rest .es-btns .filter-btn.active { color: var(--accent); }
+    #panel-rest .dp-today-btn[hidden] { display: none; }
+    #panel-rest section.st-block { margin-bottom: 10px; }
+    #panel-rest .dp-day { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; scroll-margin-top: 110px; overflow: hidden; }
+    #panel-rest .dp-day.today { border-color: rgba(232,197,71,.75); box-shadow: 0 0 0 1px rgba(232,197,71,.3); }
+    #panel-rest .dp-day.past > summary { opacity: .6; } /* nur die Klappzeile, Karten bleiben hell (Codex Runde 2) */
+    #panel-rest .dp-day summary { list-style: none; cursor: pointer; padding: 12px 16px; min-height: 44px; display: block; }
+    #panel-rest .dp-day summary::-webkit-details-marker { display: none; }
+    #panel-rest .dp-row { display: flex; align-items: center; gap: 10px; }
+    #panel-rest .dp-date { font-weight: 600; color: var(--accent); font-size: 1.1rem; }
+    #panel-rest .dp-place { font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text); }
+    #panel-rest .dp-now { background: var(--accent); color: #111; font-size: 0.85rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
+    #panel-rest .dp-arrow { margin-left: auto; font-size: 32px; line-height: 1; color: #ffffff; transition: transform .2s; }
+    #panel-rest .dp-day[open] .dp-arrow { transform: rotate(180deg); }
+    #panel-rest .dp-lbl { display: block; font-size: 1rem; margin-top: 3px; color: var(--text); }
+    #panel-rest .dp-body { padding: 0 14px 14px; border-top: 1px solid var(--border); }
+    #panel-rest .es-group { display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 20px 0 10px; }
+    #panel-rest .es-group .legend-dot { flex-shrink: 0; }
+    #panel-rest .es-count { font-weight: 600; }
+    #panel-rest .dp-body .empty-note { color: var(--text); font-size: 1rem; }
+    /* Handy: Karten im Block so breit wie vorher ohne Blöcke (kleinere Außen-/Innenabstände) */
+    @media (max-width: 600px) {
+      #panel-rest .es-wrap { padding: 0 12px; }
+      #panel-rest .dp-day summary { padding: 12px; }
+      #panel-rest .dp-body { padding: 0 8px 12px; }
+    }
 </style>
 </head>
 <body>
@@ -1083,7 +1117,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 15.10.2026 · 23:19 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 16.10.2026 · 16:12 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1232,14 +1266,6 @@
     </div>
   </section>
 
-  <div class="filter-bar" id="rest-filter-bar">
-    <button class="filter-btn active" data-filter="current">📍 Aktueller Ort</button>
-    <button class="filter-btn" data-filter="bkk">Bangkok</button>
-    <button class="filter-btn" data-filter="kpg">Koh Phangan</button>
-    <button class="filter-btn" data-filter="sam">Koh Samui</button>
-    <button class="filter-btn" data-filter="all">Alle</button>
-    <button class="filter-btn" data-filter="gf100">Nur 100 % GF</button>
-  </div>
 
   <div class="gf-hint-box">
     <div class="gf-hint-inner">
@@ -1300,18 +1326,15 @@
       </div>
     </div>
 
-  <section class="cards-section" style="margin-top:1.5rem;">
-    <h2 class="section-heading">Restaurants &amp; Cafés</h2>
-    <p class="section-sub" id="rest-sub">Klick auf eine Karte öffnet den Ort in Google Maps.</p>
-    <div class="cards-grid" id="cardsGrid"></div>
-
-    <h2 class="section-heading" style="margin-top:2.5rem;">🛒 Einkaufen</h2>
-    <p class="section-sub">a) normale Supermärkte · b) Läden mit glutenfreiem Angebot. Klick öffnet Google Maps.</p>
-    <div class="cards-grid" id="shopsGrid"></div>
+  <section class="es-wrap" aria-labelledby="es-title">
+    <h2 class="section-heading" id="es-title">🍽️ Essen je Aufenthalt</h2>
+    <p class="es-intro">Vier Aufenthalte zum Aufklappen — euer aktueller Ort ist <strong>gelb markiert</strong> und schon offen. In jedem Block zuerst 100 % glutenfrei, dann GF gekennzeichnet, dann auf Nachfrage, unten 🛒 Einkaufen. Klick auf eine Karte öffnet Google Maps.</p>
+    <div class="es-btns"><button type="button" class="dp-today-btn" id="essen-jump" hidden>📍 Zu meinem aktuellen Ort</button><button type="button" class="filter-btn" id="essen-gf100" aria-pressed="false">Nur 100 % GF</button></div>
+    <div id="essen-stations"></div>
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 15.10.2026 · 23:19 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 16.10.2026 · 16:12 Uhr
   </footer>
   <!-- ESSEN: Info-Fenster „Was ist das?“ -->
   <div class="modal-overlay" id="emd" role="dialog" aria-modal="true" aria-labelledby="emd-t"><div class="modal"><div class="modal-h"><div class="modal-ic" id="emd-ic">ℹ️</div><div class="modal-ti"><h3 id="emd-t">Titel</h3><p id="emd-s">Untertitel</p></div><button class="modal-x" type="button" aria-label="Schließen" onclick="closeEssenInfo()">×</button></div><div class="modal-b" id="emd-b"></div></div></div>
@@ -1385,7 +1408,7 @@
       <div class="src" id="action-sources"></div></section>
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 15.10.2026 · 23:19 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 16.10.2026 · 16:12 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1484,7 +1507,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "15.10.2026 · 23:19";
+const APP_VERSION = "16.10.2026 · 16:12";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -3426,7 +3449,7 @@ document.addEventListener('keydown', e => {
     { t: "📅 Fr 23.10. ist Feiertag und Fährtag: am 22.10. Proviant und Bargeld besorgen. Am Pier Thong Sala: Nira's (7–19 Uhr).", src: ["Feiertage 2026 (ttb)", "https://media.ttbbank.com/1/document/branch/Special-Holidays-for-Year-2026-TH.pdf"] }
   ];
 })();
-function renderCards() {
+function renderCardsAlt() { /* bis 15.10.2026, ersetzt durch renderCards() in essen_bloecke.js – wird nicht mehr aufgerufen */
   const placeKey = filterPlace();
   let filtered = TRIP.restaurants.filter(r => {
     if (currentFilter === 'gf100') return r.gf === '100';
@@ -3522,11 +3545,163 @@ function renderShops() {
     holder.appendChild(card);
   });
 }
-document.querySelectorAll('#rest-filter-bar .filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('#rest-filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active'); currentFilter = btn.dataset.filter; renderCards();
+/* ── ESSEN: vier aufklappbare Aufenthalte wie im Reiter Action (Wolli 16.10.2026) ──
+   Je Block: Restaurants des Orts nach GF-Stufe (100 % → gekennzeichnet → auf Nachfrage) + 🛒 Einkaufen; leere Gruppen fehlen.
+   Bangkok-Einträge stehen in beiden Bangkok-Blöcken (gleiche ID → Favorit, Status, € und Notiz gleich, Budget zählt einmal).
+   Karten-HTML und Knöpfe wie bisher, nur in restCardEl/shopCardEl ausgelagert. Umschalter „Nur 100 % GF“ gilt für alle Blöcke. */
+const ES_OPEN = new Set();
+let esLastKey = '';
+let esOnly100 = false;
+const ES_GROUPS = [['100', 'gem', '100 % glutenfrei'], ['menu', 'mid', 'GF gekennzeichnet'], ['ask', 'fine', 'GF auf Nachfrage — Vorsicht']];
+function restCardEl(r, nr) {
+  const lvl = GF_LEVELS[r.gf] || GF_LEVELS.ask;
+  const key = String(r.id);
+  const card = document.createElement('div'); card.className = 'card card-big'; card.dataset.id = r.id;
+  card.innerHTML = `
+      <div class="card-body">
+        <div class="card-name-row">
+          <span class="card-number in-row ${lvl.cls}">${nr}</span><span class="card-name">${escapeHTML(r.name)}</span>
+        </div>
+        <div class="card-tags">
+          <span class="tag ${lvl.tag}">${escapeHTML(lvl.label)}</span>
+          <span class="tag tag-cuisine">${escapeHTML(r.cuisine || '')}</span>
+          <span class="tag tag-extra">📍 ${escapeHTML(TRIP.places[r.place].name)}</span>
+          ${r.farNote ? `<span class="tag tag-cuisine">${escapeHTML(r.farNote)}</span>` : ''}
+        </div>
+        <div class="card-details">
+          <div class="detail-item"><span class="detail-icon">🕐</span><div><span class="detail-label">Öffnungszeiten</span><span class="detail-value">${keepTogether(escapeHTML(r.openingHours || 'nicht geprüft'))}</span></div></div>
+          <div class="detail-item"><span class="detail-icon">📍</span><div><span class="detail-label">Adresse</span><span class="detail-value">${keepTogether(escapeHTML(r.address || ''))}</span></div></div>
+          <div class="detail-item"><span class="detail-icon">💶</span><div><span class="detail-label">Preis</span><span class="detail-value">${keepTogether(escapeHTML(r.price || 'nicht geprüft'))}</span></div></div>
+          <div class="detail-item"><span class="detail-icon">🍳</span><div><span class="detail-label">Küche / Kreuzkontamination</span><span class="detail-value dv-text">${escapeHTML(r.cross || '')}</span></div></div>
+        </div>
+        ${r.tip ? `<div class="tip-box"><strong>Tipp:</strong> ${escapeHTML(r.tip)}</div>` : ''}
+        <div class="src-line">Quelle: ${(r.src || []).map(srcLink).join(' · ')}</div>
+      </div>
+      <div class="card-meta"></div>
+      <div class="card-actions" style="margin-top:8px;padding-top:8px;border-top:1px solid var(--color-border);grid-column:1 / -1;">
+        ${ESSEN_INFO[r.id] ? `<button class="btn-fav btn-einfo" type="button" data-einfo>ℹ️ Was ist das?</button>` : ''}<button class="btn-fav ${isFav('rest', key) ? 'active' : ''}" type="button" data-rest-fav="${escapeHTML(key)}">
+          <span class="fav-heart">❤️</span>${isFav('rest', key) ? 'Gespeichert' : 'Favorit'}
+        </button>${safeUrl(r.website) ? `<a class="btn-fav btn-web" href="${escapeHTML(safeUrl(r.website))}" target="_blank" rel="noopener noreferrer" data-stop>🔗 Website</a>` : ''}
+      </div>`;
+  const infoBtn = card.querySelector('[data-einfo]');
+  if (infoBtn) infoBtn.addEventListener('click', e => { e.stopPropagation(); openEssenInfo(r, lvl.label); });
+  const favBtn = card.querySelector('[data-rest-fav]');
+  if (favBtn) favBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    toggleFav('rest', key, { id: key, name: r.name, sub: lvl.label, ic: '🍽️', link: r.website || '', extra: TRIP.places[r.place].name });
   });
+  card.querySelectorAll('[data-stop]').forEach(a => a.addEventListener('click', e => e.stopPropagation()));
+  card.addEventListener('click', () => window.open(mapsSearchUrl(r.maps || (r.name + ' ' + r.address)), '_blank', 'noopener,noreferrer'));
+  return card;
+}
+function shopCardEl(s) {
+  const key = String(s.id);
+  const card = document.createElement('div'); card.className = 'card card-big'; card.dataset.shopId = s.id;
+  card.innerHTML = `
+      <div class="card-body">
+        <div class="card-name-row"><span class="card-number in-row ${s.kind === 'gf' ? 'gem' : 'mid'}">${s.kind === 'gf' ? 'GF' : '🛒'}</span><span class="card-name">${escapeHTML(s.name)}</span></div>
+        <div class="card-tags">
+          <span class="tag ${s.kind === 'gf' ? 'tag-gf100' : 'tag-gfmenu'}">${s.kind === 'gf' ? 'b) mit glutenfreiem Angebot' : 'a) normaler Einkauf'}</span>
+          <span class="tag tag-extra">📍 ${escapeHTML(TRIP.places[s.place].name)}</span>
+          ${s.farNote ? `<span class="tag tag-cuisine">${escapeHTML(s.farNote)}</span>` : ''}
+        </div>
+        <div class="card-details">
+          <div class="detail-item"><span class="detail-icon">🕐</span><div><span class="detail-label">Öffnungszeiten</span><span class="detail-value">${keepTogether(escapeHTML(s.openingHours || 'nicht geprüft'))}</span></div></div>
+          <div class="detail-item"><span class="detail-icon">📍</span><div><span class="detail-label">Adresse</span><span class="detail-value">${keepTogether(escapeHTML(s.address || ''))}</span></div></div>
+        </div>
+        ${s.what ? `<div class="tip-box"><strong>Was es gibt:</strong> ${escapeHTML(s.what)}</div>` : ''}
+        <div class="src-line">Quelle: ${(s.src || []).map(srcLink).join(' · ')}</div>
+      </div>
+      <div class="card-meta"></div>
+      <div class="card-actions" style="margin-top:8px;padding-top:8px;border-top:1px solid var(--color-border);grid-column:1 / -1;">
+        ${ESSEN_INFO[s.id] ? `<button class="btn-fav btn-einfo" type="button" data-einfo>ℹ️ Was ist das?</button>` : ''}<button class="btn-fav ${isFav('rest', key) ? 'active' : ''}" type="button" data-rest-fav="${escapeHTML(key)}"><span class="fav-heart">❤️</span>${isFav('rest', key) ? 'Gespeichert' : 'Favorit'}</button>${safeUrl(s.website) ? `<a class="btn-fav btn-web" href="${escapeHTML(safeUrl(s.website))}" target="_blank" rel="noopener noreferrer" data-stop>🔗 Website</a>` : ''}
+      </div>`;
+  const infoBtnS = card.querySelector('[data-einfo]');
+  if (infoBtnS) infoBtnS.addEventListener('click', e => { e.stopPropagation(); openEssenInfo(s, s.kind === 'gf' ? 'Laden mit glutenfreiem Angebot' : 'normaler Einkauf'); });
+  card.querySelector('[data-rest-fav]').addEventListener('click', e => {
+    e.stopPropagation();
+    toggleFav('rest', key, { id: key, name: s.name, sub: s.kind === 'gf' ? 'Laden mit GF-Angebot' : 'Einkauf', ic: '🛒', link: s.website || '', extra: TRIP.places[s.place].name });
+  });
+  card.querySelectorAll('[data-stop]').forEach(a => a.addEventListener('click', e => e.stopPropagation()));
+  card.addEventListener('click', () => window.open(mapsSearchUrl(s.maps || (s.name + ' ' + s.address)), '_blank', 'noopener,noreferrer'));
+  return card;
+}
+function esGroupHead(cls, label, n) {
+  return `<h3 class="es-group">${cls ? `<span class="legend-dot dot-${cls}" aria-hidden="true"></span>` : ''}${escapeHTML(label)} <span class="es-count">(${n})</span></h3>`;
+}
+function renderCards() {
+  ['100', 'menu', 'ask'].forEach(k => { const el = document.getElementById('stat-gf' + k); if (el) el.textContent = TRIP.restaurants.filter(r => r.gf === k).length; });
+  const holder = document.getElementById('essen-stations');
+  if (!holder) return;
+  const today = todayTH();
+  const first = TRIP.stations[0].first, last = TRIP.stations[TRIP.stations.length - 1].last;
+  const inTrip = today >= first && today <= last;
+  const cur = currentStation();
+  // aufgeklappte Blöcke merken; bei Orts-/Phasenwechsel aktuellen Ort öffnen, vor der Reise den ersten, nach der Reise keinen
+  holder.querySelectorAll('details[data-est]').forEach(d => { if (d.open) ES_OPEN.add(d.dataset.est); else ES_OPEN.delete(d.dataset.est); });
+  const key = inTrip ? cur.id : (today < first ? 'vorher' : 'nachher');
+  if (key !== esLastKey) {
+    ES_OPEN.clear();
+    if (inTrip) ES_OPEN.add(cur.id);
+    else if (today < first) ES_OPEN.add(TRIP.stations[0].id);
+    esLastKey = key;
+  }
+  const jump = document.getElementById('essen-jump');
+  if (jump) jump.hidden = !inTrip;
+  const tgl = document.getElementById('essen-gf100');
+  if (tgl) { tgl.classList.toggle('active', esOnly100); tgl.setAttribute('aria-pressed', String(esOnly100)); }
+  holder.innerHTML = '';
+  TRIP.stations.forEach(s => {
+    const place = TRIP.places[s.place];
+    const isCur = inTrip && s.id === cur.id;
+    const isPast = today > s.last && !isCur;
+    const rests = TRIP.restaurants.filter(r => r.place === s.place);
+    const shops = TRIP.shops.filter(x => x.place === s.place).sort((a, b) => (a.kind === 'gf' ? 1 : 0) - (b.kind === 'gf' ? 1 : 0));
+    const n100 = rests.filter(r => r.gf === '100').length;
+    const nR = esOnly100 ? n100 : rests.length;
+    const lbl = (esOnly100 ? (n100 ? `${n100} × 100 % glutenfrei` : 'kein 100 % glutenfreies Restaurant') : `${nR} ${nR === 1 ? 'Restaurant' : 'Restaurants'}`) + ` · ${shops.length} ${shops.length === 1 ? 'Laden' : 'Läden'}`;
+    const sec = document.createElement('section');
+    sec.className = 'st-block' + (isCur ? ' st-current' : '');
+    sec.id = 'est-' + s.id;
+    sec.innerHTML = `<details class="dp-day${isCur ? ' today' : ''}${isPast ? ' past' : ''}" data-est="${escapeHTML(s.id)}"${ES_OPEN.has(s.id) ? ' open' : ''}>
+        <summary>
+          <span class="dp-row"><span class="dp-date">${escapeHTML(s.stay)}</span><span class="dp-place">${escapeHTML(place.name)}</span>${isCur ? '<span class="dp-now">Du bist hier</span>' : ''}<span class="dp-arrow" aria-hidden="true">▾</span></span>
+          <span class="dp-lbl">${escapeHTML(lbl)}</span>
+        </summary>
+        <div class="dp-body"></div>
+      </details>`;
+    const body = sec.querySelector('.dp-body');
+    let nr = 0;
+    ES_GROUPS.forEach(([k, cls, label]) => {
+      if (esOnly100 && k !== '100') return;
+      const list = rests.filter(r => (GF_LEVELS[r.gf] ? r.gf : 'ask') === k).sort((a, b) => (a.farNote ? 1 : 0) - (b.farNote ? 1 : 0));
+      if (!list.length) return;
+      body.insertAdjacentHTML('beforeend', esGroupHead(cls, label, list.length));
+      const g = document.createElement('div'); g.className = 'cards-grid';
+      list.forEach(r => g.appendChild(restCardEl(r, ++nr)));
+      body.appendChild(g);
+    });
+    if (esOnly100 && !n100) body.insertAdjacentHTML('beforeend', '<div class="empty-note">Hier gibt es keine 100 % glutenfreien Restaurants. Schalte „Nur 100 % GF“ aus, dann siehst du die gekennzeichneten.</div>');
+    if (shops.length) {
+      body.insertAdjacentHTML('beforeend', esGroupHead('', '🛒 Einkaufen', shops.length));
+      const g = document.createElement('div'); g.className = 'cards-grid';
+      shops.forEach(x => g.appendChild(shopCardEl(x)));
+      body.appendChild(g);
+    }
+    holder.appendChild(sec);
+  });
+  if (typeof augmentTravelCards === 'function') augmentTravelCards();
+}
+document.addEventListener('click', e => {
+  if (e.target.closest('#essen-gf100')) { esOnly100 = !esOnly100; renderCards(); return; }
+  if (!e.target.closest('#essen-jump')) return;
+  const el = document.querySelector(`#essen-stations details[data-est="${currentStation().id}"]`);
+  if (!el) return;
+  el.open = true;
+  // Abstand = tatsächliche Höhe der festen Kopfzeile (auf dem Handy höher als am PC)
+  const nav = document.getElementById('top-nav');
+  el.style.scrollMarginTop = ((nav ? nav.offsetHeight : 0) + 12) + 'px';
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
 /* ── ACTION: 4 STATIONEN ────────────────────────────────────── */
@@ -3834,7 +4009,7 @@ function augmentTravelCards(refresh) {
   const state = loadTripState();
   if (refresh) document.querySelectorAll('.trip-tools').forEach(t => t.remove());
   getActionItems().forEach(item => addTripTools(item, item.card));
-  document.querySelectorAll('#cardsGrid .card[data-id]').forEach(card => {
+  document.querySelectorAll('#essen-stations .card[data-id]').forEach(card => {
     const r = TRIP.restaurants.find(x => String(x.id) === String(card.dataset.id));
     if (r) addTripTools({ key: 'rest_' + r.id, name: r.name }, card);
   });
