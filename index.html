@@ -70,7 +70,7 @@
     /* ══════════════════════════════════════════════════════════
        TAB 1 — RESTAURANTS  (light cream theme)
     ══════════════════════════════════════════════════════════ */
-    #panel-rest {
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) {
       --color-bg: #0f0f0f; --color-surface: #1a1a1a;
       --color-surface-2: #222222; --color-border: #2e2e2e;
       --color-divider: #2e2e2e; --color-text: #e8e4dc;
@@ -89,92 +89,92 @@
     }
 
     /* restaurant hero */
-    #panel-rest .r-hero { padding: clamp(2rem,5vw,3.5rem) 1.5rem clamp(1.5rem,3vw,2rem); max-width: 960px; margin: 0 auto; text-align: center; }
-    #panel-rest .r-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.75rem; }
-    #panel-rest .r-hero h1 { font-family: var(--font-display); font-size: clamp(1.75rem,4vw,3rem); font-weight: 600; line-height: 1.1; margin-bottom: 0.875rem; }
-    #panel-rest .r-hero h1 em { font-style: italic; color: var(--color-primary); }
-    #panel-rest .r-hero-desc { font-size: 0.95rem; color: var(--color-text-muted); max-width: 560px; margin: 0 auto 1.25rem; }
-    #panel-rest .stats-row { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
-    #panel-rest .stat { text-align: center; }
-    #panel-rest .stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: var(--color-primary); line-height: 1; }
-    #panel-rest .stat-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-faint); }
-    #panel-rest .legend-row { display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
-    #panel-rest .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; font-weight: 500; color: var(--color-text-muted); }
-    #panel-rest .legend-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
-    #panel-rest .dot-fine { background: var(--color-accent); }
-    #panel-rest .dot-gem { background: var(--color-gem); }
-    #panel-rest .dot-mid { background: var(--color-mid); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-hero { padding: clamp(2rem,5vw,3.5rem) 1.5rem clamp(1.5rem,3vw,2rem); max-width: 960px; margin: 0 auto; text-align: center; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.75rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-hero h1 { font-family: var(--font-display); font-size: clamp(1.75rem,4vw,3rem); font-weight: 600; line-height: 1.1; margin-bottom: 0.875rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-hero h1 em { font-style: italic; color: var(--color-primary); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-hero-desc { font-size: 0.95rem; color: var(--color-text-muted); max-width: 560px; margin: 0 auto 1.25rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .stats-row { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .stat { text-align: center; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: var(--color-primary); line-height: 1; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .stat-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-faint); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .legend-row { display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; font-weight: 500; color: var(--color-text-muted); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .legend-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dot-fine { background: var(--color-accent); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dot-gem { background: var(--color-gem); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dot-mid { background: var(--color-mid); }
 
     /* filter & map */
-    #panel-rest .filter-bar { max-width: 960px; margin: 0 auto 1.25rem; padding: 0 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    #panel-rest .filter-btn { padding: 0.35rem 0.875rem; border-radius: 999px; border: 1px solid var(--color-border); background: transparent; color: var(--color-text-muted); font-size: 0.8rem; font-weight: 500; cursor: pointer; transition: all var(--transition); }
-    #panel-rest .filter-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
-    #panel-rest .filter-btn.active { background: rgba(232,197,71,0.15); border-color: rgba(232,197,71,0.5); color: var(--color-primary); }
-    #panel-rest .map-section { max-width: 960px; margin: 0 auto 2rem; padding: 0 1.5rem; }
-    #panel-rest #map { width: 100%; height: 380px; border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: var(--shadow-md); overflow: hidden; background: var(--color-surface); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .filter-bar { max-width: 960px; margin: 0 auto 1.25rem; padding: 0 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .filter-btn { padding: 0.35rem 0.875rem; border-radius: 999px; border: 1px solid var(--color-border); background: transparent; color: var(--color-text-muted); font-size: 0.8rem; font-weight: 500; cursor: pointer; transition: all var(--transition); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .filter-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .filter-btn.active { background: rgba(232,197,71,0.15); border-color: rgba(232,197,71,0.5); color: var(--color-primary); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .map-section { max-width: 960px; margin: 0 auto 2rem; padding: 0 1.5rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) #map { width: 100%; height: 380px; border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: var(--shadow-md); overflow: hidden; background: var(--color-surface); }
 
     /* cards */
-    #panel-rest .cards-section { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 3rem; }
-    #panel-rest .section-heading { font-family: var(--font-display); font-size: clamp(1.2rem,2.5vw,1.6rem); font-weight: 600; color: var(--color-text); margin-bottom: 0.2rem; }
-    #panel-rest .section-sub { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem; }
-    #panel-rest .sort-row { display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
-    #panel-rest .sort-label { font-size: 0.8rem; color: var(--color-text-muted); font-weight: 500; }
-    #panel-rest .sort-btn { padding: 0.3rem 0.7rem; border-radius: var(--radius-sm); border: 1.5px solid var(--color-border); background: transparent; font-size: 0.8rem; font-weight: 500; color: var(--color-text-muted); cursor: pointer; transition: all var(--transition); }
-    #panel-rest .sort-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
-    #panel-rest .sort-btn.active { background: rgba(232,197,71,0.1); border-color: rgba(232,197,71,0.4); color: var(--color-primary); }
-    #panel-rest .cards-grid { display: grid; grid-template-columns: 1fr; gap: 0.875rem; }
-    #panel-rest .card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.125rem 1.25rem; box-shadow: var(--shadow-sm); transition: all 0.2s; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: 0 1.125rem; align-items: start; position: relative; overflow: hidden; }
-    #panel-rest .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--color-primary); opacity: 0; transition: opacity 0.2s; }
-    #panel-rest .card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); background: var(--color-surface-2); border-color: rgba(232,197,71,0.4); }
-    #panel-rest .card:hover::before { opacity: 1; }
-    #panel-rest .card-number { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; margin-top: 0.2rem; }
-    #panel-rest .card-number.fine { background: rgba(240,112,96,0.15); color: var(--color-accent); }
-    #panel-rest .card-number.gem { background: rgba(79,195,161,0.15); color: var(--color-gem); }
-    #panel-rest .card-number.mid { background: rgba(123,140,222,0.15); color: var(--color-mid); }
-    #panel-rest .card-body { min-width: 0; }
-    #panel-rest .card-name-row { display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.2rem; }
-    #panel-rest .card-name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; line-height: 1.2; color: var(--color-text); }
-    #panel-rest .website-link { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.6rem; border-radius: 999px; border: 1px solid rgba(123,140,222,0.4); background: rgba(123,140,222,0.08); color: var(--color-mid); font-size: 0.7rem; font-weight: 600; text-decoration: none; transition: all var(--transition); white-space: nowrap; }
-    #panel-rest .website-link:hover { background: rgba(123,140,222,0.2); border-color: rgba(123,140,222,0.7); color: #a0b0f0; }
-    #panel-rest .card-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
-    #panel-rest .tag { padding: 0.12rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
-    #panel-rest .tag-fine { background: rgba(240,112,96,0.15); color: var(--color-accent); }
-    #panel-rest .tag-gem { background: rgba(79,195,161,0.15); color: var(--color-gem); }
-    #panel-rest .tag-mid { background: rgba(123,140,222,0.15); color: var(--color-mid); }
-    #panel-rest .tag-cuisine { background: rgba(255,255,255,0.05); color: var(--color-text-muted); }
-    #panel-rest .tag-extra { background: rgba(232,197,71,0.15); color: var(--color-primary); }
-    #panel-rest .card-details { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px,1fr)); gap: 0.4rem 0.875rem; margin-bottom: 0.65rem; }
-    #panel-rest .detail-item { display: flex; gap: 0.35rem; align-items: flex-start; }
-    #panel-rest .detail-icon { font-size: 0.85rem; flex-shrink: 0; margin-top: 0.1rem; }
-    #panel-rest .detail-label { font-size: 0.67rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-faint); display: block; }
-    #panel-rest .detail-value { font-size: 0.8rem; color: var(--color-text); font-weight: 500; }
-    #panel-rest .tip-box { background: rgba(232,197,71,0.05); border-left: 2px solid var(--color-primary); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 0.45rem 0.7rem; font-size: 0.8rem; color: var(--color-text); line-height: 1.5; }
-    #panel-rest .tip-box strong { color: var(--color-gem); font-weight: 600; }
-    #panel-rest .card-meta { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem; }
-    #panel-rest .drive-badge { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.3rem 0.55rem; text-align: center; min-width: 62px; }
-    #panel-rest .drive-mins { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--color-text); line-height: 1; }
-    #panel-rest .drive-label { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-faint); }
-    #panel-rest .price-badge { font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); }
-    #panel-rest .radius-badge { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.45rem; border-radius: 999px; border: 1px solid var(--color-border); color: var(--color-text-faint); white-space: nowrap; }
-    #panel-rest .radius-badge.far { background: rgba(240,112,96,0.1); border-color: var(--color-accent); color: var(--color-accent); }
-    #panel-rest .category-divider { display: flex; align-items: center; gap: 0.75rem; margin: 1.5rem 0 0.75rem; }
-    #panel-rest .cat-div-line { flex: 1; height: 1px; background: var(--color-divider); }
-    #panel-rest .cat-div-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; padding: 0.2rem 0.75rem; border-radius: 999px; border: 1.5px solid; }
-    #panel-rest .cat-div-label.fine { color: var(--color-accent); border-color: var(--color-accent); background: rgba(240,112,96,0.08); }
-    #panel-rest .cat-div-label.gem { color: var(--color-gem); border-color: var(--color-gem); background: rgba(79,195,161,0.08); }
-    #panel-rest .cat-div-label.mid { color: var(--color-mid); border-color: var(--color-mid); background: rgba(123,140,222,0.08); }
-    #panel-rest .r-footer { border-top: 1px solid var(--color-divider); padding: 1.5rem; text-align: center; font-size: 0.8rem; color: var(--color-text-faint); }
-    #panel-rest .r-footer a { color: var(--color-text-muted); text-decoration: none; }
-    #panel-rest .r-footer a:hover { color: var(--color-primary); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .cards-section { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .section-heading { font-family: var(--font-display); font-size: clamp(1.2rem,2.5vw,1.6rem); font-weight: 600; color: var(--color-text); margin-bottom: 0.2rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .section-sub { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .sort-row { display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .sort-label { font-size: 0.8rem; color: var(--color-text-muted); font-weight: 500; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .sort-btn { padding: 0.3rem 0.7rem; border-radius: var(--radius-sm); border: 1.5px solid var(--color-border); background: transparent; font-size: 0.8rem; font-weight: 500; color: var(--color-text-muted); cursor: pointer; transition: all var(--transition); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .sort-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .sort-btn.active { background: rgba(232,197,71,0.1); border-color: rgba(232,197,71,0.4); color: var(--color-primary); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .cards-grid { display: grid; grid-template-columns: 1fr; gap: 0.875rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.125rem 1.25rem; box-shadow: var(--shadow-sm); transition: all 0.2s; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: 0 1.125rem; align-items: start; position: relative; overflow: hidden; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--color-primary); opacity: 0; transition: opacity 0.2s; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); background: var(--color-surface-2); border-color: rgba(232,197,71,0.4); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card:hover::before { opacity: 1; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-number { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; margin-top: 0.2rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-number.fine { background: rgba(240,112,96,0.15); color: var(--color-accent); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-number.gem { background: rgba(79,195,161,0.15); color: var(--color-gem); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-number.mid { background: rgba(123,140,222,0.15); color: var(--color-mid); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-body { min-width: 0; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-name-row { display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.2rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; line-height: 1.2; color: var(--color-text); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .website-link { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.6rem; border-radius: 999px; border: 1px solid rgba(123,140,222,0.4); background: rgba(123,140,222,0.08); color: var(--color-mid); font-size: 0.7rem; font-weight: 600; text-decoration: none; transition: all var(--transition); white-space: nowrap; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .website-link:hover { background: rgba(123,140,222,0.2); border-color: rgba(123,140,222,0.7); color: #a0b0f0; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tag { padding: 0.12rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tag-fine { background: rgba(240,112,96,0.15); color: var(--color-accent); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tag-gem { background: rgba(79,195,161,0.15); color: var(--color-gem); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tag-mid { background: rgba(123,140,222,0.15); color: var(--color-mid); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tag-cuisine { background: rgba(255,255,255,0.05); color: var(--color-text-muted); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tag-extra { background: rgba(232,197,71,0.15); color: var(--color-primary); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-details { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px,1fr)); gap: 0.4rem 0.875rem; margin-bottom: 0.65rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .detail-item { display: flex; gap: 0.35rem; align-items: flex-start; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .detail-icon { font-size: 0.85rem; flex-shrink: 0; margin-top: 0.1rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .detail-label { font-size: 0.67rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-faint); display: block; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .detail-value { font-size: 0.8rem; color: var(--color-text); font-weight: 500; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tip-box { background: rgba(232,197,71,0.05); border-left: 2px solid var(--color-primary); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 0.45rem 0.7rem; font-size: 0.8rem; color: var(--color-text); line-height: 1.5; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tip-box strong { color: var(--color-gem); font-weight: 600; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-meta { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .drive-badge { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.3rem 0.55rem; text-align: center; min-width: 62px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .drive-mins { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--color-text); line-height: 1; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .drive-label { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-faint); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .price-badge { font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .radius-badge { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.45rem; border-radius: 999px; border: 1px solid var(--color-border); color: var(--color-text-faint); white-space: nowrap; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .radius-badge.far { background: rgba(240,112,96,0.1); border-color: var(--color-accent); color: var(--color-accent); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .category-divider { display: flex; align-items: center; gap: 0.75rem; margin: 1.5rem 0 0.75rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .cat-div-line { flex: 1; height: 1px; background: var(--color-divider); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .cat-div-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; padding: 0.2rem 0.75rem; border-radius: 999px; border: 1.5px solid; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .cat-div-label.fine { color: var(--color-accent); border-color: var(--color-accent); background: rgba(240,112,96,0.08); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .cat-div-label.gem { color: var(--color-gem); border-color: var(--color-gem); background: rgba(79,195,161,0.08); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .cat-div-label.mid { color: var(--color-mid); border-color: var(--color-mid); background: rgba(123,140,222,0.08); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-footer { border-top: 1px solid var(--color-divider); padding: 1.5rem; text-align: center; font-size: 0.8rem; color: var(--color-text-faint); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-footer a { color: var(--color-text-muted); text-decoration: none; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-footer a:hover { color: var(--color-primary); }
     @media (max-width: 600px) {
-      #panel-rest .card { grid-template-columns: auto 1fr; }
-      #panel-rest .card-meta { flex-direction: row; align-items: center; justify-content: flex-start; grid-column: 2; margin-top: 0.5rem; }
+      :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card { grid-template-columns: auto 1fr; }
+      :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-meta { flex-direction: row; align-items: center; justify-content: flex-start; grid-column: 2; margin-top: 0.5rem; }
     }
 
     /* ══════════════════════════════════════════════════════════
        TAB 2 — ACTION  (dark theme)
     ══════════════════════════════════════════════════════════ */
-    #panel-action {
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) {
       --bg: #0f0f0f; --surface: #1a1a1a; --surface2: #222222;
       --border: #2e2e2e; --accent: #e8c547; --accent2: #4fc3a1;
       --accent3: #f07060; --accent4: #7b8cde;
@@ -182,22 +182,22 @@
       background: var(--bg); color: var(--text);
       font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7;
     }
-    #panel-action ::-webkit-scrollbar { width: 10px; }
-    #panel-action ::-webkit-scrollbar-track { background: var(--bg); }
-    #panel-action ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
-    #panel-action ::-webkit-scrollbar-thumb:hover { background: #3a3a3a; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) ::-webkit-scrollbar { width: 10px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) ::-webkit-scrollbar-track { background: var(--bg); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) ::-webkit-scrollbar-thumb:hover { background: #3a3a3a; }
 
-    #panel-action .a-header { padding: 50px 40px 36px; border-bottom: 1px solid var(--border); }
-    #panel-action .a-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
-    #panel-action .a-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px,5vw,48px); line-height: 1.1; font-weight: 400; }
-    #panel-action .a-header h1 em { font-style: italic; color: var(--accent); }
-    #panel-action .a-sub { color: var(--text-muted); margin-top: 14px; font-size: 14px; max-width: 760px; }
-    #panel-action .a-sub strong { color: var(--accent2); font-weight: 600; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-header { padding: 50px 40px 36px; border-bottom: 1px solid var(--border); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px,5vw,48px); line-height: 1.1; font-weight: 400; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-header h1 em { font-style: italic; color: var(--accent); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-sub { color: var(--text-muted); margin-top: 14px; font-size: 14px; max-width: 760px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-sub strong { color: var(--accent2); font-weight: 600; }
 
     /* action map */
-    #panel-action .a-map-section { max-width: 1100px; margin: 32px auto 0; padding: 0 40px; }
-    #panel-action .a-map-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
-    #panel-action #action-map { width: 100%; height: 300px; border-radius: 12px; border: 1px solid var(--border); overflow: hidden; background: var(--surface); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-map-section { max-width: 1100px; margin: 32px auto 0; padding: 0 40px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-map-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) #action-map { width: 100%; height: 300px; border-radius: 12px; border: 1px solid var(--border); overflow: hidden; background: var(--surface); }
 
     .online-map-frame { position: relative; }
     .online-map-frame iframe { width: 100%; height: 100%; border: 0; display: block; background: #1a1a1a; }
@@ -212,124 +212,124 @@
     .map-open-btn:hover { background: rgba(232,197,71,.18); }
     .map-open-note { color: #7a7670; font-size: 12px; margin-top: 8px; }
     @media (max-width: 600px) {
-      #panel-rest #map, #panel-action #action-map { height: 340px; }
+      :is(#panel-rest, #fav-rest-grid, #fav-modal-r) #map, :is(#panel-action, #fav-action-grid, #fav-modal-a) #action-map { height: 340px; }
       .map-open-btn { width: 100%; }
     }
 
-    #panel-action main { max-width: 1100px; margin: 0 auto; padding: 36px 40px 80px; }
-    #panel-action .intro { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: 22px 26px; margin-bottom: 46px; }
-    #panel-action .intro-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-    #panel-action .intro p { font-size: 14px; color: var(--text); }
-    #panel-action .intro strong { color: var(--accent2); font-weight: 600; }
-    #panel-action section { margin-bottom: 50px; }
-    #panel-action .sec-head { display: flex; align-items: baseline; gap: 16px; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 8px; }
-    #panel-action .sec-num { font-family: 'DM Serif Display', serif; font-size: 44px; color: var(--text-dim); line-height: 1; }
-    #panel-action .sec-meta { flex: 1; }
-    #panel-action .sec-date { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
-    #panel-action .sec-title { font-family: 'DM Serif Display', serif; font-size: 24px; margin-top: 2px; }
-    #panel-action .sec-title em { font-style: normal; color: var(--accent); }
-    #panel-action .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 14px; margin-top: 18px; }
-    #panel-action .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: all .2s; position: relative; overflow: hidden; display: flex; flex-direction: column; }
-    #panel-action .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); opacity: 0; transition: opacity .2s; }
-    #panel-action .card:hover { border-color: rgba(232,197,71,.4); transform: translateY(-3px); background: var(--surface2); box-shadow: 0 8px 24px rgba(0,0,0,.3); }
-    #panel-action .card:hover::before { opacity: 1; }
-    #panel-action .card.hl { border-color: rgba(232,197,71,.5); }
-    #panel-action .card.hl::before { opacity: 1; }
-    #panel-action .card-ic { font-size: 24px; margin-bottom: 8px; }
-    #panel-action .card-t { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-    #panel-action .card-d { font-size: 12.5px; color: var(--text-muted); margin-bottom: 12px; }
-    #panel-action .det { list-style: none; font-size: 12px; border-top: 1px solid var(--border); padding-top: 10px; display: flex; flex-direction: column; gap: 4px; }
-    #panel-action .det li { display: flex; gap: 7px; color: var(--text); }
-    #panel-action .det .k { color: var(--text-dim); min-width: 16px; }
-    #panel-action .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
-    #panel-action .tag { font-size: 9.5px; letter-spacing: .5px; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; font-weight: 600; }
-    #panel-action .tag-hl { background: rgba(232,197,71,.15); color: var(--accent); }
-    #panel-action .tag-w { background: rgba(123,140,222,.15); color: var(--accent4); }
-    #panel-action .tag-l { background: rgba(79,195,161,.15); color: var(--accent2); }
-    #panel-action .tag-p { background: rgba(240,112,96,.15); color: var(--accent3); }
-    #panel-action .tag-x { background: rgba(240,112,96,.2); color: var(--accent3); }
-    #panel-action .card-btns { display: flex; gap: 8px; margin-top: 12px; }
-    #panel-action .btn-info, #panel-action .btn-link { flex: 1; text-align: center; font-family: 'DM Sans', sans-serif; font-size: 11.5px; font-weight: 500; padding: 8px 6px; border-radius: 8px; cursor: pointer; text-decoration: none; transition: all .15s; border: 1px solid; }
-    #panel-action .btn-info { background: rgba(232,197,71,.08); border-color: rgba(232,197,71,.35); color: var(--accent); }
-    #panel-action .btn-info:hover { background: rgba(232,197,71,.18); }
-    #panel-action .btn-link { background: rgba(123,140,222,.08); border-color: rgba(123,140,222,.35); color: var(--accent4); }
-    #panel-action .btn-link:hover { background: rgba(123,140,222,.18); }
-    #panel-action .warn { background: rgba(240,112,96,.05); border: 1px solid rgba(240,112,96,.2); border-radius: 12px; padding: 20px 24px; margin-top: 10px; }
-    #panel-action .warn-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent3); margin-bottom: 10px; }
-    #panel-action .warn ul { list-style: none; font-size: 13px; display: flex; flex-direction: column; gap: 7px; }
-    #panel-action .warn li::before { content: '▸ '; color: var(--accent3); }
-    #panel-action .src { font-size: 12px; color: var(--text-muted); line-height: 2; }
-    #panel-action .src a { color: var(--accent4); text-decoration: none; }
-    #panel-action .src a:hover { text-decoration: underline; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) main { max-width: 1100px; margin: 0 auto; padding: 36px 40px 80px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .intro { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: 22px 26px; margin-bottom: 46px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .intro-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .intro p { font-size: 14px; color: var(--text); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .intro strong { color: var(--accent2); font-weight: 600; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) section { margin-bottom: 50px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-head { display: flex; align-items: baseline; gap: 16px; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 8px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-num { font-family: 'DM Serif Display', serif; font-size: 44px; color: var(--text-dim); line-height: 1; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-meta { flex: 1; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-date { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-title { font-family: 'DM Serif Display', serif; font-size: 24px; margin-top: 2px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-title em { font-style: normal; color: var(--accent); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 14px; margin-top: 18px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: all .2s; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); opacity: 0; transition: opacity .2s; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card:hover { border-color: rgba(232,197,71,.4); transform: translateY(-3px); background: var(--surface2); box-shadow: 0 8px 24px rgba(0,0,0,.3); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card:hover::before { opacity: 1; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card.hl { border-color: rgba(232,197,71,.5); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card.hl::before { opacity: 1; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-ic { font-size: 24px; margin-bottom: 8px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-t { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-d { font-size: 12.5px; color: var(--text-muted); margin-bottom: 12px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .det { list-style: none; font-size: 12px; border-top: 1px solid var(--border); padding-top: 10px; display: flex; flex-direction: column; gap: 4px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .det li { display: flex; gap: 7px; color: var(--text); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .det .k { color: var(--text-dim); min-width: 16px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .tag { font-size: 9.5px; letter-spacing: .5px; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; font-weight: 600; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .tag-hl { background: rgba(232,197,71,.15); color: var(--accent); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .tag-w { background: rgba(123,140,222,.15); color: var(--accent4); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .tag-l { background: rgba(79,195,161,.15); color: var(--accent2); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .tag-p { background: rgba(240,112,96,.15); color: var(--accent3); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .tag-x { background: rgba(240,112,96,.2); color: var(--accent3); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-btns { display: flex; gap: 8px; margin-top: 12px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-info, :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-link { flex: 1; text-align: center; font-family: 'DM Sans', sans-serif; font-size: 11.5px; font-weight: 500; padding: 8px 6px; border-radius: 8px; cursor: pointer; text-decoration: none; transition: all .15s; border: 1px solid; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-info { background: rgba(232,197,71,.08); border-color: rgba(232,197,71,.35); color: var(--accent); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-info:hover { background: rgba(232,197,71,.18); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-link { background: rgba(123,140,222,.08); border-color: rgba(123,140,222,.35); color: var(--accent4); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-link:hover { background: rgba(123,140,222,.18); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .warn { background: rgba(240,112,96,.05); border: 1px solid rgba(240,112,96,.2); border-radius: 12px; padding: 20px 24px; margin-top: 10px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .warn-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent3); margin-bottom: 10px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .warn ul { list-style: none; font-size: 13px; display: flex; flex-direction: column; gap: 7px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .warn li::before { content: '▸ '; color: var(--accent3); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .src { font-size: 12px; color: var(--text-muted); line-height: 2; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .src a { color: var(--accent4); text-decoration: none; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .src a:hover { text-decoration: underline; }
 
     /* ── ACTION-TAGESPLAN nach Datum (15.10.2026) ── */
-    #panel-action .dp-wrap { margin-bottom: 46px; }
-    #panel-action .dp-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent3); }
-    #panel-action .dp-title { font-family: 'DM Serif Display', serif; font-size: 26px; margin-top: 4px; line-height: 1.2; }
-    #panel-action .dp-title em { font-style: normal; color: var(--accent); }
-    #panel-action .dp-sub { font-size: 13px; color: var(--text-muted); margin-top: 6px; }
-    #panel-action .dp-today-btn { margin-top: 12px; min-height: 44px; padding: 10px 18px; border-radius: 10px; border: 1px solid rgba(232,197,71,.5); background: rgba(232,197,71,.12); color: var(--accent); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; }
-    #panel-action .dp-group { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent2); margin: 24px 0 8px; }
-    #panel-action .dp-day { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; scroll-margin-top: 110px; overflow: hidden; }
-    #panel-action .dp-day.today { border-color: rgba(232,197,71,.75); box-shadow: 0 0 0 1px rgba(232,197,71,.3); }
-    #panel-action .dp-day.past { opacity: .6; }
-    #panel-action .dp-day summary { list-style: none; cursor: pointer; padding: 12px 16px; min-height: 44px; display: block; }
-    #panel-action .dp-day summary::-webkit-details-marker { display: none; }
-    #panel-action .dp-row { display: flex; align-items: center; gap: 10px; }
-    #panel-action .dp-date { font-weight: 600; color: var(--accent); }
-    #panel-action .dp-place { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); }
-    #panel-action .dp-now { background: var(--accent); color: #111; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
-    #panel-action .dp-arrow { margin-left: auto; color: var(--text-dim); transition: transform .2s; }
-    #panel-action .dp-day[open] .dp-arrow { transform: rotate(180deg); }
-    #panel-action .dp-lbl { display: block; font-size: 14.5px; margin-top: 3px; }
-    #panel-action .dp-body { padding: 0 14px 12px; border-top: 1px solid var(--border); }
-    #panel-action .dp-travel { margin-top: 12px; font-size: 12.5px; color: var(--accent3); background: rgba(240,112,96,.06); border: 1px solid rgba(240,112,96,.25); border-radius: 8px; padding: 8px 12px; }
-    #panel-action .dp-slot-t { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin: 14px 0 6px; }
-    #panel-action .dp-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
-    #panel-action .dp-top { display: flex; gap: 10px; }
-    #panel-action .dp-ic { font-size: 20px; line-height: 1.25; }
-    #panel-action .dp-txt { flex: 1; min-width: 0; font-size: 14px; }
-    #panel-action .dp-name { font-weight: 600; }
-    #panel-action .dp-or { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent4); border: 1px solid rgba(123,140,222,.45); border-radius: 20px; padding: 1px 7px; margin-right: 6px; vertical-align: 1px; }
-    #panel-action .dp-new { font-size: 12px; }
-    #panel-action .dp-inapp { font-size: 11px; color: var(--text-dim); }
-    #panel-action .dp-note { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
-    #panel-action .dp-price { font-size: 12.5px; color: var(--accent2); margin-top: 2px; overflow-wrap: anywhere; }
-    #panel-action .dp-btns { display: flex; gap: 8px; margin-top: 8px; }
-    #panel-action .dp-btn { flex: 1; min-height: 40px; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; border-radius: 8px; border: 1px solid; cursor: pointer; text-decoration: none; }
-    #panel-action .dp-btn.info { background: rgba(232,197,71,.08); border-color: rgba(232,197,71,.35); color: var(--accent); }
-    #panel-action .dp-btn.link { background: rgba(123,140,222,.08); border-color: rgba(123,140,222,.35); color: var(--accent4); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-wrap { margin-bottom: 46px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent3); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-title { font-family: 'DM Serif Display', serif; font-size: 26px; margin-top: 4px; line-height: 1.2; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-title em { font-style: normal; color: var(--accent); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-sub { font-size: 13px; color: var(--text-muted); margin-top: 6px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-today-btn { margin-top: 12px; min-height: 44px; padding: 10px 18px; border-radius: 10px; border: 1px solid rgba(232,197,71,.5); background: rgba(232,197,71,.12); color: var(--accent); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-group { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent2); margin: 24px 0 8px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-day { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; scroll-margin-top: 110px; overflow: hidden; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-day.today { border-color: rgba(232,197,71,.75); box-shadow: 0 0 0 1px rgba(232,197,71,.3); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-day.past { opacity: .6; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-day summary { list-style: none; cursor: pointer; padding: 12px 16px; min-height: 44px; display: block; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-day summary::-webkit-details-marker { display: none; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-row { display: flex; align-items: center; gap: 10px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-date { font-weight: 600; color: var(--accent); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-place { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-now { background: var(--accent); color: #111; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-arrow { margin-left: auto; color: var(--text-dim); transition: transform .2s; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-day[open] .dp-arrow { transform: rotate(180deg); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-lbl { display: block; font-size: 14.5px; margin-top: 3px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-body { padding: 0 14px 12px; border-top: 1px solid var(--border); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-travel { margin-top: 12px; font-size: 12.5px; color: var(--accent3); background: rgba(240,112,96,.06); border: 1px solid rgba(240,112,96,.25); border-radius: 8px; padding: 8px 12px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-slot-t { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin: 14px 0 6px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-top { display: flex; gap: 10px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-ic { font-size: 20px; line-height: 1.25; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-txt { flex: 1; min-width: 0; font-size: 14px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-name { font-weight: 600; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-or { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent4); border: 1px solid rgba(123,140,222,.45); border-radius: 20px; padding: 1px 7px; margin-right: 6px; vertical-align: 1px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-new { font-size: 12px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-inapp { font-size: 11px; color: var(--text-dim); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-note { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-price { font-size: 12.5px; color: var(--accent2); margin-top: 2px; overflow-wrap: anywhere; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-btns { display: flex; gap: 8px; margin-top: 8px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-btn { flex: 1; min-height: 40px; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; border-radius: 8px; border: 1px solid; cursor: pointer; text-decoration: none; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-btn.info { background: rgba(232,197,71,.08); border-color: rgba(232,197,71,.35); color: var(--accent); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-btn.link { background: rgba(123,140,222,.08); border-color: rgba(123,140,222,.35); color: var(--accent4); }
     /* vier Blöcke mit Karten (15.10.2026 mittags) */
-    #panel-action section.st-block { margin-bottom: 10px; }
-    #panel-action .dp-body .cards { grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); }
-    #panel-action .dp-body .sub-label { margin-top: 20px; }
-    #panel-action .dp-day summary .wx-days { margin-top: 8px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) section.st-block { margin-bottom: 10px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-body .cards { grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-body .sub-label { margin-top: 20px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-day summary .wx-days { margin-top: 8px; }
     /* Lesbarkeit (Wolli + Jennifer 15.10.2026): Pfeile doppelt so groß + hellweiß, keine grauen Texte */
-    #panel-action .dp-arrow { font-size: 32px; line-height: 1; color: #ffffff; }
-    #panel-action .card-d { font-size: 15px; color: var(--text); }
-    #panel-action .det { border-top: 1px solid rgba(232,228,220,.5); }
-    #panel-action .det .k, #panel-action .dp-place, #panel-action .w-label, #panel-action .src, #panel-action .a-sub, #panel-action .a-sub span, #panel-action .trip-note-preview, #panel-action .modal-ti p, #panel-action .empty-note { color: var(--text); }
-    #panel-action .btn-fav:not(.active):not(:hover) { color: var(--text); }
-    #panel-action .google-search-label, #panel-action .gsearch-label-place, #panel-action .manual-save-toggle, #panel-action .toggle-arrow { color: var(--text); }
-    #panel-action .a-footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 12px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-arrow { font-size: 32px; line-height: 1; color: #ffffff; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-d { font-size: 15px; color: var(--text); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .det { border-top: 1px solid rgba(232,228,220,.5); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .det .k, :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-place, :is(#panel-action, #fav-action-grid, #fav-modal-a) .w-label, :is(#panel-action, #fav-action-grid, #fav-modal-a) .src, :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-sub, :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-sub span, :is(#panel-action, #fav-action-grid, #fav-modal-a) .trip-note-preview, :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-ti p, :is(#panel-action, #fav-action-grid, #fav-modal-a) .empty-note { color: var(--text); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-fav:not(.active):not(:hover) { color: var(--text); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .google-search-label, :is(#panel-action, #fav-action-grid, #fav-modal-a) .gsearch-label-place, :is(#panel-action, #fav-action-grid, #fav-modal-a) .manual-save-toggle, :is(#panel-action, #fav-action-grid, #fav-modal-a) .toggle-arrow { color: var(--text); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 12px; }
 
     /* action modal */
-    #panel-action .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }
-    #panel-action .modal-overlay.active { display: flex; }
-    #panel-action .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 28px; }
-    #panel-action .modal-h { display: flex; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 16px; }
-    #panel-action .modal-ic { font-size: 30px; }
-    #panel-action .modal-ti { flex: 1; }
-    #panel-action .modal-ti h3 { font-family: 'DM Serif Display', serif; font-size: 20px; font-weight: 400; }
-    #panel-action .modal-ti p { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-    #panel-action .modal-x { background: none; border: 1px solid var(--border); color: var(--text-muted); width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-size: 16px; }
-    #panel-action .modal-x:hover { border-color: var(--accent3); color: var(--accent3); }
-    #panel-action .modal-b p { font-size: 14px; color: var(--text); margin-bottom: 12px; }
-    #panel-action .modal-b strong { color: var(--accent2); }
-    #panel-action .modal-b .tip { background: rgba(232,197,71,.06); border-left: 2px solid var(--accent); padding: 10px 14px; border-radius: 6px; font-size: 13px; color: var(--text); margin-top: 8px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-overlay.active { display: flex; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 28px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-h { display: flex; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 16px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-ic { font-size: 30px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-ti { flex: 1; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-ti h3 { font-family: 'DM Serif Display', serif; font-size: 20px; font-weight: 400; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-ti p { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-x { background: none; border: 1px solid var(--border); color: var(--text-muted); width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-size: 16px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-x:hover { border-color: var(--accent3); color: var(--accent3); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-b p { font-size: 14px; color: var(--text); margin-bottom: 12px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-b strong { color: var(--accent2); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-b .tip { background: rgba(232,197,71,.06); border-left: 2px solid var(--accent); padding: 10px 14px; border-radius: 6px; font-size: 13px; color: var(--text); margin-top: 8px; }
 
     @media (max-width: 600px) {
-      #panel-action .a-header, #panel-action main, #panel-action .a-map-section { padding-left: 20px; padding-right: 20px; }
+      :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-header, :is(#panel-action, #fav-action-grid, #fav-modal-a) main, :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-map-section { padding-left: 20px; padding-right: 20px; }
     }
   
     /* ── FAVORITES BADGE on nav ───────────────────────── */
@@ -628,7 +628,7 @@
     .w-slot .w-icon  { font-size: 1.1rem; line-height: 1; }
     .w-slot .w-temp  { font-weight: 700; color: #e8c547; font-size: 0.8rem; }
     .w-slot .w-rain  { color: #7b8cde; font-size: 0.65rem; }
-    #panel-action .sec-head {
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-head {
       display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
     }
 
@@ -862,7 +862,7 @@
     .gf-text ul { margin: 0 0 0.9em 1.3em; }
     .gf-text li { margin-bottom: 0.25em; }
     .gf-text .gf-src { font-size: 12px !important; color: #555; border-top: 1px solid #ccc; padding-top: 10px; margin-top: 18px; }
-    #panel-plan .gf-open, #panel-rest .gf-open { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px; border-radius: 10px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; background: #e8c547; color: #0f0f0f; border: none; }
+    #panel-plan .gf-open, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-open { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px; border-radius: 10px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; background: #e8c547; color: #0f0f0f; border: none; }
     .gf-warn-list { list-style: none; font-size: 12.5px; display: flex; flex-direction: column; gap: 6px; margin-top: 10px; color: #e8e4dc; }
     .gf-warn-list li::before { content: '▸ '; color: #f07060; }
     .gf-warn-list a { color: #7b8cde; text-decoration: none; font-size: 11px; }
@@ -877,7 +877,7 @@
     .avoid-item .src a { color: #7b8cde; text-decoration: none; }
 
     /* Action: Stations-Abschnitte */
-    #panel-action section.st-current .sec-head { border-bottom-color: rgba(232,197,71,.6); }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) section.st-current .sec-head { border-bottom-color: rgba(232,197,71,.6); }
     .sec-now { font-size: 9.5px; letter-spacing: .5px; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; font-weight: 700; background: #e8c547; color: #0f0f0f; margin-left: 8px; vertical-align: middle; }
     .sub-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #e8c547; margin: 24px 0 0; }
     .empty-note { background: #1a1a1a; border: 1px dashed #2e2e2e; border-radius: 12px; padding: 16px; color: #7a7670; font-size: 13px; margin-top: 14px; }
@@ -891,15 +891,15 @@
     .wx-none { font-size: 11px; color: #5a5a5a; margin-top: 8px; }
 
     /* Essen: GF-Kennzeichnung */
-    #panel-rest .tag-gf100 { background: rgba(79,195,161,.15); color: #4fc3a1; }
-    #panel-rest .tag-gfmenu { background: rgba(123,140,222,.15); color: #7b8cde; }
-    #panel-rest .tag-gfask { background: rgba(240,112,96,.15); color: #f07060; }
-    #panel-rest .src-line { font-size: 0.7rem; color: var(--color-text-faint); margin-top: 6px; }
-    #panel-rest .src-line a { color: var(--color-mid); text-decoration: none; }
-    #panel-rest .gf-hint-box { max-width: 960px; margin: 0 auto 1.5rem; padding: 0 1.5rem; }
-    #panel-rest .gf-hint-inner { background: var(--color-surface); border: 1px solid var(--color-border); border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg); padding: 1rem 1.25rem; }
-    #panel-rest .gf-hint-inner h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; margin-bottom: 0.4rem; }
-    #panel-rest .shop-kind { display: inline-block; margin-left: 4px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tag-gf100 { background: rgba(79,195,161,.15); color: #4fc3a1; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tag-gfmenu { background: rgba(123,140,222,.15); color: #7b8cde; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .tag-gfask { background: rgba(240,112,96,.15); color: #f07060; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .src-line { font-size: 0.7rem; color: var(--color-text-faint); margin-top: 6px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .src-line a { color: var(--color-mid); text-decoration: none; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-hint-box { max-width: 960px; margin: 0 auto 1.5rem; padding: 0 1.5rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-hint-inner { background: var(--color-surface); border: 1px solid var(--color-border); border-left: 3px solid var(--color-accent); border-radius: var(--radius-lg); padding: 1rem 1.25rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-hint-inner h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; margin-bottom: 0.4rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .shop-kind { display: inline-block; margin-left: 4px; }
 
     /* Update-Hinweis */
     .update-banner { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 1300; display: none; background: #e8c547; color: #0f0f0f; border: none; border-radius: 999px; padding: 11px 18px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.85rem; box-shadow: 0 6px 24px rgba(0,0,0,.5); cursor: pointer; max-width: calc(100% - 28px); }
@@ -909,22 +909,22 @@
        1. Keine grauen Texte: alle Grau-Variablen und fest grauen Texte → helles Weiß (#e8e4dc).
        2. Halbfette Schrift (600) wie die Kartennamen — Zier-Überschriften (DM Serif Display) behalten ihre Stärke.
        Notfall-Fenster und Zöliakie-Karte bleiben unverändert. */
-    #panel-rest, #panel-fav { --color-text-muted: #e8e4dc; --color-text-faint: #e8e4dc; }
-    #panel-action, #panel-plan { --text-muted: #e8e4dc; --text-dim: #e8e4dc; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r), #panel-fav { --color-text-muted: #e8e4dc; --color-text-faint: #e8e4dc; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a), #panel-plan { --text-muted: #e8e4dc; --text-dim: #e8e4dc; }
     #panel-plan .w-label, #panel-plan .em-src, #panel-plan .info-src,
     .tab-panel .manual-save-toggle, .tab-panel .toggle-arrow, .tab-panel .google-search-label, .tab-panel .gsearch-label-place,
-    #panel-fav .fav-clear-btn, #panel-rest .src-line, #panel-rest .detail-label, #panel-rest .r-footer { color: #e8e4dc; }
+    #panel-fav .fav-clear-btn, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .src-line, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .detail-label, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-footer { color: #e8e4dc; }
     .tab-panel .btn-fav:not(.active):not(:hover) { color: #e8e4dc; }
     .tab-panel input::placeholder, .tab-panel textarea::placeholder { color: #c9c4bb; opacity: 1; }
 
-    #panel-plan *, #panel-rest *, #panel-action *, #panel-fav * { font-weight: 600 !important; }
-    #panel-plan strong, #panel-rest strong, #panel-action strong, #panel-fav strong, #panel-plan b, #panel-rest b, #panel-action b, #panel-fav b,
-    #panel-plan .gf-open, #panel-rest .gf-open { font-weight: 700 !important; }
-    #panel-action .a-header h1, #panel-action .a-header h1 *, #panel-action .sec-num, #panel-action .sec-title, #panel-action .sec-title *,
-    #panel-action .dp-title, #panel-action .dp-title *, #panel-action .modal-ti h3,
+    #panel-plan *, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) *, :is(#panel-action, #fav-action-grid, #fav-modal-a) *, #panel-fav * { font-weight: 600 !important; }
+    #panel-plan strong, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) strong, :is(#panel-action, #fav-action-grid, #fav-modal-a) strong, #panel-fav strong, #panel-plan b, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) b, :is(#panel-action, #fav-action-grid, #fav-modal-a) b, #panel-fav b,
+    #panel-plan .gf-open, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-open { font-weight: 700 !important; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-header h1, :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-header h1 *, :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-num, :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-title, :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-title *,
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-title, :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-title *, :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-ti h3,
     #panel-plan h1, #panel-plan h1 *, #panel-plan .plan-metric strong, #panel-plan .plan-block h2, #panel-plan .station-now .st-name, #panel-plan .info-cell .v, #panel-plan .budget-total-val,
     #panel-fav .fav-hero h1, #panel-fav .fav-hero h1 *, #panel-fav .fav-section-title,
-    #panel-rest .gf-hint-inner h3 { font-weight: 400 !important; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-hint-inner h3 { font-weight: 400 !important; }
     /* fest eingestellte Grautöne (#7a7670), teils als style-Attribut → mit !important */
     .tab-panel .map-open-note, .tab-panel .trip-note-preview, .tab-panel .budget-row.head span, .tab-panel .budget-name .bn-auto,
     .tab-panel .budget-total-label, .tab-panel .budget-empty, .tab-panel .budget-cell::before, .tab-panel .em-place-meta, .tab-panel .em-note,
@@ -934,24 +934,24 @@
     /* ══ Reiter Essen: Sunshine-Aufbau für ALLE Restaurant- und Laden-Karten (Wolli 15.10.2026) ══
        große Schrift im ganzen Feld · Nummer links neben dem Namen · Symbol neben der Überschrift, Wert darunter in voller Breite ·
        „🔗 Website“ unten neben „Favorit“ (gleiche Größe) · Wortgruppen zusammen · schöner Umbruch, Silbentrennung nur im Fließtext */
-    #panel-rest .card.card-big { grid-template-columns: 1fr; padding: 14px; }
-    #panel-rest .card.card-big .card-name-row { flex-wrap: nowrap; align-items: flex-start; gap: 8px; }
-    #panel-rest .card.card-big .card-name { min-width: 0; }
-    #panel-rest .card.card-big .card-number.in-row { display: inline-flex; flex-shrink: 0; width: 30px; height: 30px; margin: 0; font-size: 0.85rem; }
-    #panel-rest .card.card-big .tag { font-size: 0.9rem; }
-    #panel-rest .card.card-big .card-details { grid-template-columns: 1fr; gap: 0.7rem; }
-    #panel-rest .card.card-big .detail-item { display: block; }
-    #panel-rest .card.card-big .detail-icon { display: inline; margin-right: 6px; font-size: 1.1rem; }
-    #panel-rest .card.card-big .detail-item > div { display: inline; }
-    #panel-rest .card.card-big .detail-label { display: inline; font-size: 0.9rem; }
-    #panel-rest .card.card-big .detail-value { display: block; margin-top: 2px; font-size: 1.15rem; line-height: 1.45; text-wrap: pretty; hyphens: none; }
-    #panel-rest .card.card-big .detail-value.dv-text, #panel-rest .card.card-big .tip-box { hyphens: auto; text-wrap: pretty; }
-    #panel-rest .card.card-big .tip-box { font-size: 1.15rem; line-height: 1.5; }
-    #panel-rest .card.card-big .src-line { font-size: 1rem; line-height: 1.5; }
-    #panel-rest .card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-    #panel-rest .card.card-big .btn-fav { font-size: 1.05rem; padding: 9px 16px; }
-    #panel-rest .btn-web { text-decoration: none; color: #7b8cde !important; border-color: rgba(123,140,222,.6); }
-    #panel-rest .nobr { white-space: nowrap; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big { grid-template-columns: 1fr; padding: 14px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .card-name-row { flex-wrap: nowrap; align-items: flex-start; gap: 8px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .card-name { min-width: 0; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .card-number.in-row { display: inline-flex; flex-shrink: 0; width: 30px; height: 30px; margin: 0; font-size: 0.85rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .tag { font-size: 0.9rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .card-details { grid-template-columns: 1fr; gap: 0.7rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .detail-item { display: block; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .detail-icon { display: inline; margin-right: 6px; font-size: 1.1rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .detail-item > div { display: inline; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .detail-label { display: inline; font-size: 0.9rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .detail-value { display: block; margin-top: 2px; font-size: 1.15rem; line-height: 1.45; text-wrap: pretty; hyphens: none; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .detail-value.dv-text, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .tip-box { hyphens: auto; text-wrap: pretty; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .tip-box { font-size: 1.15rem; line-height: 1.5; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .src-line { font-size: 1rem; line-height: 1.5; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card.card-big .btn-fav { font-size: 1.05rem; padding: 9px 16px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .btn-web { text-decoration: none; color: #7b8cde !important; border-color: rgba(123,140,222,.6); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .nobr { white-space: nowrap; }
 
     /* ══ GROSSE SCHRIFT wie im Reiter Essen — Mein Urlaub, Action, Favoriten (Wolli 15.10.2026) ══
        Maßstab Essen: Fließtext/Werte ≈ 1,1–1,15rem, Bezeichnungen/Schildchen ≈ 0,85–0,9rem, Knöpfe 1rem (mind. 44 px hoch),
@@ -976,28 +976,28 @@
     #panel-plan .budget-x { width: 36px; height: 36px; font-size: 1rem !important; }
 
     /* ── Action ── */
-    #panel-action .card { padding: 14px; }
-    #panel-action .dp-body { padding: 0 10px 12px; }
-    #panel-action .card-t { font-size: 1.2rem; line-height: 1.3; }
-    #panel-action .card-d { font-size: 1.1rem; line-height: 1.45; }
-    #panel-action .det { font-size: 1.1rem; gap: 6px; }
-    #panel-action .det li { line-height: 1.45; }
-    #panel-action .tag { font-size: 0.85rem; padding: 3px 9px; }
-    #panel-action .sub-label { font-size: 1rem; }
-    #panel-action .dp-place, #panel-action .a-label, #panel-action .a-map-label, #panel-action .intro-label { font-size: 0.9rem; }
-    #panel-action .dp-date { font-size: 1.15rem; }
-    #panel-action .dp-lbl, #panel-action .a-sub, #panel-action .intro p { font-size: 1.1rem; line-height: 1.5; }
-    #panel-action .dp-travel, #panel-action .avoid-item { font-size: 1.05rem !important; line-height: 1.5; }
-    #panel-action .avoid-label { font-size: 0.95rem; }
-    #panel-action .src, #panel-action .map-open-note, #panel-action .google-search-label { font-size: 0.95rem; line-height: 1.6; }
-    #panel-action .btn-info, #panel-action .btn-link, #panel-action .btn-fav, #panel-action .map-open-btn, #panel-action .dp-today-btn { font-size: 1rem; min-height: 44px; padding: 10px 8px; }
-    #panel-action .card-btns { flex-wrap: wrap; }
-    #panel-action .trip-tools button { font-size: 1rem; min-height: 44px; }
-    #panel-action .trip-note-preview { font-size: 1rem; }
-    #panel-action .modal-b p { font-size: 1.1rem; line-height: 1.55; }
-    #panel-action .modal-b .tip { font-size: 1.05rem; line-height: 1.5; }
-    #panel-action .modal-ti p { font-size: 0.95rem; }
-    #panel-action .modal-ti h3 { font-size: 1.4rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card { padding: 14px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-body { padding: 0 10px 12px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-t { font-size: 1.2rem; line-height: 1.3; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-d { font-size: 1.1rem; line-height: 1.45; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .det { font-size: 1.1rem; gap: 6px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .det li { line-height: 1.45; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .tag { font-size: 0.85rem; padding: 3px 9px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .sub-label { font-size: 1rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-place, :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-label, :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-map-label, :is(#panel-action, #fav-action-grid, #fav-modal-a) .intro-label { font-size: 0.9rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-date { font-size: 1.15rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-lbl, :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-sub, :is(#panel-action, #fav-action-grid, #fav-modal-a) .intro p { font-size: 1.1rem; line-height: 1.5; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-travel, :is(#panel-action, #fav-action-grid, #fav-modal-a) .avoid-item { font-size: 1.05rem !important; line-height: 1.5; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .avoid-label { font-size: 0.95rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .src, :is(#panel-action, #fav-action-grid, #fav-modal-a) .map-open-note, :is(#panel-action, #fav-action-grid, #fav-modal-a) .google-search-label { font-size: 0.95rem; line-height: 1.6; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-info, :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-link, :is(#panel-action, #fav-action-grid, #fav-modal-a) .btn-fav, :is(#panel-action, #fav-action-grid, #fav-modal-a) .map-open-btn, :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-today-btn { font-size: 1rem; min-height: 44px; padding: 10px 8px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-btns { flex-wrap: wrap; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .trip-tools button { font-size: 1rem; min-height: 44px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .trip-note-preview { font-size: 1rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-b p { font-size: 1.1rem; line-height: 1.55; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-b .tip { font-size: 1.05rem; line-height: 1.5; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-ti p { font-size: 0.95rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .modal-ti h3 { font-size: 1.4rem; }
 
     /* ── Favoriten ── */
     #panel-fav .fav-hero p, #panel-fav .fav-empty { font-size: 1.1rem; line-height: 1.5; }
@@ -1018,95 +1018,95 @@
     #panel-plan .gf-warn-list li { font-size: 1.1rem !important; line-height: 1.5; }
     #panel-plan .gf-warn-list a, #panel-plan .gf-warn-list span { font-size: 0.95rem !important; }
     #panel-plan .place-add button { font-size: 1rem !important; min-height: 44px; }
-    #panel-action .dp-now { font-size: 0.8rem; padding: 3px 10px; }
-    #panel-action .google-search-btn, #panel-rest .google-search-btn { font-size: 1rem; }
-    #panel-action .sec-date { font-size: 0.9rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-now { font-size: 0.8rem; padding: 3px 10px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .google-search-btn, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .google-search-btn { font-size: 1rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .sec-date { font-size: 0.9rem; }
     .tab-panel .a-footer, .tab-panel .r-footer { font-size: 0.95rem !important; }
     #panel-fav .fav-item-remove:not(:hover) { color: #e8e4dc; border-color: #555; }
-    #panel-action .dp-now { font-size: 0.85rem; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .dp-now { font-size: 0.85rem; }
     /* Essen außerhalb der Karten (Kopf, Zahlen, Legende, Filter, Warnliste, Karten-Knopf, Suche) — Karten selbst unverändert */
-    #panel-rest .r-eyebrow, #panel-rest .stat-label { font-size: 0.9rem; }
-    #panel-rest .r-hero-desc, #panel-rest .section-sub { font-size: 1.1rem; line-height: 1.5; }
-    #panel-rest .legend-item, #panel-rest .filter-btn { font-size: 1rem; }
-    #panel-rest .filter-btn { min-height: 40px; padding: 0.45rem 1rem; }
-    #panel-rest .gf-warn-list li { font-size: 1.1rem !important; line-height: 1.5; }
-    #panel-rest .gf-warn-list a, #panel-rest .gf-warn-list span { font-size: 0.95rem !important; }
-    #panel-rest .map-open-btn { font-size: 1rem; min-height: 44px; }
-    #panel-rest .map-open-note, #panel-rest .google-search-label, #panel-rest .gsearch-label-place { font-size: 0.95rem; }
-    #panel-rest .gf-bar button, #panel-rest button:not(.btn-fav):not(.filter-btn) { font-size: 1rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-eyebrow, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .stat-label { font-size: 0.9rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .r-hero-desc, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .section-sub { font-size: 1.1rem; line-height: 1.5; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .legend-item, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .filter-btn { font-size: 1rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .filter-btn { min-height: 40px; padding: 0.45rem 1rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-warn-list li { font-size: 1.1rem !important; line-height: 1.5; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-warn-list a, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-warn-list span { font-size: 0.95rem !important; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .map-open-btn { font-size: 1rem; min-height: 44px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .map-open-note, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .google-search-label, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gsearch-label-place { font-size: 0.95rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-bar button, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) button:not(.btn-fav):not(.filter-btn) { font-size: 1rem; }
     /* Handy: Breite besser nutzen wie bei Essen (kleinere Außen-/Innenabstände) */
     @media (max-width: 600px) {
       #panel-plan .plan-shell { padding-left: 12px !important; padding-right: 12px !important; }
       #panel-plan .plan-block { padding: 14px !important; }
       #panel-plan .em-place { padding: 12px !important; }
       #panel-plan .em-btn { flex: 1 1 100% !important; }
-      #panel-action main, #panel-action .a-header, #panel-action .a-map-section { padding-left: 12px !important; padding-right: 12px !important; }
+      :is(#panel-action, #fav-action-grid, #fav-modal-a) main, :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-header, :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-map-section { padding-left: 12px !important; padding-right: 12px !important; }
       #panel-fav .fav-sections, #panel-fav .fav-hero { padding-left: 12px !important; padding-right: 12px !important; }
       #panel-fav .fav-item { padding: 14px; }
     }
     /* Notfall: Telefonnummern nie umbrechen */
     .nobr { white-space: nowrap; }
     /* Action: Knöpfe einzeilig, weichen bei Platzmangel in die nächste Zeile aus (wie Essen) */
-    #panel-action .card-btns { gap: 10px; }
-    #panel-action .card-btns .btn-info, #panel-action .card-btns .btn-link, #panel-action .card-btns .btn-fav { flex: 1 1 auto; white-space: normal; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-btns { gap: 10px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-btns .btn-info, :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-btns .btn-link, :is(#panel-action, #fav-action-grid, #fav-modal-a) .card-btns .btn-fav { flex: 1 1 auto; white-space: normal; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; }
     /* ══ Reiter Essen: Knopf „ℹ️ Was ist das?“ + Info-Fenster (Wolli 15.10.2026), gleiche Größe wie Favorit/Website ══ */
-    #panel-rest .btn-einfo { color: #e8c547 !important; border-color: rgba(232,197,71,.6); background: rgba(232,197,71,.08); }
-    #panel-rest .btn-einfo:hover { background: rgba(232,197,71,.18); }
-    #panel-rest .card-actions .btn-einfo { max-width: 100%; white-space: normal; text-align: center; }
-    #panel-rest .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 16px; }
-    #panel-rest .modal-overlay.active { display: flex; }
-    #panel-rest .modal { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 16px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 20px; }
-    #panel-rest .modal-h { display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid var(--color-border); padding-bottom: 14px; margin-bottom: 14px; }
-    #panel-rest .modal-ic { font-size: 28px; line-height: 1.2; }
-    #panel-rest .modal-ti { flex: 1; min-width: 0; }
-    #panel-rest .modal-ti h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; line-height: 1.25; color: var(--color-text); overflow-wrap: break-word; hyphens: auto; }
-    #panel-rest .modal-ti p { font-size: 0.95rem; color: var(--color-text); margin-top: 4px; }
-    #panel-rest .modal-x { background: none; border: 1px solid var(--color-border); color: var(--color-text); width: 44px; height: 44px; border-radius: 10px; cursor: pointer; font-size: 20px; flex-shrink: 0; }
-    #panel-rest .modal-x:hover { border-color: #e8c547; color: #e8c547; }
-    #panel-rest .modal-b p { font-size: 1.1rem; line-height: 1.55; color: var(--color-text); margin-bottom: 12px; text-wrap: pretty; hyphens: auto; overflow-wrap: break-word; }
-    #panel-rest .modal-b .tip { background: rgba(232,197,71,.06); border-left: 2px solid #e8c547; padding: 10px 14px; border-radius: 6px; font-size: 1.05rem; line-height: 1.5; color: var(--color-text); margin-top: 8px; }
-    #panel-rest .modal-b .map-open-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(123,140,222,.6); color: #7b8cde; text-decoration: none; font-size: 1rem; }
-    #panel-rest .modal-b .emd-src { font-size: 1rem; line-height: 1.5; margin-top: 14px; }
-    #panel-rest .modal-b .emd-src a { color: #7b8cde; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .btn-einfo { color: #e8c547 !important; border-color: rgba(232,197,71,.6); background: rgba(232,197,71,.08); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .btn-einfo:hover { background: rgba(232,197,71,.18); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .card-actions .btn-einfo { max-width: 100%; white-space: normal; text-align: center; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 16px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-overlay.active { display: flex; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 16px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 20px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-h { display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid var(--color-border); padding-bottom: 14px; margin-bottom: 14px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-ic { font-size: 28px; line-height: 1.2; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-ti { flex: 1; min-width: 0; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-ti h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; line-height: 1.25; color: var(--color-text); overflow-wrap: break-word; hyphens: auto; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-ti p { font-size: 0.95rem; color: var(--color-text); margin-top: 4px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-x { background: none; border: 1px solid var(--color-border); color: var(--color-text); width: 44px; height: 44px; border-radius: 10px; cursor: pointer; font-size: 20px; flex-shrink: 0; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-x:hover { border-color: #e8c547; color: #e8c547; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-b p { font-size: 1.1rem; line-height: 1.55; color: var(--color-text); margin-bottom: 12px; text-wrap: pretty; hyphens: auto; overflow-wrap: break-word; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-b .tip { background: rgba(232,197,71,.06); border-left: 2px solid #e8c547; padding: 10px 14px; border-radius: 6px; font-size: 1.05rem; line-height: 1.5; color: var(--color-text); margin-top: 8px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-b .map-open-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(123,140,222,.6); color: #7b8cde; text-decoration: none; font-size: 1rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-b .emd-src { font-size: 1rem; line-height: 1.5; margin-top: 14px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .modal-b .emd-src a { color: #7b8cde; }
     /* ══ Reiter Essen: vier aufklappbare Aufenthalte wie im Reiter Action (Wolli 16.10.2026) ══
-       Regeln aus tagesplan_css.css für #panel-rest übernommen (Action selbst unverändert); keine grauen Texte. */
-    #panel-rest .es-wrap { --surface: #1a1a1a; --border: #2e2e2e; --accent: #e8c547; --text: #e8e4dc; max-width: 960px; margin: 1.5rem auto 0; padding: 0 1.5rem; }
-    #panel-rest .es-intro { font-size: 1.1rem; line-height: 1.5; color: var(--text); margin: 0.25rem 0 0.9rem; }
-    #panel-rest .es-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1rem; }
-    #panel-rest .es-btns .filter-btn, #panel-rest .dp-today-btn { min-height: 44px; padding: 10px 18px; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; }
-    #panel-rest .dp-today-btn { border: 1px solid rgba(232,197,71,.5); background: rgba(232,197,71,.12); color: var(--accent); }
-    #panel-rest .es-btns .filter-btn { color: var(--text); }
-    #panel-rest .es-btns .filter-btn.active { color: var(--accent); }
-    #panel-rest .dp-today-btn[hidden] { display: none; }
-    #panel-rest section.st-block { margin-bottom: 10px; }
-    #panel-rest .dp-day { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; scroll-margin-top: 110px; overflow: hidden; }
-    #panel-rest .dp-day.today { border-color: rgba(232,197,71,.75); box-shadow: 0 0 0 1px rgba(232,197,71,.3); }
-    #panel-rest .dp-day.past > summary { opacity: .6; } /* nur die Klappzeile, Karten bleiben hell (Codex Runde 2) */
-    #panel-rest .dp-day summary { list-style: none; cursor: pointer; padding: 12px 16px; min-height: 44px; display: block; }
-    #panel-rest .dp-day summary::-webkit-details-marker { display: none; }
-    #panel-rest .dp-row { display: flex; align-items: center; gap: 10px; }
-    #panel-rest .dp-date { font-weight: 600; color: var(--accent); font-size: 1.1rem; }
-    #panel-rest .dp-place { font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text); }
-    #panel-rest .dp-now { background: var(--accent); color: #111; font-size: 0.85rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
-    #panel-rest .dp-arrow { margin-left: auto; font-size: 32px; line-height: 1; color: #ffffff; transition: transform .2s; }
-    #panel-rest .dp-day[open] .dp-arrow { transform: rotate(180deg); }
-    #panel-rest .dp-lbl { display: block; font-size: 1rem; margin-top: 3px; color: var(--text); }
-    #panel-rest .dp-body { padding: 0 14px 14px; border-top: 1px solid var(--border); }
-    #panel-rest .es-group { display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 20px 0 10px; }
-    #panel-rest .es-group .legend-dot { flex-shrink: 0; }
-    #panel-rest .es-count { font-weight: 600; }
-    #panel-rest .dp-body .empty-note { color: var(--text); font-size: 1rem; }
+       Regeln aus tagesplan_css.css für :is(#panel-rest, #fav-rest-grid, #fav-modal-r) übernommen (Action selbst unverändert); keine grauen Texte. */
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-wrap { --surface: #1a1a1a; --border: #2e2e2e; --accent: #e8c547; --text: #e8e4dc; max-width: 960px; margin: 1.5rem auto 0; padding: 0 1.5rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-intro { font-size: 1.1rem; line-height: 1.5; color: var(--text); margin: 0.25rem 0 0.9rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-btns .filter-btn, :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-today-btn { min-height: 44px; padding: 10px 18px; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-today-btn { border: 1px solid rgba(232,197,71,.5); background: rgba(232,197,71,.12); color: var(--accent); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-btns .filter-btn { color: var(--text); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-btns .filter-btn.active { color: var(--accent); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-today-btn[hidden] { display: none; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) section.st-block { margin-bottom: 10px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-day { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; scroll-margin-top: 110px; overflow: hidden; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-day.today { border-color: rgba(232,197,71,.75); box-shadow: 0 0 0 1px rgba(232,197,71,.3); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-day.past > summary { opacity: .6; } /* nur die Klappzeile, Karten bleiben hell (Codex Runde 2) */
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-day summary { list-style: none; cursor: pointer; padding: 12px 16px; min-height: 44px; display: block; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-day summary::-webkit-details-marker { display: none; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-row { display: flex; align-items: center; gap: 10px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-date { font-weight: 600; color: var(--accent); font-size: 1.1rem; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-place { font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-now { background: var(--accent); color: #111; font-size: 0.85rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-arrow { margin-left: auto; font-size: 32px; line-height: 1; color: #ffffff; transition: transform .2s; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-day[open] .dp-arrow { transform: rotate(180deg); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-lbl { display: block; font-size: 1rem; margin-top: 3px; color: var(--text); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-body { padding: 0 14px 14px; border-top: 1px solid var(--border); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-group { display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 20px 0 10px; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-group .legend-dot { flex-shrink: 0; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-count { font-weight: 600; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-body .empty-note { color: var(--text); font-size: 1rem; }
     /* Kopf Essen (Wolli 16.10.2026): Hinweise „Vor jeder Bestellung“ zugeklappt, gleicher Pfeil wie die Blöcke */
-    #panel-rest .gf-hint-inner { border-left: 1px solid var(--color-border); } /* roter Streifen links weg (Wolli 16.10.2026), Rand ringsum gleich */
-    #panel-rest .gf-more { margin-top: 12px; border-top: 1px solid var(--color-border); }
-    #panel-rest .gf-more summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; min-height: 44px; padding-top: 10px; font-size: 1.05rem; font-weight: 700; color: #e8e4dc; }
-    #panel-rest .gf-more summary::-webkit-details-marker { display: none; }
-    #panel-rest .gf-more[open] .dp-arrow { transform: rotate(180deg); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-hint-inner { border-left: 1px solid var(--color-border); } /* roter Streifen links weg (Wolli 16.10.2026), Rand ringsum gleich */
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-more { margin-top: 12px; border-top: 1px solid var(--color-border); }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-more summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; min-height: 44px; padding-top: 10px; font-size: 1.05rem; font-weight: 700; color: #e8e4dc; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-more summary::-webkit-details-marker { display: none; }
+    :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .gf-more[open] .dp-arrow { transform: rotate(180deg); }
     /* Handy: Karten im Block so breit wie vorher ohne Blöcke (kleinere Außen-/Innenabstände) */
     @media (max-width: 600px) {
-      #panel-rest .es-wrap { padding: 0 12px; }
-      #panel-rest .dp-day summary { padding: 12px; }
-      #panel-rest .dp-body { padding: 0 8px 12px; }
+      :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .es-wrap { padding: 0 12px; }
+      :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-day summary { padding: 12px; }
+      :is(#panel-rest, #fav-rest-grid, #fav-modal-r) .dp-body { padding: 0 8px 12px; }
     }
     /* ══ Baht-Euro-Rechner als eigener Block oben in „Mein Urlaub“ (Wolli 18.10.2026) ══
        große Felder (Schrift ≥ 16 px, sonst zoomt das iPhone), Bezeichnung über dem Feld, Knopf „Leeren“ */
@@ -1119,8 +1119,13 @@
     #panel-plan .cur-clear { margin-top: 12px; min-height: 44px; padding: 8px 16px; font-size: 1rem; background: transparent; color: #e8e4dc; border: 1px solid #2e2e2e; border-radius: 999px; font-family: 'DM Sans', sans-serif; cursor: pointer; }
     #panel-plan .cur-clear:hover { border-color: #e8c547; color: #e8c547; }
     /* ══ Action-Kopf nur „Urlaub · zu zweit · Thailand“ (Wolli 18.10.2026) ══ */
-    #panel-action .a-header { padding-top: 28px; padding-bottom: 24px; }
-    #panel-action .a-header h1.a-title { color: var(--accent); white-space: nowrap; font-size: clamp(20px, 7.2vw, 48px); line-height: 1.15; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-header { padding-top: 28px; padding-bottom: 24px; }
+    :is(#panel-action, #fav-action-grid, #fav-modal-a) .a-header h1.a-title { color: var(--accent); white-space: nowrap; font-size: clamp(20px, 7.2vw, 48px); line-height: 1.15; }
+    /* ══ Favoriten mit vollen Karten (Wolli 18.10.2026) ══ */
+    #panel-fav #fav-action-grid, #panel-fav #fav-rest-grid { display: block; background: transparent; }
+    #panel-fav #fav-rest-grid .es-group { margin: 1.25rem 0 0.75rem; }
+    #panel-fav #fav-rest-grid .es-group:first-child, #panel-fav #fav-action-grid .sub-label:first-child { margin-top: 0; }
+    #panel-fav #fav-rest-grid .cards-grid { margin-bottom: 0.5rem; }
 </style>
 </head>
 <body>
@@ -1136,13 +1141,13 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 18.10.2026 · 21:06 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 18.10.2026 · 21:22 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
     <button class="nav-tab active-plan" id="tab-plan" data-tab="plan"><span class="nav-ic">🧭</span> Mein Urlaub</button>
     <button class="nav-tab" id="tab-rest" data-tab="rest"><span class="nav-ic">🍽️</span> Essen</button>
-    <button class="nav-tab" id="tab-action" data-tab="action"><span class="nav-ic">⚡</span> Action<span class="nav-long"> · 4 Orte</span></button>
+    <button class="nav-tab" id="tab-action" data-tab="action"><span class="nav-ic">⚡</span> Action<span class="nav-long"> · 3 Orte</span></button>
     <button class="nav-tab" id="tab-fav" data-tab="fav"><span class="nav-ic">❤️</span> Favoriten<span id="fav-count-badge"></span></button>
   </div>
   <button class="nav-sos" id="sos-open" type="button" aria-label="Notfall-Nummern öffnen">🚨 Notfall</button>
@@ -1354,13 +1359,13 @@
 
   <section class="es-wrap" aria-labelledby="es-title">
     <h2 class="section-heading" id="es-title">🍽️ Essen je Aufenthalt</h2>
-    <p class="es-intro">Vier Aufenthalte zum Aufklappen — alle sind zu, bis ihr einen antippt. Euer aktueller Ort ist <strong>gelb markiert</strong>. In jedem Block zuerst 100 % glutenfrei, dann GF gekennzeichnet, dann auf Nachfrage, unten 🛒 Einkaufen. Klick auf eine Karte öffnet Google Maps.</p>
+    <p class="es-intro">Drei Orte zum Aufklappen (Bangkok mit beiden Zeiträumen in einem Block) — alle sind zu, bis ihr einen antippt. Euer aktueller Ort ist <strong>gelb markiert</strong>. In jedem Block zuerst 100 % glutenfrei, dann GF gekennzeichnet, dann auf Nachfrage, unten 🛒 Einkaufen. Klick auf eine Karte öffnet Google Maps.</p>
     <div class="es-btns"><button type="button" class="dp-today-btn" id="essen-jump" hidden>📍 Zu meinem aktuellen Ort</button><button type="button" class="filter-btn" id="essen-gf100" aria-pressed="false">Nur 100 % GF</button></div>
     <div id="essen-stations"></div>
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 18.10.2026 · 21:06 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 18.10.2026 · 21:22 Uhr
   </footer>
   <!-- ESSEN: Info-Fenster „Was ist das?“ -->
   <div class="modal-overlay" id="emd" role="dialog" aria-modal="true" aria-labelledby="emd-t"><div class="modal"><div class="modal-h"><div class="modal-ic" id="emd-ic">ℹ️</div><div class="modal-ti"><h3 id="emd-t">Titel</h3><p id="emd-s">Untertitel</p></div><button class="modal-x" type="button" aria-label="Schließen" onclick="closeEssenInfo()">×</button></div><div class="modal-b" id="emd-b"></div></div></div>
@@ -1424,12 +1429,12 @@
     </div>
 
   <main>
-    <div class="intro"><div class="intro-label">Das Prinzip</div><p>Vier Aufenthalte zum Aufklappen — alle sind zu, bis ihr einen antippt. Euer aktueller Ort ist <strong>gelb markiert</strong>. In jedem Block: <strong>🔥 Action am Tag</strong>, <strong>🌙 Abends &amp; Party</strong>, <strong>🏛️ Sehenswürdigkeiten &amp; schöne Ecken</strong> und was ihr <strong>meiden</strong> solltet. Ihr sucht euch aus, was ihr wann macht. 🗓️ = Termine/Zeiten, 💡 = Bedingungen. Termine und Preise vor dem Buchen beim Anbieter bestätigen (Stand 15.10.2026).</p><button type="button" class="dp-today-btn" id="action-jump" hidden>📍 Zu meinem aktuellen Ort</button></div>
+    <div class="intro"><div class="intro-label">Das Prinzip</div><p>Drei Orte zum Aufklappen (Bangkok mit beiden Zeiträumen in einem Block) — alle sind zu, bis ihr einen antippt. Euer aktueller Ort ist <strong>gelb markiert</strong>. In jedem Block: <strong>🔥 Action am Tag</strong>, <strong>🌙 Abends &amp; Party</strong>, <strong>🏛️ Sehenswürdigkeiten &amp; schöne Ecken</strong> und was ihr <strong>meiden</strong> solltet. Ihr sucht euch aus, was ihr wann macht. 🗓️ = Termine/Zeiten, 💡 = Bedingungen. Termine und Preise vor dem Buchen beim Anbieter bestätigen (Stand 15.10.2026).</p><button type="button" class="dp-today-btn" id="action-jump" hidden>📍 Zu meinem aktuellen Ort</button></div>
     <div id="action-stations"></div>
 
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 18.10.2026 · 21:06 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 18.10.2026 · 21:22 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1457,7 +1462,7 @@
     <!-- Action -->
     <div class="fav-section-head" style="margin-top:2.5rem;">
       <span class="fav-section-icon">⚡</span>
-      <span class="fav-section-title">Action · 4 Orte</span>
+      <span class="fav-section-title">Action · 3 Orte</span>
       <span class="fav-section-count" id="fav-action-count">0 gespeichert</span>
     </div>
     <div class="fav-grid" id="fav-action-grid">
@@ -1495,6 +1500,7 @@
 
     <button class="fav-clear-btn" onclick="clearAllFavs()">🗑️ Alle Favoriten löschen</button>
   </div>
+  <div id="fav-modal-a"></div><div id="fav-modal-r"></div>
 </div><!-- /panel-fav -->
 
 <!-- NOTFALL-ANSICHT (über allen Reitern) -->
@@ -1528,7 +1534,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "18.10.2026 · 21:06";
+const APP_VERSION = "18.10.2026 · 21:22";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -3569,9 +3575,9 @@ function renderShops() {
     holder.appendChild(card);
   });
 }
-/* ── ESSEN: vier aufklappbare Aufenthalte wie im Reiter Action (Wolli 16.10.2026) ──
+/* ── ESSEN: ein aufklappbarer Block je Ort wie im Reiter Action (Wolli 16.10.2026; seit 18.10.2026 Bangkok mit beiden Zeiträumen in EINEM Block) ──
    Je Block: Restaurants des Orts nach GF-Stufe (100 % → gekennzeichnet → auf Nachfrage) + 🛒 Einkaufen; leere Gruppen fehlen.
-   Bangkok-Einträge stehen in beiden Bangkok-Blöcken (gleiche ID → Favorit, Status, € und Notiz gleich, Budget zählt einmal).
+   Bangkok steht nur noch einmal (Block „17.–20.10. + 27.–31.10.“, placeBlocks() aus tagesplan_code.js).
    Karten-HTML und Knöpfe wie bisher, nur in restCardEl/shopCardEl ausgelagert. Umschalter „Nur 100 % GF“ gilt für alle Blöcke. */
 const ES_OPEN = new Set();
 let esLastKey = '';
@@ -3661,7 +3667,7 @@ function renderCards() {
   const first = TRIP.stations[0].first, last = TRIP.stations[TRIP.stations.length - 1].last;
   const inTrip = today >= first && today <= last;
   const cur = currentStation();
-  // aufgeklappte Blöcke merken; beim App-Start und bei Orts-/Phasenwechsel alle vier zu (Wolli 16.10.2026, wie Action);
+  // aufgeklappte Blöcke merken; beim App-Start und bei Orts-/Phasenwechsel alle zu (Wolli 16.10.2026, wie Action);
   // der aktuelle Ort bleibt gelb markiert, „Zu meinem aktuellen Ort“ öffnet ihn
   holder.querySelectorAll('details[data-est]').forEach(d => { if (d.open) ES_OPEN.add(d.dataset.est); else ES_OPEN.delete(d.dataset.est); });
   const key = inTrip ? cur.id : (today < first ? 'vorher' : 'nachher');
@@ -3674,9 +3680,9 @@ function renderCards() {
   const tgl = document.getElementById('essen-gf100');
   if (tgl) { tgl.classList.toggle('active', esOnly100); tgl.setAttribute('aria-pressed', String(esOnly100)); }
   holder.innerHTML = '';
-  TRIP.stations.forEach(s => {
+  placeBlocks().forEach(s => {
     const place = TRIP.places[s.place];
-    const isCur = inTrip && s.id === cur.id;
+    const isCur = inTrip && s.place === cur.place;
     const isPast = today > s.last && !isCur;
     const rests = TRIP.restaurants.filter(r => r.place === s.place);
     const shops = TRIP.shops.filter(x => x.place === s.place).sort((a, b) => (a.kind === 'gf' ? 1 : 0) - (b.kind === 'gf' ? 1 : 0));
@@ -3718,7 +3724,7 @@ function renderCards() {
 document.addEventListener('click', e => {
   if (e.target.closest('#essen-gf100')) { esOnly100 = !esOnly100; renderCards(); return; }
   if (!e.target.closest('#essen-jump')) return;
-  const el = document.querySelector(`#essen-stations details[data-est="${currentStation().id}"]`);
+  const el = document.querySelector(`#essen-stations details[data-est="${currentStation().place}"]`);
   if (!el) return;
   el.open = true;
   // Abstand = tatsächliche Höhe der festen Kopfzeile (auf dem Handy höher als am PC)
@@ -3759,11 +3765,62 @@ function activityCardHTML(a, it) {
     <div class="card-btns"><button class="btn-info" type="button" data-om="${escapeHTML(a.id)}">ℹ️ Was ist das?</button>${link ? `<a class="btn-link" href="${escapeHTML(link)}" target="_blank" rel="noopener noreferrer">🔗 Anbieter</a>` : `<a class="btn-link" href="${mapsSearchUrl(a.maps || a.name)}" target="_blank" rel="noopener noreferrer">🗺️ Karte</a>`}<button class="btn-fav ${isFav('action', a.id) ? 'active' : ''}" type="button" data-fav-key="${escapeHTML(a.id)}"><span class="fav-heart">❤️</span>${isFav('action', a.id) ? 'Gespeichert' : 'Favorit'}</button></div>
   </div>`;
 }
-/* ── ACTION-REITER: vier aufklappbare Aufenthalte (15.10.2026, Wolli + Jennifer: nur noch diese vier Blöcke) ──
+/* ── ACTION-REITER: ein aufklappbarer Block je Ort (15.10.2026 vier Aufenthalte; seit 18.10.2026 Wolli: Orte mit mehreren
+   Zeiträumen in EINEM Block — Bangkok 17.–20. + 27.–31.10.) ──
    Je Block: Wetter · Reise-Hinweis · 🔥 Action am Tag · 🌙 Abends & Party · 🏛️ Sehenswürdigkeiten & schöne Ecken · ⚠️ Meiden.
    Karten = activityCardHTML (Herz, Infos, Anbieter, Status/€/Notiz bleiben). Liste aus TRIP.stayplan. */
 const SP_OPEN = new Set();
 let spLastKey = '';
+/* Orte in Reihenfolge des ersten Besuchs; je Ort alle Aufenthalte. rep = aktueller, sonst nächster, sonst letzter Aufenthalt
+   (bestimmt data-station der Karten → „Heute“ in Mein Urlaub filtert weiter nach dem aktuellen Aufenthalt). Auch für Essen + Favoriten. */
+function placeBlocks() {
+  const today = todayTH();
+  const cur = currentStation();   // berücksichtigt auch „Ich bin jetzt in …“ (Codex 18.10.2026)
+  const out = [];
+  TRIP.stations.forEach(s => {
+    let b = out.find(x => x.place === s.place);
+    if (!b) { b = { id: s.place, place: s.place, stations: [] }; out.push(b); }
+    b.stations.push(s);
+  });
+  out.forEach(b => {
+    const st = b.stations;
+    b.multi = st.length > 1;
+    b.stay = st.map(s => s.stay).join(' + ');
+    b.first = st[0].first;
+    b.last = st[st.length - 1].last;
+    b.rep = (cur && st.find(s => s.id === cur.id)) || st.find(s => today >= s.first && today <= s.last) || st.find(s => s.last >= today) || st[st.length - 1];
+  });
+  return out;
+}
+/* Liste je Ort: Gruppen gleichen Titels zusammen, jede Aktivität einmal. Gilt sie nur in einem Zeitraum → „nur 27.–31.10.“;
+   unterscheiden sich die Zeiten je Zeitraum → beide mit Zeitraum davor. */
+function placeStayplan(b) {
+  const plans = b.stations.map(s => (TRIP.stayplan || []).find(x => x.station === s.id) || { groups: [] });
+  if (!b.multi) return plans[0];
+  const groups = [];
+  plans.forEach((sp, i) => (sp.groups || []).forEach(g => {
+    let G = groups.find(x => x.t === g.t);
+    if (!G) { G = { t: g.t, items: [] }; groups.push(G); }
+    (g.items || []).forEach(it => {
+      let I = G.items.find(x => x.ref === it.ref);
+      if (!I) { I = { ref: it.ref, per: [] }; G.items.push(I); }
+      I.per.push({ sid: b.stations[i].id, stay: b.stations[i].stay, when: it.when || '', hint: it.hint || '' });
+    });
+  }));
+  groups.forEach(G => {
+    G.items = G.items.map(I => {
+      const all = I.per.length === b.stations.length;
+      const whens = [...new Set(I.per.map(p => p.when))];
+      let when;
+      if (all && whens.length === 1) when = whens[0];
+      else if (all) when = I.per.filter(p => p.when).map(p => p.stay + ': ' + p.when).join(' · ');
+      else when = ['nur ' + I.per.map(p => p.stay).join(' + '), ...whens.filter(Boolean)].join(' · ');
+      const hint = [...new Set(I.per.map(p => p.hint).filter(Boolean))].join(' · ');
+      return { ref: I.ref, when, hint, stations: I.per.map(p => p.sid) };
+    });
+  });
+  return { label: plans[0].label, groups };
+}
 function renderAction() {
   const holder = document.getElementById('action-stations');
   if (!holder) return;
@@ -3773,7 +3830,7 @@ function renderAction() {
   const cur = currentStation();
   // aufgeklappte Blöcke merken (bleiben beim Neuzeichnen offen)
   holder.querySelectorAll('details[data-st]').forEach(d => { if (d.open) SP_OPEN.add(d.dataset.st); else SP_OPEN.delete(d.dataset.st); });
-  // beim App-Start und bei Orts-/Phasenwechsel: alle vier Blöcke zu (Wolli 16.10.2026: nicht sofort erschlagen werden);
+  // beim App-Start und bei Orts-/Phasenwechsel: alle Blöcke zu (Wolli 16.10.2026: nicht sofort erschlagen werden);
   // der aktuelle Ort bleibt gelb markiert, „Zu meinem aktuellen Ort“ öffnet ihn
   const key = inTrip ? cur.id : (today < first ? 'vorher' : 'nachher');
   if (key !== spLastKey) {
@@ -3782,28 +3839,35 @@ function renderAction() {
   }
   const btn = document.getElementById('action-jump');
   if (btn) btn.hidden = !inTrip;
-  holder.innerHTML = TRIP.stations.map((s, idx) => {
-    const place = TRIP.places[s.place];
-    const sp = (TRIP.stayplan || []).find(x => x.station === s.id) || { groups: [] };
-    const isCur = inTrip && s.id === cur.id;
-    const isPast = today > s.last && !isCur;
+  holder.innerHTML = placeBlocks().map((b, idx) => {
+    const place = TRIP.places[b.place];
+    const sp = placeStayplan(b);
+    const isCur = inTrip && b.place === cur.place;
+    const isPast = today > b.last && !isCur;
     const count = sp.groups.reduce((n, g) => n + (g.items || []).length, 0);
     const groups = sp.groups.map(g => {
-      const cards = (g.items || []).map(it => { const a = TRIP.activities.find(x => x.id === it.ref); return a ? activityCardHTML(a, it) : ''; }).join('');
+      // jede Karte gehört zu einem Aufenthalt (für „Heute“ in Mein Urlaub): nur-27.–31.10.-Karten zu Bangkok 2, gemeinsame zum Vertreter
+      const cards = (g.items || []).map(it => {
+        const a = TRIP.activities.find(x => x.id === it.ref);
+        if (!a) return '';
+        const sid = it.stations && !it.stations.includes(b.rep.id) ? it.stations[0] : b.rep.id;
+        return activityCardHTML(a, it).replace('<div class="card', `<div data-station="${escapeHTML(sid)}" class="card`);
+      }).join('');
       return `<div class="sub-label">${escapeHTML(g.t)}</div>${cards ? `<div class="cards">${cards}</div>` : '<div class="empty-note">Noch nichts eingetragen.</div>'}`;
     }).join('');
-    return `<section data-station="${escapeHTML(s.id)}" class="st-block${isCur ? ' st-current' : ''}" id="st-${escapeHTML(s.id)}">
-      <details class="dp-day${isCur ? ' today' : ''}${isPast ? ' past' : ''}" data-st="${escapeHTML(s.id)}"${SP_OPEN.has(s.id) ? ' open' : ''}>
+    const notes = b.stations.filter(s => s.note).map(s => `<div class="dp-travel">🧳 ${b.multi ? `<strong>${escapeHTML(s.stay)}</strong> ` : ''}${escapeHTML(s.note)}</div>`).join('');
+    return `<section data-station="${escapeHTML(b.rep.id)}" class="st-block${isCur ? ' st-current' : ''}" id="st-${escapeHTML(b.id)}">
+      <details class="dp-day${isCur ? ' today' : ''}${isPast ? ' past' : ''}" data-st="${escapeHTML(b.id)}"${SP_OPEN.has(b.id) ? ' open' : ''}>
         <summary>
-          <span class="dp-row"><span class="dp-date">${escapeHTML(s.stay)}</span><span class="dp-place">${escapeHTML(place.name)}</span>${isCur ? '<span class="dp-now">Du bist hier</span>' : ''}<span class="dp-arrow">▾</span></span>
+          <span class="dp-row"><span class="dp-date">${escapeHTML(b.stay)}</span><span class="dp-place">${escapeHTML(place.name)}</span>${isCur ? '<span class="dp-now">Du bist hier</span>' : ''}<span class="dp-arrow">▾</span></span>
           <span class="dp-lbl">${escapeHTML(sp.label || place.area)} · ${count} Möglichkeiten</span>
-          <span class="sec-num" hidden>${String(idx + 1).padStart(2, '0')}</span><span class="sec-title" hidden>${escapeHTML(place.name)} ${escapeHTML(s.stay)}</span>
-          <span class="wx-days" data-wx-station="${escapeHTML(s.id)}"></span>
+          <span class="sec-num" hidden>${String(idx + 1).padStart(2, '0')}</span><span class="sec-title" hidden>${escapeHTML(place.name)} ${escapeHTML(b.stay)}</span>
+          ${b.stations.map(s => `<span class="wx-days" data-wx-station="${escapeHTML(s.id)}"></span>`).join('')}
         </summary>
         <div class="dp-body">
-          ${s.note ? `<div class="dp-travel">🧳 ${escapeHTML(s.note)}</div>` : ''}
+          ${notes}
           ${groups}
-          <div class="avoid-box"><div class="avoid-label">⚠️ Meiden in ${escapeHTML(place.name)}</div>${avoidHTML(s.place, false) || '<div class="avoid-item">Siehe „Überall in Thailand“ im Reiter Mein Urlaub.</div>'}</div>
+          <div class="avoid-box"><div class="avoid-label">⚠️ Meiden in ${escapeHTML(place.name)}</div>${avoidHTML(b.place, false) || '<div class="avoid-item">Siehe „Überall in Thailand“ im Reiter Mein Urlaub.</div>'}</div>
         </div>
       </details>
     </section>`;
@@ -3824,7 +3888,7 @@ function renderAction() {
 }
 document.addEventListener('click', e => {
   if (!e.target.closest('#action-jump')) return;
-  const el = document.querySelector(`#action-stations details[data-st="${currentStation().id}"]`);
+  const el = document.querySelector(`#action-stations details[data-st="${currentStation().place}"]`);
   if (!el) return;
   el.open = true;
   // Abstand = tatsächliche Höhe der festen Kopfzeile (auf dem Handy höher als am PC)
@@ -3973,8 +4037,8 @@ function getActionItems() {
       return {
         key: favBtn?.dataset.favKey || ('action_' + stationId + '_' + index),
         type: 'action',
-        station: stationId,
-        date: st ? st.first : '',
+        station: card.dataset.station || stationId,
+        date: (stationById(card.dataset.station) || st || {}).first || '',
         day: section.querySelector('.sec-num')?.textContent.trim() || '',
         dayTitle: section.querySelector('.sec-title')?.textContent.trim() || '',
         name: card.querySelector('.card-t')?.textContent.trim() || 'Aktivität',
@@ -4047,6 +4111,14 @@ function augmentTravelCards(refresh) {
   if (refresh) document.querySelectorAll('.trip-tools').forEach(t => t.remove());
   getActionItems().forEach(item => addTripTools(item, item.card));
   document.querySelectorAll('#essen-stations .card[data-id]').forEach(card => {
+    const r = TRIP.restaurants.find(x => String(x.id) === String(card.dataset.id));
+    if (r) addTripTools({ key: 'rest_' + r.id, name: r.name }, card);
+  });
+  document.querySelectorAll('#fav-action-grid .card [data-fav-key]').forEach(btn => {
+    const a = EX[btn.dataset.favKey];
+    if (a) addTripTools({ key: a.id, name: a.name }, btn.closest('.card'));
+  });
+  document.querySelectorAll('#fav-rest-grid .card[data-id]').forEach(card => {
     const r = TRIP.restaurants.find(x => String(x.id) === String(card.dataset.id));
     if (r) addTripTools({ key: 'rest_' + r.id, name: r.name }, card);
   });
@@ -4486,16 +4558,90 @@ function favItemHTML(item, type) {
       </div>
     </div>`;
 }
+/* ── FAVORITEN wie im Reiter Action bzw. Essen (Wolli 18.10.2026) ──
+   Gleiche Karten (activityCardHTML / restCardEl / shopCardEl): Infos, „Was ist das?“, Anbieter/Karte, Herz, Status/€/Notiz.
+   Sortiert nach Ort (Reihenfolge wie die Blöcke, Bangkok einmal). Herz antippen = aus den Favoriten nehmen.
+   Ältere Favoriten, deren Eintrag es nicht mehr gibt, erscheinen weiter als kleine Karte mit „Entfernen“. */
 function renderFavPanel() {
   const favs = loadFavs();
-  const restItems = Object.values(favs.rest || {});
-  document.getElementById('fav-rest-count').textContent = restItems.length + ' gespeichert';
-  document.getElementById('fav-rest-grid').innerHTML = restItems.length ? restItems.map(i => favItemHTML(i, 'rest')).join('')
-    : '<div class="fav-empty"><div class="fav-empty-icon">🍽️</div>Noch keine Favoriten.<br/>Tippe im Essen-Reiter auf ❤️.</div>';
-  const actionItems = Object.values(favs.action || {});
-  document.getElementById('fav-action-count').textContent = actionItems.length + ' gespeichert';
-  document.getElementById('fav-action-grid').innerHTML = actionItems.length ? actionItems.map(i => favItemHTML(i, 'action')).join('')
-    : '<div class="fav-empty"><div class="fav-empty-icon">⚡</div>Noch keine Action-Favoriten.<br/>Tippe im Action-Reiter auf ❤️.</div>';
+  const blocks = placeBlocks();
+  const order = blocks.map(b => b.place);
+  const pos = p => { const i = order.indexOf(p); return i < 0 ? 99 : i; };
+  const placeName = p => (TRIP.places[p] && TRIP.places[p].name) || 'Sonstige';
+
+  // ── Essen & Läden ──
+  const restIds = Object.keys(favs.rest || {});
+  document.getElementById('fav-rest-count').textContent = restIds.length + ' gespeichert';
+  const restGrid = document.getElementById('fav-rest-grid');
+  restGrid.innerHTML = '';
+  if (!restIds.length) restGrid.innerHTML = '<div class="fav-empty"><div class="fav-empty-icon">🍽️</div>Noch keine Favoriten.<br/>Tippe im Essen-Reiter auf ❤️.</div>';
+  else {
+    const list = restIds.map(id => {
+      const r = TRIP.restaurants.find(x => String(x.id) === id);
+      const s = r ? null : TRIP.shops.find(x => String(x.id) === id);
+      return { id, r, s, place: (r || s || {}).place || '' };
+    }).sort((a, b) => pos(a.place) - pos(b.place) || (a.s ? 1 : 0) - (b.s ? 1 : 0));
+    let lastPlace = null, g = null, nr = 0;
+    list.forEach(x => {
+      if (x.place !== lastPlace) {
+        lastPlace = x.place;
+        restGrid.insertAdjacentHTML('beforeend', esGroupHead('', '📍 ' + placeName(x.place), list.filter(y => y.place === x.place).length));
+        g = document.createElement('div'); g.className = 'cards-grid'; restGrid.appendChild(g);
+      }
+      if (x.r) g.appendChild(restCardEl(x.r, ++nr));
+      else if (x.s) g.appendChild(shopCardEl(x.s));
+      else g.insertAdjacentHTML('beforeend', favItemHTML(favs.rest[x.id], 'rest'));
+    });
+  }
+
+  // ── Action ──
+  const actIds = Object.keys(favs.action || {});
+  document.getElementById('fav-action-count').textContent = actIds.length + ' gespeichert';
+  const actGrid = document.getElementById('fav-action-grid');
+  if (!actIds.length) { actGrid.innerHTML = '<div class="fav-empty"><div class="fav-empty-icon">⚡</div>Noch keine Action-Favoriten.<br/>Tippe im Action-Reiter auf ❤️.</div>'; }
+  else {
+    // 🗓️/💡 wie im Ort-Block (Bangkok: „nur 27.–31.10.“ usw.)
+    const inPlan = new Map();
+    blocks.forEach(b => placeStayplan(b).groups.forEach(gr => (gr.items || []).forEach(it => { if (!inPlan.has(it.ref)) inPlan.set(it.ref, { it, place: b.place }); })));
+    const list = actIds.map(id => {
+      const a = TRIP.activities.find(x => x.id === id);
+      const m = inPlan.get(id);
+      const st = a ? stationById(a.station) : null;
+      return { id, a, it: m ? m.it : {}, place: m ? m.place : (st ? st.place : (a ? a.station : '')) };
+    }).sort((a, b) => pos(a.place) - pos(b.place));
+    let html = '', lastPlace = null, open = false;
+    list.forEach(x => {
+      if (x.place !== lastPlace) {
+        if (open) html += '</div>';
+        lastPlace = x.place;
+        html += `<div class="sub-label">📍 ${escapeHTML(placeName(x.place))}</div><div class="cards">`;
+        open = true;
+      }
+      html += x.a ? activityCardHTML(x.a, x.it) : favItemHTML(favs.action[x.id], 'action');
+    });
+    if (open) html += '</div>';
+    actGrid.innerHTML = html;
+    actGrid.querySelectorAll('[data-fav-key]').forEach(btn => btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const a = EX[btn.dataset.favKey];
+      if (a) toggleFav('action', a.id, (loadFavs().action || {})[a.id] || { id: a.id, name: a.name });
+    }));
+  }
+  augmentTravelCards(false);
+}
+/* Info-Fenster „Was ist das?“ liegen in den Reitern Action (#md) bzw. Essen (#emd). Ist der eigene Reiter versteckt
+   (Aufruf aus den Favoriten), zieht das Fenster vor dem Öffnen in einen eigenen Platz in den Favoriten um (#fav-modal-a / #fav-modal-r,
+   außerhalb der Listen → Neuzeichnen löscht es nicht; gleiche Stile über :is, siehe favoriten.py). */
+function modalHome(id, panelId, favId) {
+  const m = document.getElementById(id);
+  const panel = document.getElementById(panelId);
+  const target = panel && panel.classList.contains('active') ? panel : document.getElementById(favId);
+  if (m && target && m.parentElement !== target) target.appendChild(m);
+}
+{
+  const _om = om, _openEssenInfo = openEssenInfo;
+  om = function (k) { modalHome('md', 'panel-action', 'fav-modal-a'); return _om(k); };
+  openEssenInfo = function (x, kindLabel) { modalHome('emd', 'panel-rest', 'fav-modal-r'); return _openEssenInfo(x, kindLabel); };
 }
 document.addEventListener('click', e => {
   const favRemove = e.target.closest('[data-remove-type][data-remove-id]');
