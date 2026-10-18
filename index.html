@@ -1118,6 +1118,9 @@
     #panel-plan .cur-calc .cur-arrow { font-size: 1.6rem !important; color: #e8c547 !important; padding-bottom: 12px; }
     #panel-plan .cur-clear { margin-top: 12px; min-height: 44px; padding: 8px 16px; font-size: 1rem; background: transparent; color: #e8e4dc; border: 1px solid #2e2e2e; border-radius: 999px; font-family: 'DM Sans', sans-serif; cursor: pointer; }
     #panel-plan .cur-clear:hover { border-color: #e8c547; color: #e8c547; }
+    /* ══ Action-Kopf nur „Urlaub · zu zweit · Thailand“ (Wolli 18.10.2026) ══ */
+    #panel-action .a-header { padding-top: 28px; padding-bottom: 24px; }
+    #panel-action .a-header h1.a-title { color: var(--accent); white-space: nowrap; font-size: clamp(20px, 7.2vw, 48px); line-height: 1.15; }
 </style>
 </head>
 <body>
@@ -1133,7 +1136,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 18.10.2026 · 20:58 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 18.10.2026 · 21:06 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1357,7 +1360,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 18.10.2026 · 20:58 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 18.10.2026 · 21:06 Uhr
   </footer>
   <!-- ESSEN: Info-Fenster „Was ist das?“ -->
   <div class="modal-overlay" id="emd" role="dialog" aria-modal="true" aria-labelledby="emd-t"><div class="modal"><div class="modal-h"><div class="modal-ic" id="emd-ic">ℹ️</div><div class="modal-ti"><h3 id="emd-t">Titel</h3><p id="emd-s">Untertitel</p></div><button class="modal-x" type="button" aria-label="Schließen" onclick="closeEssenInfo()">×</button></div><div class="modal-b" id="emd-b"></div></div></div>
@@ -1369,9 +1372,7 @@
 <div id="panel-action" class="tab-panel">
 
   <div class="a-header">
-    <div class="a-label">Action-Urlaub · zu zweit · Thailand</div>
-    <h1>Thailand — <em>spektakulär</em></h1>
-    <div class="a-sub">17.–31.10.2026 · Bangkok → Koh Phangan → Koh Samui → Bangkok. Pro Ort Action mit Preisen, schöne Ecken und was ihr <strong>meiden</strong> solltet. Pro Vorschlag: <strong>„Was ist das?"</strong> und <strong>„Anbieter"</strong>. Preise in Baht ≈ Euro (<span id="rate-note"></span>).</div>
+    <h1 class="a-title">Urlaub · zu zweit · Thailand</h1>
   </div>
 
   <div class="a-map-section">
@@ -1428,7 +1429,7 @@
 
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 18.10.2026 · 20:58 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 18.10.2026 · 21:06 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1527,7 +1528,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "18.10.2026 · 20:58";
+const APP_VERSION = "18.10.2026 · 21:06";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
