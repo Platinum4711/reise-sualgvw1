@@ -1108,6 +1108,16 @@
       #panel-rest .dp-day summary { padding: 12px; }
       #panel-rest .dp-body { padding: 0 8px 12px; }
     }
+    /* ══ Baht-Euro-Rechner als eigener Block oben in „Mein Urlaub“ (Wolli 18.10.2026) ══
+       große Felder (Schrift ≥ 16 px, sonst zoomt das iPhone), Bezeichnung über dem Feld, Knopf „Leeren“ */
+    #panel-plan .plan-block.cur-block { margin-bottom: 14px; border-top: 3px solid #e8c547; }
+    #panel-plan .cur-calc.cur-big { grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: 10px; align-items: end; }
+    #panel-plan .cur-field { display: block; min-width: 0; }
+    #panel-plan .cur-calc .cur-lab { display: block; margin-bottom: 6px; font-size: 1rem !important; color: #e8e4dc !important; }
+    #panel-plan .cur-calc.cur-big input { font-size: 1.5rem !important; padding: 12px 12px; min-height: 56px; border-radius: 10px; }
+    #panel-plan .cur-calc .cur-arrow { font-size: 1.6rem !important; color: #e8c547 !important; padding-bottom: 12px; }
+    #panel-plan .cur-clear { margin-top: 12px; min-height: 44px; padding: 8px 16px; font-size: 1rem; background: transparent; color: #e8e4dc; border: 1px solid #2e2e2e; border-radius: 999px; font-family: 'DM Sans', sans-serif; cursor: pointer; }
+    #panel-plan .cur-clear:hover { border-color: #e8c547; color: #e8c547; }
 </style>
 </head>
 <body>
@@ -1123,7 +1133,7 @@
     <div>
       <div class="nav-brand-text">Thailand 2026</div>
       <div class="nav-brand-sub">17.10 – 31.10</div>
-      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 16.10.2026 · 18:13 Uhr</div>
+      <div class="nav-brand-ver" style="font-size:0.56rem;color:#6a6a6a;margin-top:2px;letter-spacing:0.02em;white-space:nowrap;">Stand 18.10.2026 · 20:58 Uhr</div>
     </div>
   </div>
   <div class="nav-tabs">
@@ -1152,6 +1162,18 @@
         <button class="plan-btn" type="button" onclick="downloadTripReport()">Reisebericht laden</button>
       </div>
     </div>
+
+    <!-- BAHT-EURO-RECHNER (Wolli 18.10.2026: mehrmals am Tag gebraucht → ganz oben) -->
+    <section class="plan-block cur-block" aria-label="Baht-Euro-Rechner">
+      <h2>💱 Baht ⇄ Euro</h2>
+      <div class="cur-calc cur-big">
+        <label class="cur-field"><span class="cur-lab">Baht ฿</span><input id="cur-thb" inputmode="decimal" placeholder="0" aria-label="Betrag in Baht" autocomplete="off"></label>
+        <span class="cur-arrow" aria-hidden="true">⇄</span>
+        <label class="cur-field"><span class="cur-lab">Euro €</span><input id="cur-eur" inputmode="decimal" placeholder="0" aria-label="Betrag in Euro" autocomplete="off"></label>
+      </div>
+      <button type="button" class="cur-clear" id="cur-clear">✕ Leeren</button>
+      <div class="info-src" id="cur-src"></div>
+    </section>
 
     <!-- AKTUELLE STATION + UMSCHALTER -->
     <section class="plan-block station-block">
@@ -1203,18 +1225,12 @@
           <div id="avoid-cockpit"></div>
         </section>
         <section class="plan-block">
-          <h2>💱 Geld &amp; Uhrzeit</h2>
+          <h2>🕐 Uhrzeit</h2>
           <div class="info-row">
             <div class="info-cell"><div class="k">Thailand</div><div class="v" id="clock-th">–</div></div>
             <div class="info-cell"><div class="k">Deutschland</div><div class="v" id="clock-de">–</div></div>
           </div>
-          <div class="plan-mini" id="clock-diff" style="margin:-2px 0 12px;"></div>
-          <div class="cur-calc">
-            <input id="cur-thb" inputmode="decimal" placeholder="Baht" aria-label="Betrag in Baht">
-            <span>฿ ⇄ €</span>
-            <input id="cur-eur" inputmode="decimal" placeholder="Euro" aria-label="Betrag in Euro">
-          </div>
-          <div class="info-src" id="cur-src"></div>
+          <div class="plan-mini" id="clock-diff" style="margin:-2px 0 0;"></div>
         </section>
         <section class="plan-block">
           <h2>Plan-B</h2>
@@ -1341,7 +1357,7 @@
   </section>
 
   <footer class="r-footer" id="rest-footer">
-    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 16.10.2026 · 18:13 Uhr
+    Jeder Eintrag mit eigener Quelle · Öffnungszeiten können sich ändern — vorher prüfen · Stand 18.10.2026 · 20:58 Uhr
   </footer>
   <!-- ESSEN: Info-Fenster „Was ist das?“ -->
   <div class="modal-overlay" id="emd" role="dialog" aria-modal="true" aria-labelledby="emd-t"><div class="modal"><div class="modal-h"><div class="modal-ic" id="emd-ic">ℹ️</div><div class="modal-ti"><h3 id="emd-t">Titel</h3><p id="emd-s">Untertitel</p></div><button class="modal-x" type="button" aria-label="Schließen" onclick="closeEssenInfo()">×</button></div><div class="modal-b" id="emd-b"></div></div></div>
@@ -1412,7 +1428,7 @@
 
   </main>
 
-  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 16.10.2026 · 18:13 Uhr</footer>
+  <footer class="a-footer">Erstellt für die Thailand-Reise 17.10.–31.10.2026 — Stand 18.10.2026 · 20:58 Uhr</footer>
 
   <!-- ACTION MODAL -->
   <div class="modal-overlay" id="md"><div class="modal"><div class="modal-h"><div class="modal-ic" id="md-ic">ℹ️</div><div class="modal-ti"><h3 id="md-t">Titel</h3><p id="md-s">Untertitel</p></div><button class="modal-x" onclick="cm()">×</button></div><div class="modal-b" id="md-b"></div></div></div>
@@ -1511,7 +1527,7 @@
    (Stationen, Notfall, Inhalte, Zöliakie-Karte). Keine Namen,
    keine Unterkunftsadressen: diese Seite ist öffentlich erreichbar.
 ══════════════════════════════════════════════════════════════ */
-const APP_VERSION = "16.10.2026 · 18:13";
+const APP_VERSION = "18.10.2026 · 20:58";
 const TRIP = {
   title: "Thailand 2026",
   country: "Thailand",
@@ -2765,6 +2781,8 @@ function renderCurrencyInfo() {
 }
 let lastCurInput = 'thb';
 function initCurrency() {
+  const clr = document.getElementById('cur-clear');
+  if (clr) clr.addEventListener('click', () => { ['cur-thb', 'cur-eur'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; }); lastCurInput = 'thb'; const t = document.getElementById('cur-thb'); if (t) t.focus(); });
   const thb = document.getElementById('cur-thb');
   const eur = document.getElementById('cur-eur');
   const num = s => Number(String(s).replace(/\./g, '').replace(',', '.'));
